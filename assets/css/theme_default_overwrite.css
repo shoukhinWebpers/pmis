@@ -1,0 +1,48 @@
+body {
+    background-color: #333333 !important;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff !important;
+    font-size: 22px !important;
+}
+
+.navbar-default {
+    background-color: #333333 !important;
+}
+
+.nav>li>a {
+    color: #fff !important;
+}
+
+.sidebar ul li a.active {
+    background-color: #555555 !important;
+}
+
+.sidebar ul li a:focus, .sidebar ul li a:hover {
+    background-color: #555555 !important;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #555555 !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #555555 !important;
+}
+
+.navbar-top-links li:hover {
+    background-color: #555555 !important;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid black !important;
+}
+
+.navbar-default {
+    border-color: #000000 !important;
+}
+
+.huge-custom{
+    font-size: 21px;
+}

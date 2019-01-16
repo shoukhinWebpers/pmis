@@ -1,0 +1,103 @@
+.row-bordered {
+  display: flex;
+}
+
+.row-bordered > div {
+  flex: 1;
+  border: 1px solid grey;
+  background-color: lightgrey;
+}
+
+.btn-column{
+	margin-top: 5px;
+}
+
+.margin-adjust-financial-total-yearly-target{
+	margin-bottom: 5px;
+}
+
+.margin-adjust-financial-total-pcq{
+	margin-bottom: 5px;
+}
+
+.margin-adjust-financial-total-cyp{
+	margin-bottom: 5px;
+}
+
+.name-of-component{
+	font-size: 14px;
+}
+
+input{
+	border-color: #0c71c3 !important;
+	border-width: 2px !important;
+}
+
+textarea{
+	resize: none;
+	border-color: #0c71c3 !important;
+	border-width: 2px !important;
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	[class="margin-adjust-financial-total-yearly-target"] {
+	    margin-bottom: 5px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	[class="margin-adjust-financial-total-yearly-target"] {
+	    margin-bottom: 5px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	[class="margin-adjust-financial-total-yearly-target"] {
+	    margin-bottom: 5px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	[class="margin-adjust-financial-total-yearly-target"] {
+	    margin-bottom: 5px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	[class="margin-adjust-financial-total-yearly-target"] {
+	    margin-bottom: 25px;
+	}
+
+	[class="name-of-component"] {
+	    font-size: 13px;
+	}
+}
+
+@media only screen and (min-width : 1242px) {
+	[class="margin-adjust-financial-total-yearly-target"] {
+	    margin-bottom: 25px;
+	}
+
+	[class="name-of-component"] {
+	    font-size: 14px;
+	}
+}
+
+@media only screen and (min-width : 1600px) {
+	[class*="margin-adjust-"] {
+	    margin-bottom: 25px;
+	}
+}
+
+@media only screen and (min-width : 1900px) {
+	[class*="margin-adjust-"] {
+	    margin-bottom: 5px;
+	}
+}

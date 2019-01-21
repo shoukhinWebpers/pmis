@@ -1,19 +1,11 @@
-@extends('layouts.default')
-
-@section('cssFiles')
-<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-@endsection
-
-@section('content')
 <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Project Monitoring Form: IMED {{ date('m') }}/{{ date('Y') }} (Quarterly Progress Report)</h2>
-        <h4>ADP: {{ date('Y-m-d') }}, Reporting Quarter: {{ ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) }}</h4>
+        <h2 class="page-header">Project Monitoring Form: IMED 03/<?= date('Y') ?> (Quarterly Progress Report)</h2>
+        <h4>ADP: <?= date('Y-m-d') ?>, Reporting Quarter: <?= ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></h4>
     </div>
     <!-- /.col-lg-12 -->
 </div>
-<form action="{{ url('imed_03') }}" role="form" method="post">
-	{{ csrf_field() }}
+<?= form_open( 'imed_03', 'role="form" method="post"' ); ?>
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
@@ -36,7 +28,7 @@
                     <!-- B1 Start -->
                     <div class="row">
                         <div class="col-lg-6">
-                            <h4>B.1 Project Title: ........................................</h4>
+                            <h4>B.1 Project Title: <?= $project_title ?></h4>
                         </div>
                     </div><!-- B1 End -->
                     <!-- B2 Start -->
@@ -53,13 +45,13 @@
                         <div class="col-lg-7">
                             <div class="form-group">
                                 <label class="name-of-component">Name of the Component (As per Table E-1 of PP) or (As per Part E (32) of TAPP)</label>
-                                <input class="form-control">
+                                <input name="name_of_the_component" class="form-control">
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="form-group">
                                 <label>Unit</label>
-                                <input class="form-control">
+                                <input name="unit" class="form-control">
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -70,19 +62,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (Qtty)</label>
-                                        <input class="form-control" placeholder="Physical (Qtty)">
+                                        <input name="cmltv_progress_upto_qtty" class="form-control" placeholder="Physical (Qtty)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (%)</label>
-                                        <input class="form-control" placeholder="Physical (%)">
+                                        <input name="cmltv_progress_upto_prcntg" class="form-control" placeholder="Physical (%)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Financial</label>
-                                        <input class="form-control" placeholder="Financial">
+                                        <input name="cmltv_progress_upto_finance" class="form-control" placeholder="Financial">
                                     </div>
                                 </div>
                             </div>
@@ -95,19 +87,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (Qtty)</label>
-                                        <input class="form-control" placeholder="Physical (Qtty)">
+                                        <input name="yearly_target_qtty" class="form-control" placeholder="Physical (Qtty)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (%)</label>
-                                        <input class="form-control" placeholder="Physical (%)">
+                                        <input name="yearly_target_prcntg" class="form-control" placeholder="Physical (%)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Financial</label>
-                                        <input class="form-control" placeholder="Financial">
+                                        <input name="yearly_target_finance" class="form-control" placeholder="Financial">
                                     </div>
                                 </div>
                             </div>
@@ -120,19 +112,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (Qtty)</label>
-                                        <input class="form-control" placeholder="Physical (Qtty)">
+                                        <input name="prgrs_in_crnt_qrtr_qtty" class="form-control" placeholder="Physical (Qtty)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (%)</label>
-                                        <input class="form-control" placeholder="Physical (%)">
+                                        <input name="prgrs_in_crnt_qrtr_prcntg" class="form-control" placeholder="Physical (%)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Financial</label>
-                                        <input class="form-control" placeholder="Financial">
+                                        <input name="prgrs_in_crnt_qrtr_financial" class="form-control" placeholder="Financial">
                                     </div>
                                 </div>
                             </div>
@@ -145,19 +137,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (Qtty)</label>
-                                        <input class="form-control" placeholder="Physical (Qtty)">
+                                        <input name="crnt_yrs_prgrs_qtty" class="form-control" placeholder="Physical (Qtty)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Physical (%)</label>
-                                        <input class="form-control" placeholder="Physical (%)">
+                                        <input name="crnt_yrs_prgrs_prcntg" class="form-control" placeholder="Physical (%)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Financial</label>
-                                        <input class="form-control" placeholder="Financial">
+                                        <input name="crnt_yrs_prgrs_financial" class="form-control" placeholder="Financial">
                                     </div>
                                 </div>
                             </div>
@@ -165,7 +157,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Remarks</label>
-                                <input class="form-control" placeholder="Remarks">
+                                <input name="remarks" class="form-control" placeholder="Remarks">
                             </div>
                         </div>
                     </div><!-- B2 End -->
@@ -199,7 +191,7 @@
                     <!-- Financial Total End -->
                     <div class="row">
                         <div class="col-lg-3 btn-column">
-                            <a href="{{ url('imed') }}" class="btn btn-block btn-success">Back <span class="fa fa-arrow-circle-o-left"></span></a>
+                            <a href="<?= base_url('imed/'.$crnt_imed_working_id) ?>" class="btn btn-block btn-success">Back <span class="fa fa-arrow-circle-o-left"></span></a>
                         </div>
                         <div class="col-lg-3 btn-column">
                             <button type="submit" class="btn btn-block btn-warning">Add More <span class="fa fa-plus-circle"></span></button>
@@ -215,5 +207,4 @@
             </div><!-- /.panel -->
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
-</form>
-@endsection
+<?= form_close(); ?>

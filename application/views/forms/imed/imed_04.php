@@ -1,24 +1,17 @@
-@extends('layouts.default')
-
-@section('cssFiles')
-<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-@endsection
-
-@section('content')
 <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Project Monitoring Form: IMED {{ date('m') }}/{{ date('Y') }} (Quarterly Progress Report)</h2>
-        <h4>ADP: {{ date('Y-m-d') }}, Reporting Quarter: {{ ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) }}</h4>
+        <h2 class="page-header">Project Monitoring Form: IMED 03/<?= date('Y') ?> (Quarterly Progress Report)</h2>
+        <h4>ADP: <?= date('Y-m-d') ?>, Reporting Quarter: <?= ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></h4>
     </div>
     <!-- /.col-lg-12 -->
 </div>
-<form action="#" role="form">
+<?= form_open( 'imed_submit', 'role="form" method="post"' ); ?>
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    C. Contract Implementation Report (Page - 04)
+                    D. Contract Implementation Report (Page - 04)
                     <p><i>(Please fill-in this form for goods and works contract of value above Tk. 200.00 lakh and consultancy contract of value above Tk. 100.00 lakh)</i></p>
                 </div>
                 <div class="panel-body">
@@ -36,7 +29,7 @@
                     <!-- D1 Start -->
                     <div class="row">
                         <div class="col-lg-6">
-                            <h4>D.1 Project Title: ........................................</h4>
+                            <h4>D.1 Project Title: <?= $project_title ?></h4>
                         </div>
                     </div><!-- D1 End -->
                     <!-- D2 header Start -->
@@ -56,7 +49,7 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="desc_of_contracts" class="form-control">
                                     </div>  
                                 </div>
                             </div>
@@ -68,7 +61,7 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="contract_value" class="form-control">
                                     </div>  
                                 </div>
                             </div>
@@ -80,7 +73,7 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="date_of_work_order" class="form-control">
                                     </div>  
                                 </div>
                             </div>
@@ -92,7 +85,7 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="completion_date_as_per_contract" class="form-control">
                                     </div>  
                                 </div>
                             </div>
@@ -104,7 +97,7 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Amount in Lakh Taka">
+                                        <input name="amount_paid" class="form-control" placeholder="Amount in Lakh Taka">
                                     </div>  
                                 </div>
                             </div>
@@ -116,7 +109,7 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Amount in Lakh Taka">
+                                        <input name="physical" class="form-control" placeholder="Amount in Lakh Taka">
                                     </div>  
                                 </div>
                             </div>
@@ -144,7 +137,7 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <textarea class="form-control" rows="4"></textarea>
+                                <textarea name="delaying_description" class="form-control" rows="4"></textarea>
                             </div>
                         </div>
                     </div><!-- D3 End -->
@@ -157,10 +150,10 @@
                     <hr>
                     <div class="row">
                         <div class="col-lg-4 btn-column">
-                            <a href="{{ url()->previous() }}" class="btn btn-block btn-success">Back <span class="fa fa-arrow-circle-o-left"></span></a>
+                            <a href="#" class="btn btn-block btn-success">Back <span class="fa fa-arrow-circle-o-left"></span></a>
                         </div>
                         <div class="col-lg-4 btn-column">
-                            <a href="#" class="btn btn-block btn-primary">Submit <span class="fa fa-check-circle"></span></a>
+                            <button type="Submit"class="btn btn-block btn-primary">Submit <span class="fa fa-check-circle"></span></button>
                         </div>
                         <div class="col-lg-4 btn-column">
                             <a class="btn btn-block btn-danger">Cancel <span class="fa fa-times-circle"></span></a>
@@ -170,5 +163,4 @@
             </div><!-- /.panel -->
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
-</form>
-@endsection
+<?= form_close(); ?>

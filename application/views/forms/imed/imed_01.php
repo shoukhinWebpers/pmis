@@ -119,19 +119,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue">
+                                        <input name="exp_for_the_qrtr_revenue_gob" class="form-control" placeholder="Revenue">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital">
+                                        <input name="exp_for_the_qrtr_capital_gob" class="form-control" placeholder="Capital">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="exp_for_the_qrtr_grand_total_gob" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -144,19 +144,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue">
+                                        <input name="exp_for_the_qrtr_revenue_rpa" class="form-control" placeholder="Revenue">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital">
+                                        <input name="exp_for_the_qrtr_capital_rpa" class="form-control" placeholder="Capital">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="exp_for_the_qrtr_grand_total_rpa" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -169,19 +169,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue">
+                                        <input name="exp_for_the_qrtr_revenue_dpa" class="form-control" placeholder="Revenue">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital">
+                                        <input name="exp_for_the_qrtr_capital_dpa" class="form-control" placeholder="Capital">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="exp_for_the_qrtr_grand_total_dpa" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -194,19 +194,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue (Amount in Lakh Taka)">
+                                        <input name="crrnt_year_exp_revenue_gob" class="form-control" placeholder="Revenue (Amount in Lakh Taka)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital (Amount in Lakh Taka)">
+                                        <input name="crrnt_year_exp_capital_gob" class="form-control" placeholder="Capital (Amount in Lakh Taka)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="crrnt_year_exp_grand_total_gob" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -219,19 +219,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue (Amount in Lakh Taka)">
+                                        <input name="crrnt_year_exp_revenue_rpa" class="form-control" placeholder="Revenue (Amount in Lakh Taka)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital (Amount in Lakh Taka)">
+                                        <input name="crrnt_year_exp_capital_rpa" class="form-control" placeholder="Capital (Amount in Lakh Taka)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="crrnt_year_exp_grand_total_rpa" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -244,19 +244,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue (Amount in Lakh Taka)">
+                                        <input name="crrnt_year_exp_revenue_dpa" class="form-control" placeholder="Revenue (Amount in Lakh Taka)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital (Amount in Lakh Taka)">
+                                        <input name="crrnt_year_exp_capital_dpa" class="form-control" placeholder="Capital (Amount in Lakh Taka)">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="crrnt_year_exp_grand_total_dpa" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -271,7 +271,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Cash foreign exchange spent">
+                                        <input name="cash_foreign_exchange_spent" class="form-control" placeholder="Cash foreign exchange spent">
                                     </div>
                                 </div>
                             </div>
@@ -288,7 +288,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Cash">
+                                        <input name="spent_from_own_resources_cash" class="form-control" placeholder="Cash">
                                     </div>
                                 </div>
                                 <div class="col-lg-2">
@@ -298,7 +298,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Kind">
+                                        <input name="spent_from_own_resources_kind" class="form-control" placeholder="Kind">
                                     </div>
                                 </div>
                             </div>
@@ -310,7 +310,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="CD/VAT">
+                                        <input name="cd_vat" class="form-control" placeholder="CD/VAT">
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +325,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="rpa_spent_cumulative_to_date" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -342,7 +342,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="rpa_claimed_reporting_quarter" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
@@ -352,7 +352,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="rpa_claimed_cumulative_to_date" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +369,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="rpa_reimbursed_reporting_quarter" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
@@ -379,7 +379,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <input class="form-control">
+                                        <input name="rpa_reimbursed_cumulative_to_date" class="form-control">
                                     </div>
                                 </div>
                             </div>

@@ -1,19 +1,11 @@
-@extends('layouts.default')
-
-@section('cssFiles')
-<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-@endsection
-
-@section('content')
 <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Project Monitoring Form: IMED {{ date('m') }}/{{ date('Y') }} (Quarterly Progress Report)</h2>
-        <h4>ADP: {{ date('Y-m-d') }}, Reporting Quarter: {{ ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) }}</h4>
+        <h2 class="page-header">Project Monitoring Form: IMED 03/<?= date('Y') ?> (Quarterly Progress Report)</h2>
+        <h4>ADP: <?= date('Y-m-d') ?>, Reporting Quarter: <?= ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></h4>
     </div>
     <!-- /.col-lg-12 -->
 </div>
-<form action="{{ url('imed_04') }}" role="form" method="post">
-    {{ csrf_field() }}
+<?= form_open( 'imed_04', 'role="form" method="post"' ); ?>
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
@@ -36,7 +28,7 @@
                     <!-- C1 Start -->
                     <div class="row">
                         <div class="col-lg-6">
-                            <h4>C.1 Project Title: ........................................</h4>
+                            <h4>C.1 Project Title: <?= $project_title ?></h4>
                         </div>
                     </div><!-- C1 End -->
                     <!-- C2 header Start -->
@@ -53,13 +45,13 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Problem Type</label>
-                                <input class="form-control" placeholder="Problem type">
+                                <?= form_dropdown('problem_type_id', $problem_types, '', 'id="list_of_problem_types" class="form-control"'); ?>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Description of Problem</label>
-                                <textarea class="form-control" placeholder="Description of problem write here..." rows="4"></textarea>
+                                <textarea name="desc_of_problem" class="form-control" placeholder="Description of problem write here..." rows="4"></textarea>
                             </div>
                         </div>
                     </div><!-- C2 End -->
@@ -84,7 +76,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Measures Suggested</label>
-                                <textarea class="form-control" rows="4"></textarea>
+                                <textarea name="suggested_measures" class="form-control" rows="4"></textarea>
                             </div>
                         </div>
                     </div><!-- C3 End -->
@@ -104,7 +96,7 @@
                             <div class="form-group">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"><b>Yes</b>
+                                        <input type="radio" name="project_declaration" id="optionsRadios1" value="1"><b>Yes</b>
                                     </label>
                                 </div>
                             </div>
@@ -113,7 +105,7 @@
                             <div class="form-group">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"><b>No</b>
+                                        <input type="radio" name="project_declaration" id="optionsRadios1" value="2"><b>No</b>
                                     </label>
                                 </div>
                             </div>
@@ -121,7 +113,7 @@
                     </div><!-- C4 End -->
                     <div class="row">
                         <div class="col-lg-4 btn-column">
-                            <a href="{{ url('imed_02') }}" class="btn btn-block btn-success">Back <span class="fa fa-arrow-circle-o-left"></span></a>
+                            <a href="#" class="btn btn-block btn-success">Back <span class="fa fa-arrow-circle-o-left"></span></a>
                         </div>
                         <div class="col-lg-4 btn-column">
                             <button type="submit" class="btn btn-block btn-primary">Save & Continue <span class="fa fa-save"></span></button>
@@ -134,5 +126,4 @@
             </div><!-- /.panel -->
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
-</form>
-@endsection
+<?= form_close(); ?>

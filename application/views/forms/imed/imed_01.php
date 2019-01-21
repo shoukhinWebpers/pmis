@@ -1,12 +1,11 @@
 <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Project Monitoring Form: IMED <?= date('m') ?>/<?= date('Y') ?> (Quarterly Progress Report)</h2>
+        <h2 class="page-header">Project Monitoring Form: IMED 03/<?= date('Y') ?> (Quarterly Progress Report)</h2>
         <h4>ADP: <?= date('Y-m-d') ?>, Reporting Quarter: <?= ( date('m')%3 == 0 ) ? str_pad( date('m')/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( (date('m')/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></h4>
     </div>
-    <!-- /.col-lg-12 -->
 </div>
 
-<?= form_open('imed_02', 'role="form" method="post"'); ?>
+<?= form_open( 'imed_02', 'role="form" method="post"' ); ?>
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
@@ -26,6 +25,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- A1 Start -->
                     <div class="row">
                         <div class="col-lg-12">
@@ -34,22 +34,25 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>a) Project Title</label>
-                                <input class="form-control">
+                                <input name="project_title" class="form-control" placeholder="Please provide the project title">
                             </div>
                             <div class="form-group">
                                 <label>b) Ministry</label>
-                                <input class="form-control">
+                               	<?= form_dropdown('ministry', $list_of_ministry, '','id="list_of_ministry" class="form-control"'); ?>
                             </div>
                             <div class="form-group">
-                                <label>c) Division</label>
-                                <input class="form-control">
+                                <label id="sibling_list_of_division">c) Division</label>
+                                <select id="list_of_division" class="form-control">
+                                	<option value="">Please select a ministry first</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>d) Agency</label>
-                                <input class="form-control">
+                                <?= form_dropdown('agency', $list_of_agency, '','class="form-control"'); ?>
                             </div>
                         </div>
                     </div><!-- A1 End -->
+
                     <!-- A2 Start -->
                     <div class="row">
                         <div class="col-lg-6">
@@ -66,19 +69,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue">
+                                        <input name="revenue_rtq_gob" class="form-control" placeholder="Revenue">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital">
+                                        <input name="capital_rtq_gob" class="form-control" placeholder="Capital">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="grand_total_rtq_gob" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -91,19 +94,19 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Revenue</label>
-                                        <input class="form-control" placeholder="Revenue">
+                                        <input name="revenue_rtq_rpa" class="form-control" placeholder="Revenue">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Capital</label>
-                                        <input class="form-control" placeholder="Capital">
+                                        <input name="capital_rtq_rpa" class="form-control" placeholder="Capital">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Grand Total</label>
-                                        <input class="form-control" disabled="disabled">
+                                        <input name="grand_total_rtq_rpa" class="form-control" disabled="disabled">
                                     </div>
                                 </div>
                             </div>

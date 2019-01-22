@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2019 at 02:18 PM
+-- Generation Time: Jan 22, 2019 at 01:28 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -51,7 +51,28 @@ INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('hehf6kvvuo64cjoudq5m56q6hrjfkln5', '::1', 1548075646, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383037353634363b63726e745f696d65647c693a313b),
 ('29dsqv1m1ujms1ialbqur59g9i5548cb', '::1', 1548076302, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383037363330323b63726e745f696d65647c693a313b),
 ('iv3di9vn85q7e9tetkucut46bjtgpgl1', '::1', 1548076614, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383037363631343b63726e745f696d65647c693a313b),
-('0u7dh97ofsagicho72ri84u66mgmkhe9', '::1', 1548076615, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383037363631343b);
+('0u7dh97ofsagicho72ri84u66mgmkhe9', '::1', 1548076615, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383037363631343b),
+('o8vngaomrnu6b3lnvichh7njskvr902f', '::1', 1548134987, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133343938373b),
+('s6eqh0avscm8dk24011civfbnthlnd8a', '::1', 1548135857, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133353835373b63726e745f696d65647c693a323b),
+('smmjr59ec8ehnjsu37m37h2qjl6hu718', '::1', 1548136749, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133363734393b63726e745f696d65647c693a323b),
+('fie4im5tp74bbkgnqm98hiuiqcbca3p0', '::1', 1548137510, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133373531303b63726e745f696d65647c693a323b),
+('1e4ibfiuk1fajc0rvkmpqt74n6tnklph', '::1', 1548138275, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133383237353b63726e745f696d65647c693a323b),
+('lbttpnas7o0lf6lbmi4lneesv5ts6bbb', '::1', 1548139270, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133393237303b63726e745f696d65647c693a323b),
+('2uqnusaqegt91ch1a8m6ulbo41d4nl9v', '::1', 1548140445, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134303434353b),
+('0u965aqlfqqdid21dke3shhvuubqh5n7', '::1', 1548142254, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134323235343b),
+('7t92rd5p78g8v4vggdqf00nnr41ummpc', '::1', 1548142703, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134323730333b),
+('hs7qsckttna0jpf42e8hoaoaqm48uqdi', '::1', 1548143048, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134333034383b),
+('s39cqll8c69bi00lmmnpv90noambuf4p', '::1', 1548143396, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134333339363b),
+('uua1oon585kcnc0irlvvhrgs683mp0pn', '::1', 1548143807, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134333830373b),
+('uavvr18f6iml2k07t20csqeuht2osoe1', '::1', 1548144700, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134343730303b),
+('jc92nm2aetkocrmrkn78v7dehqg2af5r', '::1', 1548145334, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134353333343b),
+('1ug15khvnst6kbknhku4q9i21dudc9jq', '::1', 1548145968, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134353936383b),
+('37755ellgkf5a1j1jruj9ff5e503pmhu', '::1', 1548149412, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383134393431323b),
+('26g0gqpdhdmpmb18spmp6r0e61027l4u', '::1', 1548150177, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383135303137373b),
+('lnb2qb95q2jcpuntpr7p2fcme8ccvrto', '::1', 1548150345, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383135303137373b),
+('29agb81hh3dphsi0cboq81pngi9ii340', '::1', 1548159341, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383135393334313b),
+('kg30l7e6nmj08jj1kgjkbslsv77ns4hr', '::1', 1548159717, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383135393731373b),
+('6nkg4d1m4mp9pbusvki31t6p4gs879v4', '::1', 1548159912, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383135393731373b);
 
 -- --------------------------------------------------------
 
@@ -164,7 +185,8 @@ CREATE TABLE `tbl_imed_basic_info` (
 --
 
 INSERT INTO `tbl_imed_basic_info` (`id`, `project_title`, `ministry`, `division`, `agency`, `created_at`, `updated_at`) VALUES
-(1, 'The Project Title', 1, 3, 5, '2019-01-21 18:16:28', NULL);
+(1, 'The Project Title', 1, 3, 5, '2019-01-21 18:16:28', NULL),
+(2, 'The Project Title 2', 1, 3, 5, '2019-01-22 11:29:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -181,7 +203,6 @@ CREATE TABLE `tbl_imed_contract_implementation` (
   `completion_date_as_per_contract` date NOT NULL,
   `amount_paid` decimal(60,2) NOT NULL,
   `physical` int(3) NOT NULL,
-  `delaying_description` text NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -190,8 +211,9 @@ CREATE TABLE `tbl_imed_contract_implementation` (
 -- Dumping data for table `tbl_imed_contract_implementation`
 --
 
-INSERT INTO `tbl_imed_contract_implementation` (`id`, `imed_bi_id`, `desc_of_contracts`, `contract_value`, `date_of_work_order`, `completion_date_as_per_contract`, `amount_paid`, `physical`, `delaying_description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Description of problem', '0.00', '2019-01-01', '2019-02-02', '100000.00', 100000, 'Description of problems', '2019-01-21 19:16:54', NULL);
+INSERT INTO `tbl_imed_contract_implementation` (`id`, `imed_bi_id`, `desc_of_contracts`, `contract_value`, `date_of_work_order`, `completion_date_as_per_contract`, `amount_paid`, `physical`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Description of problem', '0.00', '2019-01-01', '2019-02-02', '100000.00', 100000, '2019-01-21 19:16:54', NULL),
+(2, 2, 'Description of problem', '0.00', '2019-01-01', '2019-02-02', '100000.00', 100000, '2019-01-22 12:41:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -214,7 +236,8 @@ CREATE TABLE `tbl_imed_implementation_problems` (
 --
 
 INSERT INTO `tbl_imed_implementation_problems` (`id`, `imed_bi_id`, `problem_type_id`, `if_other`, `desc_of_problem`, `created_at`, `updated_at`) VALUES
-(1, 1, 2, NULL, 'Description of Problem', '2019-01-21 19:01:46', NULL);
+(1, 1, 2, NULL, 'Description of Problem', '2019-01-21 19:01:46', NULL),
+(2, 2, 3, NULL, 'Description of Problem', '2019-01-22 11:44:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -260,7 +283,8 @@ CREATE TABLE `tbl_imed_project_declaration` (
 --
 
 INSERT INTO `tbl_imed_project_declaration` (`id`, `imed_bi_id`, `project_declaration`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2019-01-21 13:01:46', NULL);
+(1, 1, 1, '2019-01-21 13:01:46', NULL),
+(2, 2, 1, '2019-01-22 05:44:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -295,7 +319,8 @@ CREATE TABLE `tbl_imed_quarterly_component_wise_progress` (
 --
 
 INSERT INTO `tbl_imed_quarterly_component_wise_progress` (`id`, `imed_bi_id`, `name_of_the_component`, `unit`, `cmltv_progress_upto_qtty`, `cmltv_progress_upto_prcntg`, `cmltv_progress_upto_finance`, `yearly_target_qtty`, `yearly_target_prcntg`, `yearly_target_finance`, `prgrs_in_crnt_qrtr_qtty`, `prgrs_in_crnt_qrtr_prcntg`, `prgrs_in_crnt_qrtr_financial`, `crnt_yrs_prgrs_qtty`, `crnt_yrs_prgrs_prcntg`, `crnt_yrs_prgrs_financial`, `remarks`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Component Name', 12, 1, 12, '123.00', 2, 23, '234.00', 3, 34, '345.00', 4, 45, '456.00', 'Short Note', '2019-01-21 18:16:55', NULL);
+(1, 1, 'Component Name', 12, 1, 12, '123.00', 2, 23, '234.00', 3, 34, '345.00', 4, 45, '456.00', 'Short Note', '2019-01-21 18:16:55', NULL),
+(2, 2, 'Component Name', 12, 1, 12, '123.00', 2, 23, '234.00', 3, 34, '345.00', 4, 45, '456.00', 'Short Note', '2019-01-22 11:30:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -340,7 +365,30 @@ CREATE TABLE `tbl_imed_quarterly_financial_progress` (
 --
 
 INSERT INTO `tbl_imed_quarterly_financial_progress` (`id`, `imed_bi_id`, `release_for_the_quarter_revenue_gob`, `release_for_the_quarter_capital_gob`, `release_for_the_quarter_revenue_rpa`, `release_for_the_quarter_capital_rpa`, `exp_for_the_quarter_revenue_gob`, `exp_for_the_quarter_capital_gob`, `exp_for_the_quarter_revenue_rpa`, `exp_for_the_quarter_capital_rpa`, `exp_for_the_quarter_revenue_dpa`, `exp_for_the_quarter_capital_dpa`, `crnt_yrs_exp_revenue_gob`, `crnt_yrs_exp_capital_gob`, `crnt_yrs_exp_revenue_rpa`, `crnt_yrs_exp_capital_rpa`, `crnt_yrs_exp_revenue_dpa`, `crnt_yrs_exp_capital_dpa`, `cash_frgn_exchng_spent`, `cash`, `kind`, `cd_vat`, `rpa_spent`, `rpa_claimed_1`, `rpa_claimed_2`, `rpa_reimbursed_1`, `rpa_reimbursed_2`, `created_at`, `updated_at`) VALUES
-(1, 1, '23.00', '23.00', '12.00', '12.00', '11.00', '11.00', '22.00', '22.00', '33.00', '33.00', '44.00', '44.00', '55.00', '55.00', '66.00', '66.00', '1234.00', '45.00', '23.00', '1000.00', '34.00', '43.00', '33.00', '3.00', '444.00', '2019-01-21 18:16:28', NULL);
+(1, 1, '23.00', '23.00', '12.00', '12.00', '11.00', '11.00', '22.00', '22.00', '33.00', '33.00', '44.00', '44.00', '55.00', '55.00', '66.00', '66.00', '1234.00', '45.00', '23.00', '1000.00', '34.00', '43.00', '33.00', '3.00', '444.00', '2019-01-21 18:16:28', NULL),
+(2, 2, '23.00', '23.00', '12.00', '12.00', '11.00', '11.00', '22.00', '22.00', '33.00', '33.00', '44.00', '44.00', '55.00', '55.00', '66.00', '66.00', '1234.00', '45.00', '23.00', '1000.00', '34.00', '43.00', '33.00', '3.00', '444.00', '2019-01-22 11:29:47', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_imed_reason_for_delaying`
+--
+
+CREATE TABLE `tbl_imed_reason_for_delaying` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `imed_bi_id` bigint(20) UNSIGNED NOT NULL,
+  `delaying_description` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_imed_reason_for_delaying`
+--
+
+INSERT INTO `tbl_imed_reason_for_delaying` (`id`, `imed_bi_id`, `delaying_description`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Delaying reason', '2019-01-22 06:27:31', NULL),
+(2, 2, 'Description', '2019-01-22 06:41:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -361,7 +409,8 @@ CREATE TABLE `tbl_imed_suggested_measures` (
 --
 
 INSERT INTO `tbl_imed_suggested_measures` (`id`, `imed_bi_id`, `suggested_measures`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Suggested Measures', '2019-01-21 19:01:46', NULL);
+(1, 1, 'Suggested Measures', '2019-01-21 19:01:46', NULL),
+(2, 2, 'Suggested Measure', '2019-01-22 11:44:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -1113,6 +1162,14 @@ ALTER TABLE `tbl_imed_quarterly_financial_progress`
   ADD KEY `imed_bi_id` (`imed_bi_id`);
 
 --
+-- Indexes for table `tbl_imed_reason_for_delaying`
+--
+ALTER TABLE `tbl_imed_reason_for_delaying`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `imed_bi_id` (`imed_bi_id`);
+
+--
 -- Indexes for table `tbl_imed_suggested_measures`
 --
 ALTER TABLE `tbl_imed_suggested_measures`
@@ -1410,19 +1467,19 @@ ALTER TABLE `tbl_data_collection_for_works_contracts`
 -- AUTO_INCREMENT for table `tbl_imed_basic_info`
 --
 ALTER TABLE `tbl_imed_basic_info`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_imed_contract_implementation`
 --
 ALTER TABLE `tbl_imed_contract_implementation`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_imed_implementation_problems`
 --
 ALTER TABLE `tbl_imed_implementation_problems`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_imed_implementation_problem_type`
@@ -1434,25 +1491,31 @@ ALTER TABLE `tbl_imed_implementation_problem_type`
 -- AUTO_INCREMENT for table `tbl_imed_project_declaration`
 --
 ALTER TABLE `tbl_imed_project_declaration`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_imed_quarterly_component_wise_progress`
 --
 ALTER TABLE `tbl_imed_quarterly_component_wise_progress`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_imed_quarterly_financial_progress`
 --
 ALTER TABLE `tbl_imed_quarterly_financial_progress`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_imed_reason_for_delaying`
+--
+ALTER TABLE `tbl_imed_reason_for_delaying`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_imed_suggested_measures`
 --
 ALTER TABLE `tbl_imed_suggested_measures`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_intermediate_result_indicators_component`
@@ -1706,6 +1769,12 @@ ALTER TABLE `tbl_imed_quarterly_component_wise_progress`
 --
 ALTER TABLE `tbl_imed_quarterly_financial_progress`
   ADD CONSTRAINT `tbl_imed_quarterly_financial_progress_ibfk_1` FOREIGN KEY (`imed_bi_id`) REFERENCES `tbl_imed_basic_info` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `tbl_imed_reason_for_delaying`
+--
+ALTER TABLE `tbl_imed_reason_for_delaying`
+  ADD CONSTRAINT `tbl_imed_reason_for_delaying_ibfk_1` FOREIGN KEY (`imed_bi_id`) REFERENCES `tbl_imed_basic_info` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `tbl_imed_suggested_measures`

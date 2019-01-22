@@ -8,7 +8,7 @@ class Imed_model extends CI_Model {
         $this->load->database();
     }
 
-    public function  get_division( $ministry_id ){
+    public function get_division( $ministry_id ){
 
         $this->db->select('*');
         $this->db->from('tbl_list_of_ministry t1');
@@ -42,8 +42,8 @@ class Imed_model extends CI_Model {
         return FALSE;
     }
 
-    public function insert_contract_implementation_data( $data ){
-        if( $this->db->insert('imed_contract_implementation', $data) ){
+    public function insert_contract_implementation_data( $tbl_name, $data ){
+        if( $this->db->insert($tbl_name, $data) ){
             return TRUE;
         }
         return FALSE;
@@ -76,6 +76,23 @@ class Imed_model extends CI_Model {
         $query = $this->db->get();
 
         return $query->result();
+
+    }
+
+    public function get_imed_quarterly_financial_progress( $id ){
+
+        $this->db->select('a.id as imed_id, project_title, e.*, 
+                            a.created_at as imed_creation, name_of_ministry, division_name, name as agency_name');
+        $this->db->from('imed_basic_info a');
+        $this->db->join('list_of_ministry b', 'a.ministry=b.id');
+        $this->db->join('list_of_division c', 'a.division=c.id');
+        $this->db->join('list_of_implementing_agencies d', 'a.agency=d.id');
+        $this->db->join('imed_quarterly_financial_progress e', 'a.id=e.imed_bi_id');
+        $this->db->where('a.id', $id);
+
+        $query = $this->db->get();
+
+        return $query->row();
 
     }
 

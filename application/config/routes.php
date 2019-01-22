@@ -61,6 +61,7 @@ $route['imed_submit']                                        = 'forms/Imed/imed_
 $route['imed_form_02']                                       = 'forms/Imed/imed_02_load';
 $route['imed_form_03']                                       = 'forms/Imed/imed_03_load';
 $route['imed_form_04']                                       = 'forms/Imed/imed_04_load';
+$route['imed_report/(:num)']                                 = 'reports/Imed/index/$1';
 $route['approved_cost']                                      = 'reports/project_information/approved_cost';
 $route['adp']                                                = 'reports/project_information/adp';
 $route['kaa_dncc']                                           = 'reports/progress_monitoring/kaa_dncc';

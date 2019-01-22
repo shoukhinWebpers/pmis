@@ -198,15 +198,30 @@ class Imed extends CI_Controller {
 
     public function imed_04_submit(){
 
-        $data               = $this->input->post();
-        $data['imed_bi_id'] = $this->session->userdata('crnt_imed');
+        $data                          = $this->input->post();
+        $data_basic_info['imed_bi_id'] = $this->session->userdata('crnt_imed');
+        $data_contract_implementation  = array_merge( array_slice($data, 0, 6), $data_basic_info );
+        $data_delay_reason             = array_merge( array_slice($data, 6, 1), $data_basic_info );
 
-        if( $this->Imed_model->insert_contract_implementation_data( $data ) ){
-            $this->session->unset_userdata('crnt_imed'); 
-            redirect('imed','refresh');
+        if( $this->Imed_model->insert_contract_implementation_data( "imed_contract_implementation", $data_contract_implementation ) ){
+
+            if( $this->Imed_model->insert_contract_implementation_data( "imed_reason_for_delaying", $data_delay_reason ) ){
+
+                $this->session->unset_userdata('crnt_imed'); 
+                redirect('imed/'.$data_basic_info['imed_bi_id'],'refresh');
+
+            }else{
+
+                echo "Error Happens!";
+                exit();
+
+            }
+
         }else{
+
             echo "Error Happens!";
             exit();
+
         }
 
     }

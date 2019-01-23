@@ -81,18 +81,53 @@ class Imed_model extends CI_Model {
 
     public function get_imed_quarterly_financial_progress( $id ){
 
-        $this->db->select('a.id as imed_id, project_title, e.*, 
+        $this->db->select('a.id as imed_id, project_title, e.*, f.*,
                             a.created_at as imed_creation, name_of_ministry, division_name, name as agency_name');
         $this->db->from('imed_basic_info a');
         $this->db->join('list_of_ministry b', 'a.ministry=b.id');
         $this->db->join('list_of_division c', 'a.division=c.id');
         $this->db->join('list_of_implementing_agencies d', 'a.agency=d.id');
         $this->db->join('imed_quarterly_financial_progress e', 'a.id=e.imed_bi_id');
+        $this->db->join('imed_project_declaration f', 'a.id=f.imed_bi_id');
         $this->db->where('a.id', $id);
 
         $query = $this->db->get();
 
         return $query->row();
+
+    }
+
+    public function get_imed_quarterly_component_wise_progress( $id ){
+
+        $this->db->select('*');
+        $this->db->from('imed_quarterly_component_wise_progress');
+        $this->db->where('imed_bi_id', $id);
+
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
+    public function get_imed_implementation_problem( $id ){
+
+        $this->db->select('*');
+        $this->db->from('imed_implementation_problems a');
+        $this->db->join('imed_implementation_problem_type b', 'a.problem_type_id = b.id');
+        $this->db->where('imed_bi_id', $id);
+
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
+    public function get_imed_suggested_measures( $id ){
+
+        $this->db->select('*');
+        $this->db->from('imed_suggested_measures a');
+        $this->db->where('imed_bi_id', $id);
+
+        $query = $this->db->get();
+        return $query->result();
 
     }
 

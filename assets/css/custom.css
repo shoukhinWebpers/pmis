@@ -28,6 +28,8 @@
 	font-size: 14px;
 }
 
+.pagebreak { page-break-before: always; }
+
 input, select{
 	border-color: #0c71c3 !important;
 	border-width: 2px !important;

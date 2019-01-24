@@ -208,7 +208,7 @@ class Imed extends CI_Controller {
             if( $this->Imed_model->insert_contract_implementation_data( "imed_reason_for_delaying", $data_delay_reason ) ){
 
                 $this->session->unset_userdata('crnt_imed'); 
-                redirect('imed/'.$data_basic_info['imed_bi_id'],'refresh');
+                redirect('imed_report/'.$data_basic_info['imed_bi_id'],'refresh');
 
             }else{
 

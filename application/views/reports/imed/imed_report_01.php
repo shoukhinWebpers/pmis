@@ -318,6 +318,89 @@
 		</table>
 	</div>
 	<div class="row" style="margin-top: 12px;">
-		<div class="col-lg-12"><b>C.4 Is the project declared Completed: <?= ($quarterly_financial_progress->project_declaration == 1) ? "Yes":"No" ?></b></div>
+		<div class="col-lg-12"><b>C.4 Is the project declared Completed: <?= ( $quarterly_financial_progress->project_declaration == 1 ) ? "Yes":"No" ?></b></div>
+	</div>
+
+	<hr>
+
+	<div class="pagebreak"></div>
+
+	<div style="text-align:center">
+		<b style="font-weight:bold">Project Monitoring Form: <span style="text-decoration: underline;">IMED 03/<?= date( "Y",strtotime( $quarterly_financial_progress->imed_creation ) ) ?> (Revised) (Page 4 of 4)</span></b><br>
+		<p>(Quarterly Progress Report)</p>
+		<?php $month_in_numeric = date( "m",strtotime( $quarterly_financial_progress->imed_creation ) ) ?>
+		<p>ADP: <?= date( "Y-m-d",strtotime( $quarterly_financial_progress->imed_creation ) ) ?> , Reporting Quarter: <?= ( $month_in_numeric%3 == 0 ) ? str_pad( $month_in_numeric/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( ($month_in_numeric/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></p><br>
+		<b>D. Contract Implementation Report</b>
+	</div>
+
+	<div class="row">
+	    <div class="col-lg-1 col-lg-offset-8">
+	        <h4>Code</h4>
+	    </div>
+	    <div class="col-lg-2">
+	        <div class="row row-bordered" style="height: 38px;">
+	            <div class="col-lg-6"></div>
+	            <div class="col-lg-6"></div>
+	        </div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="col-lg-1"><b>D.1</b></div>
+		<div class="col-lg-11"><b>Project Title:</b><?= $quarterly_financial_progress->project_title ?></div>
+	</div>
+	<div class="row" style="margin-top: 12px;">
+		<div class="col-lg-12"><b>D.2 Contract Implementation:</b></div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th style="vertical-align: top; text-align: center" rowspan="2">Description of contracts<br>(as per tender document)</th>
+					<th style="vertical-align: top; text-align: center" rowspan="2">Contract value</th>
+					<th style="vertical-align: top; text-align: center" rowspan="2">Date of work order/contract agreement</th>
+					<th style="vertical-align: top; text-align: center" rowspan="2">Completion date as per contract</th>
+					<th style="vertical-align: top; text-align: center" colspan="2">Progress</th>
+				</tr>
+				<tr>
+					<th style="vertical-align: top; text-align: center">Amount paid</th>
+					<th style="vertical-align: top; text-align: center">Physical (%)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ( $contract_implementation as $key => $value ) { ?>
+				<tr>
+					<td><?= $value->desc_of_contracts ?></td>
+					<td><?= $value->contract_value ?></td>
+					<td><?= $value->date_of_work_order ?></td>
+					<td><?= $value->completion_date_as_per_contract ?></td>
+					<td><?= $value->amount_paid ?></td>
+					<td><?= $value->physical ?></td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
+	<div class="row" style="margin-top: 12px;">
+		<div class="col-lg-12"><b>D.3 Problems/Reasons for Delay in Contract Implementation (if any):</b></div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th style="vertical-align: top;">SI. No.</th>
+					<th style="vertical-align: top; text-align: center">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php $counter = 1; ?>
+				<?php foreach ($reason_for_delaying as $key => $value) { ?>
+				<tr>
+					<td><?= $counter ?></td>
+					<td><?= $value->delaying_description ?></td>
+				</tr>
+				<?php $counter++; ?>
+				<?php } ?>
+			</tbody>
+		</table>
 	</div>
 </div>

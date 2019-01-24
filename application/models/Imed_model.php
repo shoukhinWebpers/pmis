@@ -131,4 +131,26 @@ class Imed_model extends CI_Model {
 
     }
 
+    public function get_imed_contract_implementation( $id ){
+
+        $this->db->select('*');
+        $this->db->from('imed_contract_implementation');
+        $this->db->where('imed_bi_id', $id);
+
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
+    public function get_reason_for_delaying( $id ){
+
+        $this->db->select('*');
+        $this->db->from('imed_reason_for_delaying');
+        $this->db->where('imed_bi_id', $id);
+
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
 }

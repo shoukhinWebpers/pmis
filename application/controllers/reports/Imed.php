@@ -27,8 +27,10 @@ class Imed extends CI_Controller {
         $data['quarterly_component_wise_progress'] = $this->Imed_model->get_imed_quarterly_component_wise_progress( $id );
         $data['implementation_problems']           = $this->Imed_model->get_imed_implementation_problem( $id );
         $data['suggested_measure']                 = $this->Imed_model->get_imed_suggested_measures( $id );
+        $data['contract_implementation']           = $this->Imed_model->get_imed_contract_implementation( $id );
+        $data['reason_for_delaying']               = $this->Imed_model->get_reason_for_delaying( $id );
 
-        $this->load->view('reports/imed/imed_report_01', $data);
+        $this->load->view( 'reports/imed/imed_report_01', $data );
         return;
 
     }

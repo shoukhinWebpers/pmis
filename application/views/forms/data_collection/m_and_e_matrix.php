@@ -5,104 +5,51 @@
 </div>
 
 <?= form_open('#', 'role="form" method="post"'); ?>
-
-    <h2>Basic Info</h2>
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="form-group">
-                <label for="contractPackageNumber">URP Component and IA</label>
-                <input type="text" class="form-control" id="contractPackageNumber" placeholder="Enter contract package number">
+                <label for="contractPackageNumber">Select a Component</label>
+                <select id="component" class="form-control">
+                    <option value="">Select a component</option>
+                    <option value="1">Component A: Reinforce the country’s Emergency Management Response capacity</option>
+                    <option value="2">Component B: Vulnerability Assessment of Critical and Essential Facilities and Lifeline (Implemented by Rajuk)</option>
+                    <option value="3">Component C: Improved construction, urban planning and development</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="contractDescription">Contract Description</label>
-                <textarea class="form-control" id="contractDescription" rows="3" placeholder="Enter contract description"></textarea>
+                <label for="contractDescription">Select a Sub Component</label>
+                <select id="sub_component" class="form-control">
+                    <option value="">Select a sub component</option>
+                    <option style="display: none" value="1" group="1">A1: Design, build and outfit national- level Disaster Risk Management (DRM) facilities for the Emergency Response and Communication Centre (ERCC) and the National Disaster Management Research and Training Institute (NDMRTI).</option>
+                    <option style="display: none" value="2" group="1">A2: Build, Renovate, and Outfit Local-Level City Corporation and FSCD DRM facilities in Dhaka and Sylhet</option>
+                    <option style="display: none" value="3" group="2">B1: Conduct a vulnerability assessment of critical and essential facilities and lifelines</option>
+                    <option style="display: none" value="4" group="2">B2: Support the development of a Risk Sensitive Land Use Planning (RSLUP) practice in Dhaka</option>
+                    <option style="display: none" value="5" group="3">C1: Create and operationalize the Urban Resilience Unit (URU) in Rajuk to Support DRR Mainstreaming and Improve Dhaka Urban Resilience.</option>
+                    <option style="display: none" value="6" group="3">C2: Establish an Electronic Construction Permitting System</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="unit">Unit</label>
-                <input type="text" class="form-control" id="unit" placeholder="Enter unit">
+                <label for="contractDescription">Select an Output</label>
+                <select id="output" class="form-control">
+                    <option style="display: none" value="">Select an output</option>
+                    <option style="display: none" value="1" group="1">ERCC and NDMRTI Renovated with basic office equipment</option>
+                    <option style="display: none" value="2" group="2">Database of Critical and Essential Facilities developed;</option>
+                    <option style="display: none" value="3" group="2">Structural Vulnerability Assessment surveyed</option>
+                    <option style="display: none" value="4" group="3">URU is created within RAJUK</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="qty">Qty/Nos</label>
-                <input type="text" class="form-control" id="qty" placeholder="Enter the quantity">
-            </div>
-            <div class="form-group">
-                <label for="estimatedPrice">Estimated Price (in lakh Taka) (Actual Contract Price in Contract Currency)</label>
-                <input type="text" class="form-control" id="qty" placeholder="Enter estimated price">
-            </div>
-            <div class="form-group">
-                <label for="procedureMethod">Procedure/Method</label>
-                <input type="text" class="form-control" id="procedureMethod" placeholder="Enter procedure/method">
-            </div>
-            <div class="form-group">
-                <label for="procurementGuideline">Procurement Guideline (PPA/BG)</label>
-                <input type="text" class="form-control" id="procurementGuideline" placeholder="Enter procurement guideline">
-            </div>
-            <div class="form-group">
-                <label for="priorReview2">Prior Review 2 (Yes/No)</label>
-                <input type="text" class="form-control" id="priorReview2" placeholder="Enter prior review">
+                <label for="contractDescription">Select an IRIs</label>
+                <select id="iris" class="form-control">
+                    <option style="display: none" value="">Select an IRI</option>
+                    <option style="display: none" value="1" group="1">DDM facilities renovated (ERCC, NDMRTI)</option>
+                    <option style="display: none" value="2" group="2">Identification of critical and essential facilities and lifelines for Dhaka</option>
+                    <option style="display: none" value="3" group="2">Vulnerability of prioritized critical and essential facilities and lifelines assessed for Dhaka</option>
+                    <option style="display: none" value="4" group="3">RAJUK Urban Resilience Unit facility constructed</option>
+                    <option style="display: none" value="5" group="3">RAJUK Urban Resilience Unit facility equipped with laboratory and field testing equipment</option>
+                </select>
             </div>
         </div>
     </div>
-
-    <h2>Date of Proposal Submission</h2>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="form-group">
-                <label for="plannedDateforDateofBid">Planned Date</label>
-                <input type="text" class="form-control" id="plannedDateforDateofBid" placeholder="Enter planned date">
-            </div>
-            <div class="form-group">
-                <label for="actualDateforDateofBid">Actual Date</label>
-                <input type="text" class="form-control" id="plannedDateforDateofBid" placeholder="Enter actual date">
-            </div>
-        </div>
-    </div>
-
-    <h2>Date of Contract Signing</h2>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="form-group">
-                <label for="plannedDateforDateofContractSigning">Planned Date</label>
-                <input type="text" class="form-control" id="plannedDateforDateofContractSigning" placeholder="Enter planned date">
-            </div>
-            <div class="form-group">
-                <label for="actualDateforDateofContractSigning">Actual Date</label>
-                <input type="text" class="form-control" id="actualDateforDateofContractSigning" placeholder="Enter actual date">
-            </div>
-        </div>
-    </div>
-
-    <h2>Date of Completion</h2>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="form-group">
-                <label for="plannedDateforDateofDelivery">Planned Date</label>
-                <input type="text" class="form-control" id="plannedDateforDateofDelivery" placeholder="Enter planned date">
-            </div>
-            <div class="form-group">
-                <label for="actualDateforDateofDelivery">Actual Date</label>
-                <input type="text" class="form-control" id="actualDateforDateofDelivery" placeholder="Enter actual date">
-            </div>
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="form-group">
-                <label for="nameOfSupplier">Name of Consultant/Firm</label>
-                <input type="text" class="form-control" id="nameOfSupplier" placeholder="Enter name of contractor">
-            </div>
-            <div class="form-group">
-                <label for="progressOfProcurement">Progress of Procurement as of {{ date('d-M-Y') }} [as %]</label>
-                <input type="text" class="form-control" id="progressOfProcurement" placeholder="Enter the progress of procurement">
-            </div>
-            <div class="form-group">
-                <label for="remarks">Remarks</label>
-                <input type="text" class="form-control" id="remarks" placeholder="Remarks">
-            </div>
-        </div>
-    </div>
-
-    <a href="#" class="btn btn-info">Save and Add More Plan&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a>
-    <a href="#" class="btn btn-success">Submit</a>
+    <a href="<?= base_url('mem') ?>" class="btn btn-success">Submit</a>
 <?= form_close(); ?>

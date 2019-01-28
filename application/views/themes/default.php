@@ -411,6 +411,9 @@
 	    	                    <li>
 	    	                        <a href="<?= base_url('check_list_for_structures') ?>">Check list for Structures</a>
 	    	                    </li>
+	    	                    <li>
+	    	                        <a href="<?= base_url('mem_form') ?>">Monitoring and Evaluation Matrix</a>
+	    	                    </li>
 	    	                </ul>
 	    	            </li>
 	    	            <li>

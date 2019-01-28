@@ -19,6 +19,7 @@ class M_and_e_matrix extends CI_Controller {
 	}
 
 	public function index(){
+		$this->load->js( 'assets/js/mem.js' );
 		$this->load->view( 'forms/data_collection/m_and_e_matrix' );
 		return;
 	}

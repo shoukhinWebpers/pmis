@@ -77,6 +77,7 @@ $route['check_list_for_structures']                          = 'data_collection/
 $route['pdoi']                                               = 'reports/results_framework/updated/Project_development_objective_indicators';
 $route['iri']                                                = 'reports/results_framework/updated/Intermediate_results_indicators';
 $route['mem']                                                = 'reports/M_and_e_matrix';
+$route['mem_form']                                           = 'data_collection/M_and_e_matrix';
 $route['progress']                                           = 'reports/KAA_progress_tracking';
 $route['pdo']                                                = 'reports/Consolidate_project_development_object';
 $route['wrf']                                                = 'reports/Wb_results_framework';

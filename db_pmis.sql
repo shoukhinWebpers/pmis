@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2019 at 11:02 AM
+-- Generation Time: Jan 28, 2019 at 02:09 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -50,7 +50,28 @@ INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('liq8ap958c1t4451jlarho20esv20an1', '::1', 1548318597, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383331383539373b),
 ('fv2067javtej57nm75alab6gknlbss2s', '::1', 1548321443, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383332313434333b),
 ('4ll8iokadstol64vlgccu9shih2p909a', '::1', 1548321767, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383332313736373b63726e745f696d65647c693a333b),
-('4cl705qti6ib1j0ondaau0av47i6ta5q', '::1', 1548321859, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383332313736373b);
+('4cl705qti6ib1j0ondaau0av47i6ta5q', '::1', 1548325360, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383332353336303b),
+('072h91eclcks8rs5oni9699ad4ln68go', '::1', 1548325436, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383332353336303b),
+('gc8rjogreo1ue09fdifiqle83kmuv57l', '::1', 1548566820, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383536363832303b),
+('d837brh7bpjf24bij5ruucp6461kdhv4', '::1', 1548568783, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383536383738333b),
+('2rsvu93ocftpvqk7gb0jtqgh7pfred91', '::1', 1548568783, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383536383738333b),
+('oripmdgcggmkfuft476qnkopl6avt21t', '::1', 1548576748, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383537363734313b),
+('7jan6j6h67g662dn9n2eahsi42fdcea9', '::1', 1548587571, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383538373537313b),
+('ahkrmobeinc2qr4gbj2jqle13e78c0hc', '::1', 1548654414, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635343431343b),
+('vme24sgd0haguu135anl57c4leh4vng4', '::1', 1548654414, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635343431343b),
+('fn2k47jj45h82e9gsua493fjo030g9fv', '::1', 1548665088, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636353038383b),
+('njtgc7s3pk6339ad9rn6bf3e30fqs1fm', '::1', 1548665381, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636353038383b),
+('ec250u6kaoqjgr461k6q8db2odb73chi', '::1', 1548677202, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637373230323b),
+('6guuoq6dcqavjbgubl51ar6u5lqfr5hi', '::1', 1548677531, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637373533313b),
+('d5icvefqcvcbe2f6jkohhjeknhfm44ka', '::1', 1548677842, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637373834323b),
+('5n7vitefbjeva554etd1mgd58hpkka1j', '::1', 1548678215, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637383231353b),
+('bfnpl37c68ii419524mmjns57tfvuvei', '::1', 1548678847, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637383834373b),
+('i11012uavop33ak0267p7enu3cvuqnbc', '::1', 1548679249, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637393234393b),
+('hg8nviobk04h31m6rolccotfojmbv73q', '::1', 1548679697, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637393639373b),
+('1gf1116utrqm0v9j66k34pg7ji5b529q', '::1', 1548680018, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383638303031383b),
+('gc7vn7eno4p2nqc28r8rk9k1li4s477e', '::1', 1548680450, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383638303435303b),
+('7fgtk4m1drt1jkr7rj98ffpudruq2572', '::1', 1548680775, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383638303737353b),
+('9rehs0llvh1kulm7kf9hef26qa9b5n7t', '::1', 1548680873, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383638303737353b);
 
 -- --------------------------------------------------------
 
@@ -585,6 +606,178 @@ INSERT INTO `tbl_list_of_ministry` (`id`, `name_of_ministry`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_me_activities_sub_component`
+--
+
+CREATE TABLE `tbl_me_activities_sub_component` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `component_id` bigint(20) UNSIGNED NOT NULL,
+  `activities_name` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_me_activities_sub_component`
+--
+
+INSERT INTO `tbl_me_activities_sub_component` (`id`, `component_id`, `activities_name`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Design, build and outfit national- level Disaster Risk Management (DRM) facilities for the Emergency Response and Communication Centre (ERCC) and the National Disaster Management Research and Training Institute (NDMRTI).', '2019-01-28 09:30:02', NULL),
+(2, 1, 'Build, Renovate, and Outfit Local-Level City Corporation and FSCD DRM facilities in Dhaka and Sylhet', '2019-01-28 09:30:02', NULL),
+(3, 1, 'Supply, Install and Integrate Specialized ICT Equipment for DRM and Emergency response', '2019-01-28 09:30:51', NULL),
+(4, 1, 'Supply Specialized Search and Rescue Equipment to Local-Level Agencies Involved in DRM', '2019-01-28 09:30:51', NULL),
+(5, 1, 'Enhance the emergency management and preparedness capacity of the national-level ERCC and NDMRTI and the local-level city corporations and FSCD in Dhaka and Sylhet through training, exercises and drills.', '2019-01-28 09:31:38', NULL),
+(6, 2, 'Conduct a vulnerability assessment of critical and essential facilities and lifelines', '2019-01-28 09:31:38', NULL),
+(7, 2, 'Support the development of a Risk Sensitive Land Use Planning (RSLUP) practice in Dhaka', '2019-01-28 09:32:28', NULL),
+(8, 3, 'Create and operationalize the Urban Resilience Unit (URU) in Rajuk to Support DRR Mainstreaming and Improve Dhaka Urban Resilience.', '2019-01-28 09:32:28', NULL),
+(9, 3, 'Establish an Electronic Construction Permitting System', '2019-01-28 09:33:02', NULL),
+(10, 3, 'Set Up a Professional Accreditation Program for Engineers, Architects and Planners', '2019-01-28 09:33:02', NULL),
+(11, 3, 'Improve Building Code Enforcement with Rajuk Jurisdiction', '2019-01-28 09:33:42', NULL),
+(12, 4, 'Project Coordination, Monitoring and Evaluation', '2019-01-28 09:33:42', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_me_iris`
+--
+
+CREATE TABLE `tbl_me_iris` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `output_id` bigint(20) UNSIGNED NOT NULL,
+  `iris` char(200) NOT NULL,
+  `baseline` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_me_iris`
+--
+
+INSERT INTO `tbl_me_iris` (`id`, `output_id`, `iris`, `baseline`, `created_at`, `updated_at`) VALUES
+(1, 1, 'DDM facilities renovated (ERCC, NDMRTI)', NULL, '2019-01-28 10:27:13', NULL),
+(2, 2, 'FSCD facilities constructed and/or renovated', NULL, '2019-01-28 10:27:58', NULL),
+(3, 2, 'DNCC/DSCC/SCC facilities constructed and/or renovated', NULL, '2019-01-28 10:27:58', NULL),
+(4, 3, 'DDM/DNCC/DSCC/SCC/FSCD and Satellite Control Room facilities equipped with ECT suites and/or kits', NULL, '2019-01-28 10:29:33', NULL),
+(5, 4, 'FSCD emergency management warehouses equipped with specialized search and rescue equipment', NULL, '2019-01-28 10:29:33', NULL),
+(6, 5, 'Multi-agency training exercises and drills completed', NULL, '2019-01-28 10:31:00', NULL),
+(7, 6, 'Identification of critical and essential facilities and lifelines for Dhaka', NULL, '2019-01-28 10:31:00', NULL),
+(8, 7, 'Vulnerability of prioritized critical and essential facilities and lifelines assessed for Dhaka', NULL, '2019-01-28 10:56:58', NULL),
+(9, 8, 'Indicator not available', NULL, '2019-01-28 10:56:58', NULL),
+(10, 9, 'RAJUK Urban Resilience Unit facility constructed', NULL, '2019-01-28 10:57:54', NULL),
+(11, 9, 'RAJUK Urban Resilience Unit facility equipped with laboratory and field testing equipment', NULL, '2019-01-28 10:57:54', NULL),
+(12, 10, 'E-Permits for construction issued by RAJUK', NULL, '2019-01-28 10:59:46', NULL),
+(13, 11, 'Professional Accreditation Program for Engineers, Architects and Planners established', NULL, '2019-01-28 10:59:46', NULL),
+(14, 12, 'Indicator not available', NULL, '2019-01-28 11:00:30', NULL),
+(15, 13, '# of Monitoring reports produced', NULL, '2019-01-28 11:00:30', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_me_outputs`
+--
+
+CREATE TABLE `tbl_me_outputs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `activity_id` bigint(20) UNSIGNED NOT NULL,
+  `output_name` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_me_outputs`
+--
+
+INSERT INTO `tbl_me_outputs` (`id`, `activity_id`, `output_name`, `created_at`, `updated_at`) VALUES
+(1, 1, 'ERCC and NDMRTI Renovated with basic office equipment', '2019-01-28 09:37:34', NULL),
+(2, 2, '## of warehouses and ## of EOC constructed for FSCD, SCC, DNCC & DSCC', '2019-01-28 09:37:34', NULL),
+(3, 3, 'Full ECT Suites installed, tested and operationalized;', '2019-01-28 09:38:47', NULL),
+(4, 4, 'Specialized search and rescue equipment supplied and operationalized within FSCD, DNCC and DSCC', '2019-01-28 09:38:47', NULL),
+(5, 5, 'Improved emergency response capabilities, preparedness and readiness of govt. institutions and other key stakeholders involved in disaster and emergency management response', '2019-01-28 09:39:14', '2019-01-28 09:40:43'),
+(6, 6, 'Database of Critical and Essential Facilities developed;', '2019-01-28 09:42:33', NULL),
+(7, 6, 'Structural Vulnerability Assessment surveyed', '2019-01-28 09:42:33', NULL),
+(8, 7, 'Internal Guidelines and Processes for RSLUP Developed', '2019-01-28 09:55:28', NULL),
+(9, 8, 'URU is created within RAJUK', '2019-01-28 09:55:28', NULL),
+(10, 9, 'An electronic permitting and monitoring system (e-permit) for construction application is designed, developed and implemented', '2019-01-28 09:56:49', NULL),
+(11, 10, 'A Professional Accreditation Program for Engineers, Architects and Planners is developed based on international best practice', '2019-01-28 09:56:49', NULL),
+(12, 11, 'RAJUK\'s capacity and administrative structure to implement and enforce the BNBC is increased.', '2019-01-28 09:57:41', NULL),
+(13, 12, 'Monitoring reports produced', '2019-01-28 09:57:41', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_me_urp_component_ia`
+--
+
+CREATE TABLE `tbl_me_urp_component_ia` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `component_seq` char(100) NOT NULL,
+  `component_description` char(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_me_urp_component_ia`
+--
+
+INSERT INTO `tbl_me_urp_component_ia` (`id`, `component_seq`, `component_description`, `created_at`, `updated_at`) VALUES
+(1, 'A', 'Reinforce the country’s Emergency Management Response capacity', '2019-01-28 09:03:02', NULL),
+(2, 'B', 'Vulnerability Assessment of Critical and Essential Facilities and Lifeline (Implemented by Rajuk)', '2019-01-28 09:03:02', NULL),
+(3, 'C', 'Improved construction, urban planning and development', '2019-01-28 09:04:16', NULL),
+(4, 'D', 'Project Coordination, Monitoring and Evaluation', '2019-01-28 09:04:16', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_m_and_e_matrix`
+--
+
+CREATE TABLE `tbl_m_and_e_matrix` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `component_id` bigint(20) UNSIGNED NOT NULL,
+  `activity_id` bigint(20) UNSIGNED NOT NULL,
+  `output_id` bigint(20) UNSIGNED NOT NULL,
+  `iris_id` bigint(20) UNSIGNED NOT NULL,
+  `year` year(4) NOT NULL,
+  `q1_physical_progress_target` decimal(60,2) NOT NULL,
+  `q1_physical_progress_actual` decimal(60,2) NOT NULL,
+  `q1_physical_progress_ratio` decimal(60,2) NOT NULL,
+  `q2_physical_progress_target` decimal(60,2) NOT NULL,
+  `q2_physical_progress_actual` decimal(60,2) NOT NULL,
+  `q2_physical_progress_ratio` decimal(60,2) NOT NULL,
+  `q3_physical_progress_target` decimal(60,2) NOT NULL,
+  `q3_physical_progress_actual` decimal(60,2) NOT NULL,
+  `q3_physical_progress_ratio` decimal(60,2) NOT NULL,
+  `q4_physical_progress_target` decimal(60,2) NOT NULL,
+  `q4_physical_progress_actual` decimal(60,2) NOT NULL,
+  `q4_physical_progress_ratio` decimal(60,2) NOT NULL,
+  `completion_date_planned` date NOT NULL,
+  `completion_date_actual` date NOT NULL,
+  `completion_date_time_overdue` int(11) NOT NULL,
+  `fn_progress_q1_planned` decimal(60,2) NOT NULL,
+  `fn_progress_q1_actual` decimal(60,2) NOT NULL,
+  `fn_progress_q1_ratio` int(3) NOT NULL,
+  `fn_progress_q2_planned` decimal(60,2) NOT NULL,
+  `fn_progress_q2_actual` decimal(60,2) NOT NULL,
+  `fn_progress_q2_ratio` int(3) NOT NULL,
+  `fn_progress_q3_planned` decimal(60,2) NOT NULL,
+  `fn_progress_q3_actual` decimal(60,2) NOT NULL,
+  `fn_progress_q3_ratio` int(3) NOT NULL,
+  `fn_progress_q4_planned` decimal(60,2) NOT NULL,
+  `fn_progress_q4_actual` decimal(60,2) NOT NULL,
+  `fn_progress_q4_ratio` int(3) NOT NULL,
+  `physical_progress` decimal(60,2) NOT NULL,
+  `expenditure` decimal(60,2) NOT NULL,
+  `ratio` int(3) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_progress_of_procurements_goods_contracts`
 --
 
@@ -1113,8 +1306,8 @@ ALTER TABLE `tbl_imed_contract_implementation`
 ALTER TABLE `tbl_imed_implementation_problems`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `imed_bi_id` (`imed_bi_id`),
-  ADD KEY `problem_type_id` (`problem_type_id`);
+  ADD KEY `problem_type_id` (`problem_type_id`),
+  ADD KEY `tbl_imed_implementation_problems_ibfk_1` (`imed_bi_id`);
 
 --
 -- Indexes for table `tbl_imed_implementation_problem_type`
@@ -1214,6 +1407,48 @@ ALTER TABLE `tbl_list_of_implementing_agencies`
 ALTER TABLE `tbl_list_of_ministry`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tbl_me_activities_sub_component`
+--
+ALTER TABLE `tbl_me_activities_sub_component`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `component_id` (`component_id`);
+
+--
+-- Indexes for table `tbl_me_iris`
+--
+ALTER TABLE `tbl_me_iris`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `output_id` (`output_id`);
+
+--
+-- Indexes for table `tbl_me_outputs`
+--
+ALTER TABLE `tbl_me_outputs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `activity_id` (`activity_id`);
+
+--
+-- Indexes for table `tbl_me_urp_component_ia`
+--
+ALTER TABLE `tbl_me_urp_component_ia`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tbl_m_and_e_matrix`
+--
+ALTER TABLE `tbl_m_and_e_matrix`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `component_id` (`component_id`),
+  ADD KEY `activity_id` (`activity_id`),
+  ADD KEY `output_id` (`output_id`),
+  ADD KEY `iris_id` (`iris_id`);
 
 --
 -- Indexes for table `tbl_progress_of_procurements_goods_contracts`
@@ -1546,6 +1781,36 @@ ALTER TABLE `tbl_list_of_ministry`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
+-- AUTO_INCREMENT for table `tbl_me_activities_sub_component`
+--
+ALTER TABLE `tbl_me_activities_sub_component`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `tbl_me_iris`
+--
+ALTER TABLE `tbl_me_iris`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `tbl_me_outputs`
+--
+ALTER TABLE `tbl_me_outputs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `tbl_me_urp_component_ia`
+--
+ALTER TABLE `tbl_me_urp_component_ia`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_m_and_e_matrix`
+--
+ALTER TABLE `tbl_m_and_e_matrix`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_goods_contracts`
 --
 ALTER TABLE `tbl_progress_of_procurements_goods_contracts`
@@ -1735,7 +2000,7 @@ ALTER TABLE `tbl_imed_contract_implementation`
 -- Constraints for table `tbl_imed_implementation_problems`
 --
 ALTER TABLE `tbl_imed_implementation_problems`
-  ADD CONSTRAINT `tbl_imed_implementation_problems_ibfk_1` FOREIGN KEY (`imed_bi_id`) REFERENCES `tbl_imed_implementation_problems` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `tbl_imed_implementation_problems_ibfk_1` FOREIGN KEY (`imed_bi_id`) REFERENCES `tbl_imed_basic_info` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `tbl_imed_implementation_problems_ibfk_2` FOREIGN KEY (`problem_type_id`) REFERENCES `tbl_imed_implementation_problem_type` (`id`);
 
 --
@@ -1785,6 +2050,33 @@ ALTER TABLE `tbl_key_agreed_actions_tracking_sub_activities`
 --
 ALTER TABLE `tbl_list_of_division`
   ADD CONSTRAINT `tbl_list_of_division_ibfk_1` FOREIGN KEY (`ministry_id`) REFERENCES `tbl_list_of_ministry` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `tbl_me_activities_sub_component`
+--
+ALTER TABLE `tbl_me_activities_sub_component`
+  ADD CONSTRAINT `tbl_me_activities_sub_component_ibfk_1` FOREIGN KEY (`component_id`) REFERENCES `tbl_me_urp_component_ia` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tbl_me_iris`
+--
+ALTER TABLE `tbl_me_iris`
+  ADD CONSTRAINT `tbl_me_iris_ibfk_1` FOREIGN KEY (`output_id`) REFERENCES `tbl_me_outputs` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tbl_me_outputs`
+--
+ALTER TABLE `tbl_me_outputs`
+  ADD CONSTRAINT `tbl_me_outputs_ibfk_1` FOREIGN KEY (`activity_id`) REFERENCES `tbl_me_activities_sub_component` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tbl_m_and_e_matrix`
+--
+ALTER TABLE `tbl_m_and_e_matrix`
+  ADD CONSTRAINT `tbl_m_and_e_matrix_ibfk_1` FOREIGN KEY (`component_id`) REFERENCES `tbl_me_urp_component_ia` (`id`),
+  ADD CONSTRAINT `tbl_m_and_e_matrix_ibfk_2` FOREIGN KEY (`activity_id`) REFERENCES `tbl_me_activities_sub_component` (`id`),
+  ADD CONSTRAINT `tbl_m_and_e_matrix_ibfk_3` FOREIGN KEY (`output_id`) REFERENCES `tbl_me_outputs` (`id`),
+  ADD CONSTRAINT `tbl_m_and_e_matrix_ibfk_4` FOREIGN KEY (`iris_id`) REFERENCES `tbl_me_iris` (`id`);
 
 --
 -- Constraints for table `tbl_progress_of_procurements_goods_contracts`

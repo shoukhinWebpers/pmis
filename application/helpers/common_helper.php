@@ -36,7 +36,8 @@ if ( ! function_exists('get_ministry_list') )
 
     function create_an_array( $result, $data_field, $blank_field_title ){
 
-    	$data[''] = "Select ".$blank_field_title;
+    	$data['']  = "Select ".$blank_field_title;
+        $data['1'] = "Ministry of Planning.";
     	
     	foreach ($result as $key => $value) {
     		$data[$value->id] = $value->$data_field;

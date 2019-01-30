@@ -338,7 +338,7 @@
 	    	                        <a href="#">Result Framework</a>
 	    	                    </li>
 	    	                    <li>
-	    	                        <a href="<?= base_url('mem') ?>">M&E Matrix</a>
+	    	                        <a href="<?= base_url('mem_form') ?>">M&E Matrix</a>
 	    	                    </li>
 	    	                    <li>
 	    	                        <a href="#">Key Agreed Actions (KAA)<span class="fa arrow"></span></a>

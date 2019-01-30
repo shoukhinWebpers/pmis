@@ -6,7 +6,6 @@
 </div>
 
 <?= form_open( 'imed_02', 'role="form" method="post"' ); ?>
-    <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">

@@ -85,5 +85,6 @@ $route['progress_urp']                                       = 'reports/Progress
 $route['sc_kaa']                                             = 'reports/Summary_of_completion_progress_of_all_sub_activity_of_KAAs';
 $route['expbyagency']                                        = 'reports/Expenditure_by_agencies';
 $route['get_division']                                       = 'forms/Imed/get_division_under_the_ministry';
+$route['get_m_e_component_related_info']                     = 'data_collection/M_and_e_matrix/get_m_and_e_data_related_to_component';
 $route['404_override']                                       = '';
 $route['translate_uri_dashes']                               = FALSE;

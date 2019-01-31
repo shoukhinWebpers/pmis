@@ -25,4 +25,24 @@ class M_and_E_model extends CI_Model {
 
     }
 
+    public function get_output( $id ){
+
+        $this->db->select('*');
+        $this->db->from('me_outputs');
+        $this->db->where('activity_id', $id);
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
+    public function get_iri( $id ){
+
+        $this->db->select('*');
+        $this->db->from('me_iris');
+        $this->db->where('output_id', $id);
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
 }

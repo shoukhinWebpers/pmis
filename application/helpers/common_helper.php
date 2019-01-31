@@ -39,7 +39,7 @@ function get_urp_component(){
     $ci->load->model("M_and_E_model");
     $result = $ci->M_and_E_model->get_urp_component();
 
-    $data['']  = "Select Component";
+    $data['']  = "Select a Component";
     
     foreach ($result as $key => $value) {
         $data[$value->id] = "Component ".$value->component_seq.': '.$value->component_description;

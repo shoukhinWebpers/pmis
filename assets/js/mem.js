@@ -16,78 +16,51 @@ $(document).ready(function(){
         var url     = "http://localhost/pmisV2/get_m_e_component_related_info";
         var workFor = $(this).parent().next(".form-group").children("select").attr("id");
 
-        ajax_csrf_setup();
+        if( cid == "" ){
 
-        $.post(
-            url, 
-            {getId: cid, dataFor: workFor}, 
-            function( result ){
-                $('#'+workFor).remove();
-                $(result).insertAfter( "#sibling_"+workFor );
+        	var index       = $(".related-to-component").index(this);
+        	var indexLength = $(".related-to-component").length;
 
-                $('#'+workFor' option').each(function() {
-                    if( $(this).text().length > 100 ){
-                    	var str     = $(this).text();
-                    	var sub_str = str.slice(0, 80)+".....";
-                    	$(this).text(sub_str);
-                    	$(this).attr("data-toggle","tooltip");
-                    	$(this).attr("title",str);
-                    	$(this).attr("data-placement","left");
-                    }
-                });
-            }
-        );
+        	for( var i = index + 1; i < indexLength; i++ ){
+
+        		var idOfThis         = $('.related-to-component').eq(i-1).attr("id");
+        		var idOfWorkingData  = $('.related-to-component').eq(i).attr("id");
+        		var wordManipulation = idOfThis.split('_');
+        		var manipulatedWord  = '';
+
+        		wordManipulation.forEach(function( item ){
+        			manipulatedWord += item + ' ';
+        		});
+
+        		$('.related-to-component').eq(i).remove();
+        		$('<select id="'+idOfWorkingData+'" class="form-control related-to-component"><option value="">Please select ' + manipulatedWord.trim() + ' first</option></select>').insertAfter( "#sibling_"+idOfWorkingData );
+        	}
+
+        }else{
+        	ajax_csrf_setup();
+
+        	$.post(
+        	    url, 
+        	    {getId: cid, dataFor: workFor}, 
+        	    function( result ){
+        	        $('#'+workFor).remove();
+        	        $(result).insertAfter( "#sibling_"+workFor );
+
+        	        $('#'+workFor+' option').each( function() {
+        	            if( $(this).text().length > 100 ){
+        	            	var str     = $(this).text();
+        	            	var sub_str = str.slice(0, 80)+".....";
+        	            	$(this).text(sub_str);
+        	            	$(this).attr("data-toggle","tooltip");
+        	            	$(this).attr("title",str);
+        	            	$(this).attr("data-placement","left");
+
+        	            }
+        	        });
+        	    }
+        	);
+        }
     });
-
-	$(document).on("change", "#sub_component", function(){
-		var data = $(this).val();
-		var counter = 1;
-		
-		$('#sub_component option').each(function() {
-		    if ( $(this).attr("group") == data ) {
-		        $(this).show();
-		    }else if( data == "" && counter != 1 ){
-		    	$(this).hide();
-		    }else if( counter != 1 ){
-		    	$(this).hide();
-		    }
-		    counter++;
-		});
-	});
-
-	$("#sub_component").change(function(){
-		var data = $("option:selected", this).attr("group");
-
-		var counter = 1;
-
-		$('#output option').each(function() {
-		    if ( $(this).attr("group") == data ) {
-		        $(this).show();
-		    }else if( data == "" && counter != 1 ){
-		    	$(this).hide();
-		    }else if( counter != 1 ){
-		    	$(this).hide();
-		    }
-		    counter++;
-		});
-
-	});
-
-	$("#output").change(function(){
-		var data = $("option:selected", this).attr("group");
-		var counter = 1;
-		
-		$('#iris option').each(function() {
-		    if ( $(this).attr("group") == data ) {
-		        $(this).show();
-		    }else if( data == "" && counter != 1 ){
-		    	$(this).hide();
-		    }else if( counter != 1 ){
-		    	$(this).hide();
-		    }
-		    counter++;
-		});
-	});
 
 	$('[data-toggle="tooltip"]').tooltip();
 

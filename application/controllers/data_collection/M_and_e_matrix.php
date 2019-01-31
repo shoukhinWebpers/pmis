@@ -34,21 +34,50 @@ class M_and_e_matrix extends CI_Controller {
         	$search_id  = $this->input->post( "getId" );
         	$search_for = $this->input->post( "dataFor" );
 
-        	if( $search_id == "" ){
-        		$data[''] = "Please select a component first";
-        	}else{
+        	if( $search_for == "sub_component" ){
 
-        		$result   = $this->M_and_E_model->get_sub_component( $component_id );
+        		$result   = $this->M_and_E_model->get_sub_component( $search_id );
         		$data[''] = "Select a sub component";
         		
-        		foreach ($result as $key => $value) {
+        		foreach ( $result as $key => $value ) {
+
         		    $data[$value->id] = $value->activities_name;
+
         		}
 
-        	}
+        		echo form_dropdown( 'sub_component', $data, '', 'id="sub_component" class="form-control related-to-component"' );        	
+        		return;
 
-        	echo form_dropdown( 'sub_component', $data, '', 'id="sub_component" class="form-control"' );        	
-        	return;
+        	}else if( $search_for == "output" ){
+
+        		$result   = $this->M_and_E_model->get_output( $search_id );
+        		$data[''] = "Select an output";
+        		
+        		foreach ( $result as $key => $value ) {
+
+        		    $data[$value->id] = $value->output_name;
+
+        		}
+
+        		echo form_dropdown( 'output', $data, '', 'id="output" class="form-control related-to-component"' );       	
+        		return;
+
+        	}else if( $search_for == "iris" ){
+
+        		$result = $this->M_and_E_model->get_iri( $search_id );
+
+        		$data[''] = "Select an IRI";
+        		
+        		foreach ( $result as $key => $value ) {
+
+        		    $data[$value->id] = $value->iris;
+
+        		}
+
+        		echo form_dropdown( 'output', $data, '', 'id="iris" class="form-control related-to-component"' );        	
+        		return;
+
+        	}
 
         }
 	}

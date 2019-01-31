@@ -9,23 +9,23 @@
         <div class="panel-body">
             <div class="form-group">
                 <label for="contractPackageNumber">Select a Component</label>
-                <?= form_dropdown( 'component', $component, '','id="component" class="form-control"' ); ?>
+                <?= form_dropdown( 'component', $component, '','id="component" class="form-control related-to-component"' ); ?>
             </div>
             <div class="form-group">
                 <label id="sibling_sub_component" for="contractDescription">Select a Sub Component</label>
-                <select id="sub_component" class="form-control">
+                <select id="sub_component" class="form-control related-to-component">
                     <option value="">Please select a component first</option>
                 </select>
             </div>
             <div class="form-group">
                 <label id="sibling_output" for="contractDescription">Select an Output</label>
-                <select id="output" class="form-control">
+                <select id="output" class="form-control related-to-component">
                     <option value="">Please select a sub component first</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="contractDescription">Select an IRIs</label>
-                <select id="iris" class="form-control">
+                <label id="sibling_iris" for="contractDescription">Select an IRIs</label>
+                <select id="iris" class="form-control related-to-component">
                     <option value="">Please select an output first</option>
                 </select>
             </div>

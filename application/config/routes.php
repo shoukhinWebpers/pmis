@@ -78,6 +78,7 @@ $route['pdoi']                                               = 'reports/results_
 $route['iri']                                                = 'reports/results_framework/updated/Intermediate_results_indicators';
 $route['mem']                                                = 'reports/M_and_e_matrix';
 $route['mem_form']                                           = 'data_collection/M_and_e_matrix';
+$route['m_and_e_submit']                                     = 'data_collection/M_and_e_matrix/me_submit';
 $route['progress']                                           = 'reports/KAA_progress_tracking';
 $route['pdo']                                                = 'reports/Consolidate_project_development_object';
 $route['wrf']                                                = 'reports/Wb_results_framework';

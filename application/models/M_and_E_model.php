@@ -19,7 +19,7 @@ class M_and_E_model extends CI_Model {
 
         $this->db->select('*');
         $this->db->from('me_activities_sub_component');
-        $this->db->where('component_id', $id);
+        $this->db->where( 'component_id', $id );
         $query = $this->db->get();
         return $query->result();
 
@@ -42,6 +42,21 @@ class M_and_E_model extends CI_Model {
         $this->db->where('output_id', $id);
         $query = $this->db->get();
         return $query->result();
+
+    }
+
+    public function insert_data( $tbl_name, $data ){
+
+        if( $this->db->insert( $tbl_name, $data ) ){
+            return $this->db->insert_id();
+        }
+        return FALSE;
+
+    }
+
+    public function get_data( $id ){
+        
+        
 
     }
 

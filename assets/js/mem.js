@@ -13,7 +13,7 @@ $(document).ready(function(){
 	$(document).on("change", "#component, #sub_component, #output", function(){
 		var id      = $(this).attr("id");
         var cid     = $(this).val();
-        var url     = "http://localhost/pmisV2/get_m_e_component_related_info";
+        var url     = base_url+"get_m_e_component_related_info";
         var workFor = $(this).parent().next(".form-group").children("select").attr("id");
 
         if( cid == "" ){

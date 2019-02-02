@@ -1,22 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_and_e_matrix extends CI_Controller {
+class M_and_e_matrix extends MY_Controller {
 
 	function __construct(){
 	    Parent::__construct();
-
 	    $this->load->model("M_and_E_model");
-	    
-	    if( !$this->input->is_ajax_request() ){
-            $this->_init();
-        }
-	}
-
-	private function _init(){
-		$this->load->css( 'assets/css/custom.css' );
-		$this->output->set_template( 'default' );
-		return;
 	}
 
 	public function index(){
@@ -25,6 +14,21 @@ class M_and_e_matrix extends CI_Controller {
 		$this->load->view( 'forms/data_collection/m_and_e_matrix', $data );
 		return;
 	}
+
+    public function me_submit(){
+       
+        $matrix_data = $this->input->post();
+
+        if( $id = $this->M_and_E_model->insert_data( 'm_and_e_matrix', $matrix_data ) ){
+
+            $data['m_and_e']   = $this->M_and_E_model->get_data( $id );
+            $data['component'] = get_urp_component();
+            $this->load->view( 'forms/data_collection/m_and_e_matrix', $data );
+
+        }
+        return;
+
+    }
 
 	public function get_m_and_e_data_related_to_component(){
 		if( !$this->input->is_ajax_request() ){
@@ -45,7 +49,7 @@ class M_and_e_matrix extends CI_Controller {
 
         		}
 
-        		echo form_dropdown( 'sub_component', $data, '', 'id="sub_component" class="form-control related-to-component"' );        	
+        		echo form_dropdown( 'activity_id', $data, '', 'id="sub_component" class="form-control related-to-component"' );        	
         		return;
 
         	}else if( $search_for == "output" ){
@@ -59,7 +63,7 @@ class M_and_e_matrix extends CI_Controller {
 
         		}
 
-        		echo form_dropdown( 'output', $data, '', 'id="output" class="form-control related-to-component"' );       	
+        		echo form_dropdown( 'output_id', $data, '', 'id="output" class="form-control related-to-component"' );       	
         		return;
 
         	}else if( $search_for == "iris" ){
@@ -74,7 +78,7 @@ class M_and_e_matrix extends CI_Controller {
 
         		}
 
-        		echo form_dropdown( 'output', $data, '', 'id="iris" class="form-control related-to-component"' );        	
+        		echo form_dropdown( 'iris_id', $data, '', 'id="iris" class="form-control related-to-component"' );        	
         		return;
 
         	}

@@ -146,8 +146,8 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Target</label>
-                                <input name="fn_progress_q1_planned" class="form-control" placeholder="Target">
+                                <label>Planned</label>
+                                <input name="fn_progress_q1_planned" class="form-control" placeholder="Planned">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -166,8 +166,8 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Target</label>
-                                <input name="fn_progress_q2_planned" class="form-control" placeholder="Target">
+                                <label>Planned</label>
+                                <input name="fn_progress_q2_planned" class="form-control" placeholder="Planned">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -186,8 +186,8 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Target</label>
-                                <input name="fn_progress_q3_planned" class="form-control" placeholder="Target">
+                                <label>Planned</label>
+                                <input name="fn_progress_q3_planned" class="form-control" placeholder="Planned">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -206,8 +206,8 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Target</label>
-                                <input name="fn_progress_q4_planned" class="form-control" placeholder="Target">
+                                <label>Planned</label>
+                                <input name="fn_progress_q4_planned" class="form-control" placeholder="Planned">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -274,4 +274,6 @@
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
+    <a style="margin-left: 100px;" href="#" class="btn btn-info">Save and Add More Component under the Selected Fiscal Year(s)</a>
+    <a style="margin-left: 100px;" href="#" class="btn btn-danger">Cancel</a>
 <?= form_close(); ?>

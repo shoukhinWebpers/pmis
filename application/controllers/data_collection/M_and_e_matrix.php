@@ -30,6 +30,14 @@ class M_and_e_matrix extends MY_Controller {
 
     }
 
+    public function get_m_and_e_data( $tracking_id = 1 ){
+
+        $data['data'] = $this->M_and_E_model->get_m_and_e_data( $tracking_id );
+
+        $this->load->view( 'reports/mem', $data );
+
+    }
+
 	public function get_m_and_e_data_related_to_component(){
 		if( !$this->input->is_ajax_request() ){
             show_404();

@@ -60,3 +60,116 @@ function create_an_array( $result, $data_field, $blank_field_title ){
     return $data;
 
 }
+
+function count_similar_component( $data, $value ){
+
+    $counter = 0;
+
+    $activity_id = '';
+    $output_id   = '';
+    $iris_id     = '';
+
+    for( $i = 0; $i<count($data); $i++ ){
+
+        if( $data[$i]['component_id'] == $value 
+            && ( $data[$i]['activity_id'] != $activity_id 
+                        || $data[$i]['output_id'] != $output_id 
+                        || $data[$i]['iris_id'] != $iris_id ) ){
+
+            $activity_id = $data[$i]['activity_id'];
+            $output_id   = $data[$i]['output_id'];
+            $iris_id     = $data[$i]['iris_id'];
+
+            $counter++;
+
+        }
+
+    }
+
+    return $counter;
+
+}
+
+function get_years( $data ){
+
+    $year = array();
+
+    for ( $i=0; $i < count($data); $i++ ) { 
+
+        if( !in_array( $data[$i]['year'], $year ) ){
+
+            $year[] = $data[$i]['year'];
+
+        }
+
+    }
+
+    sort($year);
+
+    return $year;
+
+}
+
+function get_the_location_of_same_parameters_in_different_year( $data, $component_id, $activity_id, $output_id, $iris_id, $year ){
+
+    $location = NULL;
+
+    for ( $i=0; $i < count($data); $i++ ) {
+
+        if( $data[$i]['component_id'] == $component_id 
+            && $data[$i]['activity_id'] == $activity_id 
+            && $data[$i]['output_id'] == $output_id 
+            && $data[$i]['iris_id'] == $iris_id
+            && $year == $data[$i]['year'] ){
+
+            $location = $i;
+
+            break;
+
+        }
+
+    }
+
+    return $location;
+
+}
+
+function count_iris_under_this_output( $data, $component_id, $output_id ){
+
+    $counter = 0;
+    $iris_id     = '';
+
+    for( $i = 0; $i<count($data); $i++ ){
+
+        if( $data[$i]['component_id'] == $component_id && $data[$i]['output_id'] == $output_id && $data[$i]['iris_id'] != $iris_id ){
+
+            $iris_id = $data[$i]['iris_id'];
+            $counter++;
+
+        }
+
+    }
+
+    return $counter;
+}
+
+function calculate_rowspan_for_this_activity( $data, $component_id, $activity_id ){
+
+    $counter   = 0;
+    $output_id = '';
+
+    for( $i = 0; $i<count($data); $i++ ){
+
+        if( $data[$i]['component_id'] == $component_id && $data[$i]['activity_id'] == $activity_id && $data[$i]['output_id'] != $output_id ){
+
+            $output_id = $data[$i]['output_id'];
+            //each IRIS contains 3 rows
+            $corresponding_iris_generated_row_number = 3*count_iris_under_this_output( $data, $component_id, $output_id );
+            $counter += $corresponding_iris_generated_row_number;
+
+        }
+
+    }
+
+    return $counter;
+}

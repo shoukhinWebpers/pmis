@@ -45,10 +45,38 @@ class M_and_E_model extends CI_Model {
 
     }
 
+    public function get_m_and_e_data( $tracking_id ){
+
+        $this->db->select('*');
+        $this->db->from('m_and_e_matrix a');
+        $this->db->join('me_urp_component_ia b', 'a.component_id = b.id');
+        $this->db->join('me_activities_sub_component c', 'a.activity_id = c.id');
+        $this->db->join('me_outputs d', 'a.output_id = d.id');
+        $this->db->join('me_iris e', 'a.iris_id = e.id');
+        $this->db->where('tracking_id', $tracking_id);
+        $this->db->order_by('a.component_id');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+
     public function insert_data( $tbl_name, $data ){
 
         if( $this->db->insert( $tbl_name, $data ) ){
-            return $this->db->insert_id();
+            
+            $insert_id = $this->db->insert_id();
+
+            $this->db->reset_query();
+
+            if( $this->session->has_userdata('tracking_id') ){
+                $this->db->set( 'tracking_id', $this->session->userdata('tracking_id'), FALSE );
+            }else{
+                $this->db->set( 'tracking_id', $insert_id, FALSE );
+            }
+
+            $this->db->where('id', $insert_id);
+            $this->db->update('mytable');
+
         }
         return FALSE;
 

@@ -96,63 +96,27 @@
                                 $iris_id      = '';
 
                                 for ( $i = 0; $i < count($data); $i++ ) {
+
+                                if( $i == 0 || $component_id != $data[$i]['component_id'] ){
+                                    $component_id      = $data[$i]['component_id'];
+                                    $similar_component = count_similar_component( $data, $component_id );
                                 ?>
                                 <tr component = "<?= $data[$i]['component_seq'] ?>">
-                                    <?php
-                                    if( $component_id != $data[$i]['component_id'] ){
-                                        $component_id      = $data[$i]['component_id'];
-                                        $similar_component = count_similar_component( $data, $component_id );
-                                    ?>
                                     <td rowspan = "<?= 3*$similar_component ?>">
                                         Component <?= $data[$i]['component_seq'] ?>: <?= $data[$i]['component_description'] ?>
                                     </td>
-                                    <?php
-                                    }//End of If
-                                    ?>
-                                    <?php
-                                    if( $component_id == $data[$i]['component_id'] && $activity_id != $data[$i]['activity_id'] ){
-                                        $activity_id                = $data[$i]['activity_id'];
-                                        $rowspan_for_this_activity = calculate_rowspan_for_this_activity( $data, $component_id, $activity_id );
-                                    ?>
-                                    <td rowspan="<?= $rowspan_for_this_activity ?>">
+                                    <td rowspan="3">
                                         <?= $data[$i]['activities_name'] ?>
                                     </td>
-                                    <?php
-                                    }//End of If
-                                    ?>
-                                    <?php
-                                    if( $component_id == $data[$i]['component_id'] 
-                                        && $activity_id == $data[$i]['activity_id'] 
-                                        && $output_id != $data[$i]['output_id'] ){
-
-                                        $output_id              = $data[$i]['output_id'];
-                                        $iris_under_this_output = count_iris_under_this_output( $data, $component_id, $output_id );
-                                    ?>
-                                    <td rowspan="<?= 3*$iris_under_this_output ?>">
+                                    <td rowspan="3">
                                         <?= $data[$i]['output_name'] ?>
                                     </td>
-                                    <?php
-                                    }//End of If
-                                    ?>
-                                    <?php
-                                    if( $component_id == $data[$i]['component_id'] 
-                                        && $activity_id == $data[$i]['activity_id'] 
-                                        && $output_id == $data[$i]['output_id'] 
-                                        && $iris_id != $data[$i]['iris_id'] ){
-                                        
-                                        $iris_id = $data[$i]['iris_id'];
-                                    ?>
                                     <td rowspan="3">
                                         <?= $data[$i]['iris'] ?>
                                     </td>
                                     <td rowspan="3">
                                         <?= ( is_null($data[$i]['baseline']) ) ? "N/A":$data[$i]['baseline'] ?>
                                     </td>
-                                    <?php
-                                    }//End of If
-                                    ?>
-
-                                    <!-- Target Row start -->
                                     <td>Target</td>
                                     <?php
                                     $total_physical_progress = 0;
@@ -186,7 +150,7 @@
                                     <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q3_planned'] ?></td>
                                     <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q4_planned'] ?></td>
                                     <td>
-                                        <?= ( is_null( $location ) ) ? 0: $total_expenditures += $data[$location]['fn_progress_q1_planned'] + $data[$location]['fn_progress_q2_planned'] + $data[$location]['fn_progress_q3_planned'] + $data[$location]['fn_progress_q4_planned'] ?>
+                                        <?= ( is_null($location) ) ? 0: $total_expenditures += $data[$location]['fn_progress_q1_planned'] + $data[$location]['fn_progress_q2_planned'] + $data[$location]['fn_progress_q3_planned'] + $data[$location]['fn_progress_q4_planned'] ?>
                                     </td>
                                     <?php
                                     }
@@ -194,10 +158,10 @@
                                     <td><?= $total_physical_progress ?></td>
                                     <td><?= $total_expenditures ?></td>
                                     <td><?= number_format( ( $total_physical_progress/$total_expenditures )*100, 2 )  ?>%</td>
-                                    <!-- Target Row End -->
                                 </tr>
 
                                 <?php
+                                }//End of If
                                 }//End of for 
                                 ?>
                                 <tr component = "A">

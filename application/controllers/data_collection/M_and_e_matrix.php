@@ -19,18 +19,18 @@ class M_and_e_matrix extends MY_Controller {
        
         $matrix_data = $this->input->post();
 
-        if( $id = $this->M_and_E_model->insert_data( 'm_and_e_matrix', $matrix_data ) ){
+        if( $tracking_id = $this->M_and_E_model->insert_m_and_e_data( $matrix_data ) ){
 
-            $data['m_and_e']   = $this->M_and_E_model->get_data( $id );
-            $data['component'] = get_urp_component();
-            $this->load->view( 'forms/data_collection/m_and_e_matrix', $data );
+            //$data['component'] = get_urp_component();
+
+            redirect('m_and_e_data/'.$tracking_id,'refresh');    
 
         }
         return;
 
     }
 
-    public function get_m_and_e_data( $tracking_id = 1 ){
+    public function get_m_and_e_data( $tracking_id ){
 
         $data['data'] = $this->M_and_E_model->get_m_and_e_data( $tracking_id );
 

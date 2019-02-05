@@ -173,3 +173,11 @@ function calculate_rowspan_for_this_activity( $data, $component_id, $activity_id
 
     return $counter;
 }
+
+function dd( $data ){
+
+    echo "<pre>";
+    print_r($data);
+    return;
+
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2019 at 01:28 PM
+-- Generation Time: Feb 05, 2019 at 01:39 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -154,7 +154,26 @@ INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('hlmva7ocpmd6mqhsc84vrv2b9ne1fess', '::1', 1549273230, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393237333233303b),
 ('qsnusl8iaoc76oj0npuv8mnfojd4fs7t', '::1', 1549273706, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393237333730363b),
 ('9dp81jpvjdt8li1l1iv0c7fcje5cknok', '::1', 1549273829, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393237333730363b),
-('h57bo4fa0vgdgvkbqthoger32l9cvjh6', '::1', 1549283243, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393238333030323b);
+('h57bo4fa0vgdgvkbqthoger32l9cvjh6', '::1', 1549283243, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393238333030323b),
+('43ro1al41tihiva93vo9uph87noreiid', '::1', 1549342895, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393334323839353b),
+('5pevnlm51sar0sn6nk2flta09rdrmqrp', '::1', 1549343530, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393334333533303b),
+('fcnekfl2jtou2hrikbf66m4pvnnghhd6', '::1', 1549344690, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393334343639303b),
+('7v4nm23amb1vtgmqmc07u7j4pr0q4879', '::1', 1549347138, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393334373133383b),
+('a326gm0ia13cbct95o7m3qdb73drkm9d', '::1', 1549347488, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393334373438383b),
+('or686scdvb50j68jt8l4id6g62frl6m0', '::1', 1549354095, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393335343039353b),
+('q5s38qn8gb8vspo60djcdm74t9lls8ro', '::1', 1549355316, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393335353331363b),
+('6knghu6gf962u1nuag6ocvj3dhhoklnu', '::1', 1549361712, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336313731323b),
+('g6548nnvs66f4jdn64urnmqk2bgvhlp3', '::1', 1549362107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336323130373b),
+('rv8ppmqm4qpoimurgs2tnhlu75ea1ih7', '::1', 1549362467, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336323436373b),
+('rrrlv76jamr6hd095hv9aj7j14md0628', '::1', 1549363876, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336333837363b),
+('t47hc78c35e43g1lcfaruti9g99d3n6h', '::1', 1549364217, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336343231373b),
+('5j2k5l2mmmd8nahk1g24hvkppurf173d', '::1', 1549367576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336373537363b),
+('93afanuuiqb3b5oq3mvkighbeuq6ptea', '::1', 1549368090, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336383039303b),
+('egqj1khap42i632n93a0e64vlcl7mdvi', '::1', 1549368642, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336383634323b),
+('c90lie5jiucmbdrs4e4dl13c04mkqufu', '::1', 1549369155, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336393135353b),
+('f28k0d03tp1tqc0l4rcipe8ejnhq9m9c', '::1', 1549369691, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336393639313b),
+('5dpdrdp9bk08jsm4j689oo11narr7ksc', '::1', 1549370059, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393337303035393b),
+('rptofv6l01038mdn0uoiumnguin29383', '::1', 1549370060, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393337303035393b);
 
 -- --------------------------------------------------------
 
@@ -825,26 +844,25 @@ CREATE TABLE `tbl_m_and_e_matrix` (
   `output_id` bigint(20) UNSIGNED NOT NULL,
   `iris_id` bigint(20) UNSIGNED NOT NULL,
   `year` year(4) NOT NULL,
-  `q1_physical_progress_target` decimal(60,2) NOT NULL,
-  `q1_physical_progress_actual` decimal(60,2) NOT NULL,
-  `q2_physical_progress_target` decimal(60,2) NOT NULL,
-  `q2_physical_progress_actual` decimal(60,2) NOT NULL,
-  `q3_physical_progress_target` decimal(60,2) NOT NULL,
-  `q3_physical_progress_actual` decimal(60,2) NOT NULL,
-  `q4_physical_progress_target` decimal(60,2) NOT NULL,
-  `q4_physical_progress_actual` decimal(60,2) NOT NULL,
+  `q1_physical_progress_target` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q1_physical_progress_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q2_physical_progress_target` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q2_physical_progress_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q3_physical_progress_target` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q3_physical_progress_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q4_physical_progress_target` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `q4_physical_progress_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
   `completion_date_planned` date NOT NULL,
   `completion_date_actual` date NOT NULL,
   `completion_date_time_overdue` int(11) NOT NULL,
-  `fn_progress_q1_planned` decimal(60,2) NOT NULL,
-  `fn_progress_q1_actual` decimal(60,2) NOT NULL,
-  `fn_progress_q2_planned` decimal(60,2) NOT NULL,
-  `fn_progress_q2_actual` decimal(60,2) NOT NULL,
-  `fn_progress_q3_planned` decimal(60,2) NOT NULL,
-  `fn_progress_q3_actual` decimal(60,2) NOT NULL,
-  `fn_progress_q4_planned` decimal(60,2) NOT NULL,
-  `fn_progress_q4_actual` decimal(60,2) NOT NULL,
-  `ratio` int(3) NOT NULL,
+  `fn_progress_q1_planned` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q1_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q2_planned` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q2_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q3_planned` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q3_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q4_planned` decimal(60,2) NOT NULL DEFAULT '0.00',
+  `fn_progress_q4_actual` decimal(60,2) NOT NULL DEFAULT '0.00',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -853,9 +871,11 @@ CREATE TABLE `tbl_m_and_e_matrix` (
 -- Dumping data for table `tbl_m_and_e_matrix`
 --
 
-INSERT INTO `tbl_m_and_e_matrix` (`id`, `tracking_id`, `component_id`, `activity_id`, `output_id`, `iris_id`, `year`, `q1_physical_progress_target`, `q1_physical_progress_actual`, `q2_physical_progress_target`, `q2_physical_progress_actual`, `q3_physical_progress_target`, `q3_physical_progress_actual`, `q4_physical_progress_target`, `q4_physical_progress_actual`, `completion_date_planned`, `completion_date_actual`, `completion_date_time_overdue`, `fn_progress_q1_planned`, `fn_progress_q1_actual`, `fn_progress_q2_planned`, `fn_progress_q2_actual`, `fn_progress_q3_planned`, `fn_progress_q3_actual`, `fn_progress_q4_planned`, `fn_progress_q4_actual`, `ratio`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, 1, 1, 2017, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', 0, '2019-02-02 11:09:27', '2019-02-03 08:20:06'),
-(2, 1, 1, 2, 2, 2, 2008, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', 0, '2019-02-02 12:10:09', '2019-02-03 11:33:03');
+INSERT INTO `tbl_m_and_e_matrix` (`id`, `tracking_id`, `component_id`, `activity_id`, `output_id`, `iris_id`, `year`, `q1_physical_progress_target`, `q1_physical_progress_actual`, `q2_physical_progress_target`, `q2_physical_progress_actual`, `q3_physical_progress_target`, `q3_physical_progress_actual`, `q4_physical_progress_target`, `q4_physical_progress_actual`, `completion_date_planned`, `completion_date_actual`, `completion_date_time_overdue`, `fn_progress_q1_planned`, `fn_progress_q1_actual`, `fn_progress_q2_planned`, `fn_progress_q2_actual`, `fn_progress_q3_planned`, `fn_progress_q3_actual`, `fn_progress_q4_planned`, `fn_progress_q4_actual`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 1, 1, 1, 2017, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', '2019-02-02 11:09:27', '2019-02-03 08:20:06'),
+(2, 1, 1, 2, 2, 2, 2008, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', '2019-02-02 12:10:09', '2019-02-03 11:33:03'),
+(3, 3, 2, 6, 6, 7, 2015, '3546.00', '896.00', '231.00', '768.00', '231.00', '897.00', '987.00', '123.00', '2019-10-01', '2019-10-01', 2019, '34.00', '12.00', '90.00', '45.00', '23.00', '45.00', '56.00', '12.00', '2019-02-05 11:55:57', '2019-02-05 11:55:57'),
+(4, 4, 2, 6, 6, 7, 0000, '3546.00', '12.00', '322.00', '23.00', '4644.00', '344.00', '4345.00', '23.00', '2019-10-01', '2019-10-01', 23, '455.00', '12.00', '344.00', '23.00', '454.00', '23.00', '656.00', '45.00', '2019-02-05 12:34:19', '2019-02-05 12:34:19');
 
 -- --------------------------------------------------------
 
@@ -1890,7 +1910,7 @@ ALTER TABLE `tbl_me_urp_component_ia`
 -- AUTO_INCREMENT for table `tbl_m_and_e_matrix`
 --
 ALTER TABLE `tbl_m_and_e_matrix`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_goods_contracts`

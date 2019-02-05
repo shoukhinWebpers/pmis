@@ -60,31 +60,34 @@ class M_and_E_model extends CI_Model {
 
     }
 
-    public function insert_data( $tbl_name, $data ){
+    public function insert_m_and_e_data( $data ){
 
-        if( $this->db->insert( $tbl_name, $data ) ){
+        if( $this->db->insert( "m_and_e_matrix", $data ) ){
             
-            $insert_id = $this->db->insert_id();
+            $insert_id   = $this->db->insert_id();
+            $tracking_id = NULL;
 
             $this->db->reset_query();
 
             if( $this->session->has_userdata('tracking_id') ){
-                $this->db->set( 'tracking_id', $this->session->userdata('tracking_id'), FALSE );
+
+                $this->db->set( 'tracking_id', $this->session->userdata( 'tracking_id' ), FALSE );
+                $tracking_id = $this->session->userdata( 'tracking_id' );
+
             }else{
+
                 $this->db->set( 'tracking_id', $insert_id, FALSE );
+                $tracking_id = $insert_id;
+
             }
 
             $this->db->where('id', $insert_id);
-            $this->db->update('mytable');
+            $this->db->update("m_and_e_matrix");
+
+            return $tracking_id;
 
         }
         return FALSE;
-
-    }
-
-    public function get_data( $id ){
-        
-        
 
     }
 

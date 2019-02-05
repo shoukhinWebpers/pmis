@@ -155,7 +155,10 @@
                                     <!-- Target Row start -->
                                     <td>Target</td>
                                     <?php
-                                    $total_physical_progress = 0;
+
+                                    $total_physical_progress         = 0;
+                                    $total_physical_progress_storage = 0;
+
                                     for( $y=0; $y<count($year); $y++ ){
 
                                         $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
@@ -166,16 +169,20 @@
                                     <td><?= ( is_null( $location ) ) ? '':$data[$location]['q3_physical_progress_target'] ?></td>
                                     <td><?= ( is_null( $location ) ) ? '':$data[$location]['q4_physical_progress_target'] ?></td>
                                     <td>
-                                        <?= ( is_null($location) ) ? 0: $total_physical_progress += $data[$location]['q1_physical_progress_target'] + $data[$location]['q2_physical_progress_target'] + $data[$location]['q3_physical_progress_target'] + $data[$location]['q4_physical_progress_target'] ?>
+                                        <?= ( is_null($location) ) ? 0: $total_physical_progress_storage = $data[$location]['q1_physical_progress_target'] + $data[$location]['q2_physical_progress_target'] + $data[$location]['q3_physical_progress_target'] + $data[$location]['q4_physical_progress_target'] ?>
                                     </td>
                                     <?php
+                                    $total_physical_progress += $total_physical_progress_storage;
                                     }
                                     ?>
                                     <td>Planned</td>
                                     <td><?= $data[$i]['completion_date_planned'] ?></td>
                                     <td>Planned</td>
                                     <?php
-                                    $total_expenditures = 0;
+
+                                    $total_expenditures         = 0;
+                                    $total_expenditures_storage = 0;
+
                                     for( $y=0; $y<count($year); $y++ ){
 
                                         $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
@@ -186,9 +193,10 @@
                                     <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q3_planned'] ?></td>
                                     <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q4_planned'] ?></td>
                                     <td>
-                                        <?= ( is_null( $location ) ) ? 0: $total_expenditures += $data[$location]['fn_progress_q1_planned'] + $data[$location]['fn_progress_q2_planned'] + $data[$location]['fn_progress_q3_planned'] + $data[$location]['fn_progress_q4_planned'] ?>
+                                        <?= ( is_null( $location ) ) ? 0: $total_expenditures_storage = $data[$location]['fn_progress_q1_planned'] + $data[$location]['fn_progress_q2_planned'] + $data[$location]['fn_progress_q3_planned'] + $data[$location]['fn_progress_q4_planned'] ?>
                                     </td>
                                     <?php
+                                    $total_expenditures += $total_expenditures_storage;
                                     }
                                     ?>
                                     <td><?= $total_physical_progress ?></td>
@@ -197,937 +205,205 @@
                                     <!-- Target Row End -->
                                 </tr>
 
+                                <!-- Actual row start -->
+                                <tr component = "<?= $data[$i]['component_seq'] ?>">
+                                    <td>Actual</td>
+                                    <?php
+
+                                    $total_actual_progress         = 0;
+                                    $total_actual_progress_storage = 0;
+
+                                    for( $y=0; $y<count($year); $y++ ){
+
+                                        $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
+                                    ?>
+
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['q1_physical_progress_actual'] ?></td>
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['q2_physical_progress_actual'] ?></td>
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['q3_physical_progress_actual'] ?></td>
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['q4_physical_progress_actual'] ?></td>
+                                    <td>
+                                        <?= ( is_null($location) ) ? 0: $total_actual_progress_storage = $data[$location]['q1_physical_progress_actual'] + $data[$location]['q2_physical_progress_actual'] + $data[$location]['q3_physical_progress_actual'] + $data[$location]['q4_physical_progress_actual'] ?>
+                                    </td>
+                                    <?php
+                                    $total_actual_progress += $total_actual_progress_storage;
+                                    }//End for
+                                    ?>
+                                    <td>Actual</td>
+                                    <td><?= $data[$i]['completion_date_actual'] ?></td>
+                                    <td>Actual</td>
+                                    <?php
+
+                                    $total_actual_expenditures         = 0;
+                                    $total_actual_expenditures_storage = 0;
+
+                                    for( $y=0; $y<count($year); $y++ ){
+
+                                        $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
+                                    ?>
+
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q1_actual'] ?></td>
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q2_actual'] ?></td>
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q3_actual'] ?></td>
+                                    <td><?= ( is_null( $location ) ) ? '':$data[$location]['fn_progress_q4_actual'] ?></td>
+                                    <td>
+                                        <?= ( is_null($location) ) ? 0: $total_actual_expenditures_storage = $data[$location]['fn_progress_q1_actual'] + $data[$location]['fn_progress_q2_actual'] + $data[$location]['fn_progress_q3_actual'] + $data[$location]['fn_progress_q4_actual'] ?>
+                                    </td>
+                                    <?php
+                                    $total_actual_expenditures += $total_actual_expenditures_storage;
+                                    }//End for
+                                    ?>
+
+                                    <td><?= $total_actual_progress ?></td>
+                                    <td><?= $total_actual_expenditures ?></td>
+                                    <td><?= number_format( ( $total_actual_progress/$total_actual_expenditures )*100, 2 )  ?>%</td>
+                                </tr>
+                                <!-- Actual row end -->
+
+                                <!-- Ratio row start -->
+                                <tr component = "<?= $data[$i]['component_seq'] ?>">
+                                    <td>Ratio (%)</td>
+                                    <?php
+
+                                    $total_ratio_progress_of_all_cumulative_year = 0;
+
+                                    for( $y=0; $y<count($year); $y++ ){
+
+                                        $total_ratio_progress_for_a_year = 0;
+                                        $total_ratio_progress_temporary  = 0;
+
+                                        $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
+                                    ?>
+
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q1_physical_progress_actual'] == 0 || $data[$location]['q1_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q1_physical_progress_actual']/$data[$location]['q1_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q2_physical_progress_actual'] == 0 || $data[$location]['q2_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q2_physical_progress_actual']/$data[$location]['q2_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q3_physical_progress_actual'] == 0 || $data[$location]['q3_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q3_physical_progress_actual']/$data[$location]['q3_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q4_physical_progress_actual'] == 0 || $data[$location]['q4_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q4_physical_progress_actual']/$data[$location]['q4_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?= number_format($total_ratio_progress_for_a_year /= 4, 2) ?>%
+                                    </td>
+                                    <?php
+                                    $total_ratio_progress_of_all_cumulative_year += $total_ratio_progress_for_a_year;
+                                    }//End for
+                                    ?>
+                                    <td>Time Overdue</td>
+                                    <td><?= $data[$i]['completion_date_time_overdue'] ?></td>
+                                    <td>Ratio (%)</td>
+                                    <?php
+
+                                    $total_ratio_progress_financial_of_all_cumulative_year = 0;
+
+                                    for( $y=0; $y<count($year); $y++ ){
+
+                                        $total_ratio_progress_for_a_year = 0;
+                                        $total_ratio_progress_temporary  = 0;
+
+                                        $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
+                                    ?>
+
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q1_physical_progress_actual'] == 0 || $data[$location]['q1_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q1_physical_progress_actual']/$data[$location]['q1_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q2_physical_progress_actual'] == 0 || $data[$location]['q2_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q2_physical_progress_actual']/$data[$location]['q2_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q3_physical_progress_actual'] == 0 || $data[$location]['q3_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q3_physical_progress_actual']/$data[$location]['q3_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if( is_null( $location ) || $data[$location]['q4_physical_progress_actual'] == 0 || $data[$location]['q4_physical_progress_target'] == 0 ){
+                                            echo '';
+                                        }else{
+                                            echo $total_ratio_progress_temporary = number_format(( $data[$location]['q4_physical_progress_actual']/$data[$location]['q4_physical_progress_target'] )*(100), 2);
+                                            echo '%';
+                                            $total_ratio_progress_for_a_year += $total_ratio_progress_temporary;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?= number_format($total_ratio_progress_for_a_year /= 4, 2) ?>%
+                                    </td>
+                                    <?php
+                                    $total_ratio_progress_financial_of_all_cumulative_year += $total_ratio_progress_for_a_year;
+                                    }//End for
+                                    ?>
+
+
+                                    <td><?= number_format($total_ratio_progress_of_all_cumulative_year /= count($year), 2) ?>%</td>
+                                    <td><?= number_format($total_ratio_progress_financial_of_all_cumulative_year /= count($year), 2) ?>%</td>
+                                    <td>
+                                        <?= number_format( ( $total_ratio_progress_of_all_cumulative_year+$total_ratio_progress_financial_of_all_cumulative_year )/2, 2 )  ?>%
+                                    </td>
+                                </tr>
+                                <!-- Ratio row end -->
                                 <?php
                                 }//End of for 
-                                ?>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>Time Overdue</td>
-                                    <td>&nbsp;</td>
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td rowspan="3">
-                                        A5: Enhance the emergency management and preparedness capacity of the national-level ERCC and NDMRTI and the local-level city corporations and FSCD in Dhaka and Sylhet through training, exercises and drills.
-                                    </td>
-                                    <td rowspan="3">
-                                        Improved emergency response capabilities, preparedness and readiness of govern-ment institutions and other key stakeholders involved in disaster and emergency management response
-                                    </td>
-                                    <td rowspan="3">
-                                        Multi-agency training exercises and drills completed
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>2</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>12</td>
-                                    <td>Planned</td>
-                                    <td>&nbsp;</td>
-                                    <td>Planned</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>Time Overdue</td>
-                                    <td>&nbsp;</td>
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td rowspan="15">
-                                        Component A: Reinforcing the country's Emergency Management Response Capacity (implemented by DNCC)
-                                    </td>
-                                    <td rowspan="9">
-                                        Activity A2: Build, Renovate and Outfit Local-Level City  Corporation and FSCD DRM facilities
-                                    </td>
-                                    <td rowspan="3">
-                                        A-2.1: Construct-ed &equipped FSCD Fixed Control Rooms;
-                                    </td>
-                                    <td rowspan="3">
-                                        FSCD facilities constructed and/or renovated
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>29</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>31</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td rowspan="3">
-                                        A-2.2: Renovated &equipped Auxiliary Control Rooms for Alpha fire stations
-                                    </td>
-                                    <td rowspan="3">
-                                        DNCC/DSCC/SCC facilities constructed and/or renovated
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>24</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>26</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td rowspan="3">
-                                        A-2.3:  Contracted & equipped new Emergency Management Warehouses within FSCD grounds
-                                    </td>
-                                    <td rowspan="3">&nbsp;</td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td rowspan="3">
-                                        A3: Supply, Install and Integrate Specialized ICT Equipment
-                                    </td>
-                                    <td rowspan="3">
-                                        A3.1: Full ECT  Suites installed, tested and operationalized;
-                                    </td>
-                                    <td rowspan="3">
-                                        DDM/DNCC/DSCC/SCC/FSCD and Satellite Control Room facilities equipped with ECT suites and/or kits
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>53</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>59</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td rowspan="3">
-                                        A4: Supply Specialized Search and Rescue Equipment to Local-Level Agencies Involved in DRM
-                                    </td>
-                                    <td rowspan="3">
-                                        A4.1: Specialized search and rescue equipment supplied and operationalized within FSCD, DNCC and DSCC
-                                    </td>
-                                    <td rowspan="3">
-                                        FSCD emergency management warehouses equipped with specialized search and rescue equipment
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>12</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>12</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "A">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <!-- End component A -->
-                                <tr component = "B">
-                                    <td rowspan="9">
-                                        Component-B: Vulnerability Assessment of Critical and Essential Facilities and Lifeline (Implemented by Rajuk)
-                                    </td>
-                                    <td rowspan="6">
-                                        B1: Conduct a vulnerability assessment of critical and essential facilities and lifelines
-                                    </td>
-                                    <td rowspan="3">
-                                        B1.1: Database of Critical and Essential Facilities developed;
-                                    </td>
-                                    <td rowspan="3">
-                                        Identification of critical and essential facilities and lifelines for Dhaka
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>100</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>100</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td rowspan="3">
-                                        Output B 1.2: Structural Vulnerability Assessment surveyed
-                                    </td>
-                                    <td rowspan="3">
-                                        Vulnerability of prioritized critical and essential facilities and lifelines assessed for Dhaka
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>75</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>100</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td rowspan="3">
-                                        B2: Support the development of a risk sensitive land use planning practice in Dhaka
-                                    </td>
-                                    <td rowspan="3">
-                                        Output B2.2: Internal Guidelines and Processes for RSLUP Developed
-                                    </td>
-                                    <td rowspan="3">
-                                        No Indicator currently
-                                    </td>
-                                    <td rowspan="3">0</td>
-                                    <td>Target</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td>Actual</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr component = "B">
-                                    <td>Ratio (%)</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <!-- End component B -->   
+                                ?>  
                             </tbody>
                         </table>
                     </div>

@@ -414,6 +414,17 @@
 	    	                    <li>
 	    	                        <a href="<?= base_url('mem_form') ?>">Monitoring and Evaluation Matrix</a>
 	    	                    </li>
+	    	                    <li>
+	    	                        <a href="<?= base_url('#') ?>">Result Framework<span class="fa arrow"></span></a>
+	    	                        <ul class="nav nav-third-level">
+	    	                        	<li>
+	    	                        	    <a href="<?= base_url('pdoi_form') ?>">Project Development Objective Indicators</a>
+	    	                        	</li>
+	    	                        	<li>
+	    	                        	    <a href="<?= '#'//base_url('iri') ?>">Intermediate Results Indicators</a>
+	    	                        	</li>
+	    	                        </ul>
+	    	                    </li>
 	    	                </ul>
 	    	            </li>
 	    	            <li>
@@ -426,7 +437,7 @@
 	    	                                <a href="<?= base_url('#') ?>">Updated<span class="fa arrow"></span></a>
 	    	                                <ul class="nav nav-fourth-level">
 	    	                                    <li>
-	    	                                        <a href="<?= '#'//base_url('pdoi') ?>">Project Development Objective Indicators</a>
+	    	                                        <a href="<?= base_url('pdoi') ?>">Project Development Objective Indicators</a>
 	    	                                    </li>
 	    	                                    <li>
 	    	                                        <a href="<?= '#'//base_url('iri') ?>">Intermediate Results Indicators</a>

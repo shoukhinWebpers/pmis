@@ -65,7 +65,7 @@
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label>Comments</label>
-                        <textarea name="comments" rows="4"></textarea>
+                        <textarea class="form-control" name="comments" rows="4"></textarea>
                     </div>
                 </div>
 

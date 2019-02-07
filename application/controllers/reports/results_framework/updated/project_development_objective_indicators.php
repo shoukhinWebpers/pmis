@@ -36,20 +36,18 @@ class Project_development_objective_indicators extends MY_Controller {
 		$data = $this->input->post();
 
 		if( $id = $this->PDOI_model->insert_data( $data ) ){
-
-			echo $id;
-
+			redirect( 'get_pdoi_form_data/'.$id, 'refresh' );
 		}else{
-
 			return FALSE;
-
 		}
 
 	}
 
 	public function get_pdoi_data( $id ){
 
-		
+		$data['data'] = $this->PDOI_model->get_data( $id );
+		$this->load->view( 'reports/pdoi', $data );
 
 	}
+
 }

@@ -18,131 +18,50 @@
                 <div class="row">
                     <div class="col-lg-12 table-responsive">
                         <table id="bootstrap-data-table" class="table table-bordered">
+                            <?php $year = get_years( $data ); ?>
                             <thead>
                                 <tr>
                                     <th rowspan="2">Indicator Name</th>
                                     <th rowspan="2">Unit of Measure</th>
                                     <th rowspan="2">&nbsp;</th>
                                     <th rowspan="2">Baseline</th>
-                                    <th colspan="5" style="text-align: center">Cumulative Target Values</th>
+                                    <th colspan="<?= count( $year ) ?>" style="text-align: center">Cumulative Target Values</th>
                                     <th rowspan="2">Frequency</th>
                                     <th rowspan="2">Data Source/Methodology</th>
                                     <th rowspan="2">Responsible for data collection</th>
                                     <th rowspan="2">Comments</th>
                                 </tr>
                                 <tr>
-                                    <th>YR1</th>
-                                    <th>YR2</th>
-                                    <th>YR3</th>
-                                    <th>YR4</th>
-                                    <th>YR5</th>
+                                    <?php
+                                    for ( $i = 0; $i < count( $year ); $i++ ) {
+                                    ?>
+                                    <th>YR<?= $i + 1 ?> ( <?= $year[$i] ?> )</th>
+                                    <?php
+                                    }
+                                    ?>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php for ( $i = 0; $i < count( $data ); $i++ ) { ?>
                                 <tr>
                                     <td rowspan="2">
-                                        Share of wards with decentralized emergency response services in Dhaka (DNCC/DSCC jurisdiction)<sup>15</sup>
+                                        <?= $data[$i]['indicator_name'] ?>
                                     </td>
-                                    <td rowspan="2">Percentage</td>
+                                    <td rowspan="2"><?= $data[$i]['unit_of_measure'] ?></td>
                                     <td>PAD Targets</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>25</td>
-                                    <td>50</td>
-                                    <td>75</td>
-                                    <td rowspan="2">Annual</td>
-                                    <td rowspan="2">DNCC, DSCC, FSCD/Monitoring Reports</td>
-                                    <td rowspan="2">PCMU and M&E Consultants</td>
-                                    <td rowspan="2">In progress</td>
+                                    <td><?= $data[$i]['baseline'] ?></td>
+                                    <td><?= $data[$i]['pad_target'] ?></td>
+                                    <td rowspan="2"><?= $data[$i]['frequency'] ?></td>
+                                    <td rowspan="2"><?= $data[$i]['data_source_methodology'] ?></td>
+                                    <td rowspan="2"><?= $data[$i]['responsibilities_for_data_collection'] ?></td>
+                                    <td rowspan="2"><?= $data[$i]['comments'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>Actual Achieved</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>25</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td><?= $data[$i]['baseline'] ?></td>
+                                    <td><?= $data[$i]['actual_acheived'] ?></td>
                                 </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        Share of wards with decentralized emergency response services in Sylhet (SCC jurisdiction)<sup>16</sup>
-                                    </td>
-                                    <td rowspan="2">Percentage</td>
-                                    <td>PAD Targets</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>25</td>
-                                    <td>50</td>
-                                    <td>75</td>
-                                    <td rowspan="2">Annual</td>
-                                    <td rowspan="2">SCC, FSCD/Monitoring Reports</td>
-                                    <td rowspan="2">PCMU and M&E Consultants</td>
-                                    <td rowspan="2">In progress</td>
-                                </tr>
-                                <tr>
-                                    <td>Actual Achieved</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        Increased capacity of officials and emergency management response personnel<sup>17</sup>
-                                    </td>
-                                    <td rowspan="2">Composite Scale</td>
-                                    <td>PAD Targets</td>
-                                    <td>N/A</td>
-                                    <td>Baseline</td>
-                                    <td>Baseline</td>
-                                    <td>Baseline + 1</td>
-                                    <td>Baseline + 2</td>
-                                    <td>Baseline + 3</td>
-                                    <td rowspan="2">Annual</td>
-                                    <td rowspan="2">DDM/Based on the training, exercises and drills consultant</td>
-                                    <td rowspan="2">PCMU and M&E Consultants</td>
-                                    <td rowspan="2">In progress</td>
-                                </tr>
-                                <tr>
-                                    <td>Actual Achieved</td>
-                                    <td>N/A</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        Systems established to reduce vulnerability of new buildings in Dhaka and Sylhet<sup>18</sup>
-                                    </td>
-                                    <td rowspan="2">Number</td>
-                                    <td>PAD Targets</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>3</td>
-                                    <td rowspan="2">Annual</td>
-                                    <td rowspan="2">RAJUK, SCC/Monitoring Reports</td>
-                                    <td rowspan="2">PCMU and M&E Consultants</td>
-                                    <td rowspan="2">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td>Actual Achieved</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

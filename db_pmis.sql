@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 05, 2019 at 01:39 PM
+-- Generation Time: Feb 07, 2019 at 01:06 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -173,7 +173,27 @@ INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('c90lie5jiucmbdrs4e4dl13c04mkqufu', '::1', 1549369155, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336393135353b),
 ('f28k0d03tp1tqc0l4rcipe8ejnhq9m9c', '::1', 1549369691, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393336393639313b),
 ('5dpdrdp9bk08jsm4j689oo11narr7ksc', '::1', 1549370059, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393337303035393b),
-('rptofv6l01038mdn0uoiumnguin29383', '::1', 1549370060, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393337303035393b);
+('rptofv6l01038mdn0uoiumnguin29383', '::1', 1549370060, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393337303035393b),
+('jm6iqe6s0qjqqebjkcvltcm09ogcg21q', '::1', 1549435688, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393433353638383b),
+('h9klrsg6fia8m2solebm8t7g66oat1ds', '::1', 1549442448, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434323434383b),
+('jcrnqfrdkpd65cnqutg37i175hb6rd6r', '::1', 1549442768, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434323736383b),
+('icv51gqu3pkasmcetm15spp773cmq7vu', '::1', 1549443273, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434333237333b),
+('aek4mip27rujrrh1oatkpfk6rensr9uv', '::1', 1549443775, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434333737353b),
+('l5ujgsrrdvtk1nachicdro5v2tbdsl8d', '::1', 1549444774, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434343737343b),
+('fqm5ddupl4h16eug65n3jsr3gbheq435', '::1', 1549445086, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434353038363b),
+('l1qj431911b9k3sk74s57vs11n6got2m', '::1', 1549447426, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434373432363b),
+('07n4f0c9i9dpipc9o3e7nk0ano7q70ig', '::1', 1549448244, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434383234343b),
+('mkm6ih1gu09d2nhr1vnddpkb3v7esflv', '::1', 1549450062, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393435303036323b),
+('ob4f4g7u10v1vnong2gncatd4p5edsat', '::1', 1549452134, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393435323133343b),
+('i6uea5hum0kvijge3322qk773joiv7bd', '::1', 1549452504, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393435323530343b),
+('33av45h522mle0ki49881f4irvfphojj', '::1', 1549453343, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393435333334333b),
+('6ut0kdvg94b0fh19jgctc3ihp12tsjv4', '::1', 1549453566, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393435333334333b),
+('0le8vbg24a3qb8s0p326q17tfb1v3f34', '::1', 1549522566, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393532323536363b),
+('pcqashh0951jmr88r7k3d8e7lfqblrbg', '::1', 1549522624, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393532323536363b),
+('kf4gfskf0lpt8shh1hrpvrq407te0a91', '::1', 1549536308, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533363330383b),
+('1na685hhe7l2vu9eciqi6uq8ttj7o2qv', '::1', 1549536852, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533363835323b),
+('ke01mke7g8gt3ndii8pp2euhgpe4tc48', '::1', 1549537634, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533373633343b),
+('igusq9psnpr2g5mplr9jvj39835g4r5a', '::1', 1549537841, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533373633343b);
 
 -- --------------------------------------------------------
 
@@ -935,7 +955,6 @@ CREATE TABLE `tbl_project_development_objective_indicators_name` (
   `frequency` char(255) NOT NULL,
   `data_source_methodology` char(255) NOT NULL,
   `responsibilities_for_data_collection` char(255) NOT NULL,
-  `comments` char(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -944,8 +963,9 @@ CREATE TABLE `tbl_project_development_objective_indicators_name` (
 -- Dumping data for table `tbl_project_development_objective_indicators_name`
 --
 
-INSERT INTO `tbl_project_development_objective_indicators_name` (`id`, `indicator_name`, `baseline`, `frequency`, `data_source_methodology`, `responsibilities_for_data_collection`, `comments`, `created_at`, `updated_at`) VALUES
-(1, 'Share of wards with decentralized emergency response services in Dhaka (DNCC/DSCC jurisdiction)<sup>1</sup>', '0', 'Annual', 'DNCC, DSCC, FSCD/Monitoring Reports', 'PCMU and M&E Consultants', 'In progress', '2019-01-05 09:14:58', NULL);
+INSERT INTO `tbl_project_development_objective_indicators_name` (`id`, `indicator_name`, `baseline`, `frequency`, `data_source_methodology`, `responsibilities_for_data_collection`, `created_at`, `updated_at`) VALUES
+(1, 'Share of wards with decentralized emergency response services in Dhaka (DNCC/DSCC jurisdiction)<sup>1</sup>', '0', 'Annual', 'DNCC, DSCC, FSCD/Monitoring Reports', 'PCMU and M&E Consultants', '2019-01-05 09:14:58', NULL),
+(2, 'share of wards with decentralized emergency response services in Sylhet (SCC jurisdiction)', '0', 'Annual', 'SCC, FSCD/Monitoring Reports', 'PCMU and M&E Consultants', '2019-02-06 08:15:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -982,17 +1002,22 @@ CREATE TABLE `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs` (
   `ind_id` bigint(20) UNSIGNED NOT NULL,
   `measure_id` bigint(20) UNSIGNED NOT NULL,
   `year` year(4) DEFAULT NULL,
-  `q1_pad_target` char(255) NOT NULL,
-  `q2_pad_target` char(255) NOT NULL,
-  `q3_pad_target` char(255) NOT NULL,
-  `q4_pad_target` char(255) NOT NULL,
-  `q1_actual_acheived` char(255) NOT NULL,
-  `q2_actual_acheived` char(255) NOT NULL,
-  `q3_actual_acheived` char(255) NOT NULL,
-  `q4_actual_acheived` char(255) NOT NULL,
+  `pad_target` char(255) NOT NULL,
+  `actual_acheived` char(255) NOT NULL,
+  `comments` tinytext NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
+--
+
+INSERT INTO `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs` (`id`, `ind_id`, `measure_id`, `year`, `pad_target`, `actual_acheived`, `comments`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, 2018, '2342', '23', '', '2019-02-06 11:46:06', NULL),
+(2, 1, 1, 2016, '13', '2', 'N/A', '2019-02-07 08:50:52', NULL),
+(3, 1, 1, 2017, '345', '3', 'N/A', '2019-02-07 09:30:33', NULL),
+(4, 1, 1, 2015, '78', '45', '', '2019-02-07 09:33:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -1597,7 +1622,7 @@ ALTER TABLE `tbl_result_framework_intermediate_result_indicators`
 ALTER TABLE `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `ind_id` (`ind_id`),
+  ADD UNIQUE KEY `unique_index` (`ind_id`,`year`),
   ADD KEY `measure_id` (`measure_id`);
 
 --
@@ -1934,7 +1959,7 @@ ALTER TABLE `tbl_progress_of_procurements_works_contracts`
 -- AUTO_INCREMENT for table `tbl_project_development_objective_indicators_name`
 --
 ALTER TABLE `tbl_project_development_objective_indicators_name`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_result_framework_intermediate_result_indicators`
@@ -1946,7 +1971,7 @@ ALTER TABLE `tbl_result_framework_intermediate_result_indicators`
 -- AUTO_INCREMENT for table `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
 --
 ALTER TABLE `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_svce_description_of_package`

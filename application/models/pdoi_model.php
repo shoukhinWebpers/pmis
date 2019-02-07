@@ -33,9 +33,7 @@ class PDOI_model extends CI_Model {
     public function insert_data( $data ){
 
         if( $this->db->insert( 'rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs', $data ) ){
-
             return $this->db->insert_id();
-
         }
 
         return FALSE;
@@ -48,7 +46,9 @@ class PDOI_model extends CI_Model {
         $this->db->from('rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs a');
         $this->db->join('project_development_objective_indicators_name b', 'a.ind_id = b.id');
         $this->db->join('unit_of_measure c', 'a.measure_id = c.id');
-        $this->db->order_by('b.indicator_name');
+        $this->db->order_by('a.ind_id, a.year');
+
+        $this->db->where('a.id', $id);
 
         $query = $this->db->get();
         return $query->result_array();

@@ -37,7 +37,7 @@
                                     <?php $number_of_year = count($data)  ?>
                                     <th colspan="<?= 5*$number_of_year ?>" style="text-align: center;">Cumulative Physical progress Achieved toward Indicator Targets</th>
                                     <th rowspan="3" colspan="2">Completion Dates</th>
-                                    <th colspan="<?= (5*$number_of_year)+1 ?>" style="text-align: center;">Cumulative Financial Progress</th>
+                                    <th colspan="<?= ( 5 * $number_of_year ) + 1 ?>" style="text-align: center;">Cumulative Financial Progress</th>
                                     <th colspan="3" style="text-align: center;">Physical Progress vs. Actual Expenditures (as % of Planned)</th>
                                 </tr>
                                 <tr>
@@ -90,18 +90,20 @@
                             <tbody>
                                 <?php
 
-                                $component_id = '';
-                                $activity_id  = '';
-                                $output_id    = '';
-                                $iris_id      = '';
+                                $component_id = array();
+                                $activity_id  = array();
+                                $output_id    = array();
+                                $iris_id      = array();
 
                                 for ( $i = 0; $i < count($data); $i++ ) {
                                 ?>
                                 <tr component = "<?= $data[$i]['component_seq'] ?>">
                                     <?php
-                                    if( $component_id != $data[$i]['component_id'] ){
-                                        $component_id      = $data[$i]['component_id'];
-                                        $similar_component = count_similar_component( $data, $component_id );
+                                    if( !in_array( $data[$i]['component_id'], $component_id ) ){
+
+                                        $component_id[]    = $data[$i]['component_id'];
+                                        $similar_component = count_similar_component( $data, $data[$i]['component_id'] );
+
                                     ?>
                                     <td rowspan = "<?= 3*$similar_component ?>">
                                         Component <?= $data[$i]['component_seq'] ?>: <?= $data[$i]['component_description'] ?>
@@ -110,9 +112,9 @@
                                     }//End of If
                                     ?>
                                     <?php
-                                    if( $component_id == $data[$i]['component_id'] && $activity_id != $data[$i]['activity_id'] ){
-                                        $activity_id                = $data[$i]['activity_id'];
-                                        $rowspan_for_this_activity = calculate_rowspan_for_this_activity( $data, $component_id, $activity_id );
+                                    if( in_array( $data[$i]['component_id'], $component_id ) && !in_array( $data[$i]['activity_id'], $activity_id ) ){
+                                        $activity_id[]             = $data[$i]['activity_id'];
+                                        $rowspan_for_this_activity = calculate_rowspan_for_this_activity( $data, $data[$i]['component_id'], $data[$i]['activity_id'] );
                                     ?>
                                     <td rowspan="<?= $rowspan_for_this_activity ?>">
                                         <?= $data[$i]['activities_name'] ?>
@@ -121,12 +123,12 @@
                                     }//End of If
                                     ?>
                                     <?php
-                                    if( $component_id == $data[$i]['component_id'] 
-                                        && $activity_id == $data[$i]['activity_id'] 
-                                        && $output_id != $data[$i]['output_id'] ){
+                                    if( in_array( $data[$i]['component_id'], $component_id ) 
+                                        && in_array( $data[$i]['activity_id'], $activity_id ) 
+                                        && !in_array( $data[$i]['output_id'], $output_id ) ){
 
-                                        $output_id              = $data[$i]['output_id'];
-                                        $iris_under_this_output = count_iris_under_this_output( $data, $component_id, $output_id );
+                                        $output_id[]            = $data[$i]['output_id'];
+                                        $iris_under_this_output = count_iris_under_this_output( $data, $data[$i]['component_id'], $data[$i]['output_id'] );
                                     ?>
                                     <td rowspan="<?= 3*$iris_under_this_output ?>">
                                         <?= $data[$i]['output_name'] ?>
@@ -135,12 +137,12 @@
                                     }//End of If
                                     ?>
                                     <?php
-                                    if( $component_id == $data[$i]['component_id'] 
-                                        && $activity_id == $data[$i]['activity_id'] 
-                                        && $output_id == $data[$i]['output_id'] 
-                                        && $iris_id != $data[$i]['iris_id'] ){
+                                    if( in_array( $data[$i]['component_id'], $component_id ) 
+                                        && in_array( $data[$i]['activity_id'], $activity_id ) 
+                                        && in_array( $data[$i]['output_id'], $output_id ) 
+                                        && !in_array( $data[$i]['iris_id'], $iris_id ) ){
                                         
-                                        $iris_id = $data[$i]['iris_id'];
+                                        $iris_id[] = $data[$i]['iris_id'];
                                     ?>
                                     <td rowspan="3">
                                         <?= $data[$i]['iris'] ?>
@@ -234,7 +236,7 @@
                                     $total_actual_expenditures         = 0;
                                     $total_actual_expenditures_storage = 0;
 
-                                    for( $y=0; $y<count($year); $y++ ){
+                                    for( $y = 0; $y < count($year); $y++ ){
 
                                         $location = get_the_location_of_same_parameters_in_different_year( $data, $data[$i]['component_id'], $data[$i]['activity_id'], $data[$i]['output_id'], $data[$i]['iris_id'], $year[$y] );
                                     ?>

@@ -63,22 +63,21 @@ function create_an_array( $result, $data_field, $blank_field_title ){
 
 function count_similar_component( $data, $value ){
 
-    $counter = 0;
-
-    $activity_id = '';
-    $output_id   = '';
-    $iris_id     = '';
+    $counter     = 0;
+    $activity_id = array();
+    $output_id   = array();
+    $iris_id     = array();
 
     for( $i = 0; $i<count($data); $i++ ){
 
         if( $data[$i]['component_id'] == $value 
-            && ( $data[$i]['activity_id'] != $activity_id 
-                        || $data[$i]['output_id'] != $output_id 
-                        || $data[$i]['iris_id'] != $iris_id ) ){
+            && ( !in_array( $data[$i]['activity_id'], $activity_id )  
+                        || !in_array( $data[$i]['output_id'], $output_id )  
+                        || !in_array( $data[$i]['iris_id'], $iris_id ) ) ){
 
-            $activity_id = $data[$i]['activity_id'];
-            $output_id   = $data[$i]['output_id'];
-            $iris_id     = $data[$i]['iris_id'];
+            $activity_id[] = $data[$i]['activity_id'];
+            $output_id[]   = $data[$i]['output_id'];
+            $iris_id[]     = $data[$i]['iris_id'];
 
             $counter++;
 
@@ -87,7 +86,6 @@ function count_similar_component( $data, $value ){
     }
 
     return $counter;
-
 }
 
 function get_years( $data ){

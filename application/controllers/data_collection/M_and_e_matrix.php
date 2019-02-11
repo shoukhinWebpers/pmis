@@ -4,15 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_and_e_matrix extends MY_Controller {
 
 	function __construct(){
+
 	    Parent::__construct();
 	    $this->load->model("M_and_E_model");
+
 	}
 
 	public function index(){
+
 		$this->load->js( 'assets/js/mem.js' );
 		$data['component'] = get_urp_component();
 		$this->load->view( 'forms/data_collection/m_and_e_matrix', $data );
 		return;
+
 	}
 
     public function me_submit(){
@@ -21,8 +25,6 @@ class M_and_e_matrix extends MY_Controller {
 
         if( $tracking_id = $this->M_and_E_model->insert_m_and_e_data( $matrix_data ) ){
 
-            //$data['component'] = get_urp_component();
-
             redirect('m_and_e_data/'.$tracking_id,'refresh');    
 
         }
@@ -30,17 +32,18 @@ class M_and_e_matrix extends MY_Controller {
 
     }
 
-    public function get_m_and_e_data( $tracking_id ){
+    public function get_m_and_e_data( $tracking_id = NULL ){
 
         $data['data'] = $this->M_and_E_model->get_m_and_e_data( $tracking_id );
-
         $this->load->view( 'reports/mem', $data );
 
     }
 
 	public function get_m_and_e_data_related_to_component(){
 		if( !$this->input->is_ajax_request() ){
+
             show_404();
+
         }else{
 
         	$search_id  = $this->input->post( "getId" );

@@ -17,17 +17,17 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12 table-responsive">
+                        <select class="form-control" name="component" style="width: 147px; margin-bottom: 10px;">
+                            <option value="">Select Component</option>
+                            <option value="A">Component A</option>
+                            <option value="B">Component B</option>
+                            <option value="C">Component C</option>
+                        </select>
                         <table id="bootstrap-data-table" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th rowspan="3">
                                         URP Component and IA
-                                        <select class="form-control" name="component" style="width: 147px;">
-                                            <option value="">Select Component</option>
-                                            <option value="A">Component A</option>
-                                            <option value="B">Component B</option>
-                                            <option value="C">Component C</option>
-                                        </select>
                                     </th>
                                     <th rowspan="3">Activities by Sub-Component</th>
                                     <th rowspan="3">Out-puts</th>
@@ -148,9 +148,6 @@
                                     <td rowspan="3">
                                         <?= ( is_null($data[$i]['baseline']) ) ? "N/A":$data[$i]['baseline'] ?>
                                     </td>
-                                    <?php
-                                    }//End of If
-                                    ?>
 
                                     <!-- Target Row start -->
                                     <td>Target</td>
@@ -403,6 +400,9 @@
                                 <!-- Ratio row end -->
                                 <?php
                                 }//End of for 
+                                ?>
+                                <?php
+                                }//End of If
                                 ?>  
                             </tbody>
                         </table>

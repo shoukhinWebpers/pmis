@@ -53,7 +53,11 @@ class M_and_E_model extends CI_Model {
         $this->db->join('me_activities_sub_component c', 'a.activity_id = c.id');
         $this->db->join('me_outputs d', 'a.output_id = d.id');
         $this->db->join('me_iris e', 'a.iris_id = e.id');
-        $this->db->where('tracking_id', $tracking_id);
+
+        if( !is_null( $tracking_id ) ){
+            $this->db->where('tracking_id', $tracking_id);
+        }
+
         $this->db->order_by('a.component_id');
         $query = $this->db->get();
         return $query->result_array();

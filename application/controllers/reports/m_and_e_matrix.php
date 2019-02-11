@@ -1,25 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_and_e_matrix extends CI_Controller {
+class M_and_e_matrix extends MY_Controller {
 
 	function __construct(){
 	    Parent::__construct();
-	    
-	    $this->_init();
+	    $this->load->model("M_and_E_model");
 	}
 
-	private function _init()
-	{
-		$this->load->js('assets/js/mem.js');
-		$this->output->set_template('default');
-		return;
+	public function index( $tracking_id = NULL ){
 
-	}
-
-	public function index(){
-
-		$this->load->view('reports/mem');
+		$data['data'] = $this->M_and_E_model->get_m_and_e_data( $tracking_id );
+		$this->load->js( 'assets/js/mem.js' );
+		$this->load->view( 'reports/mem', $data );
 		return;
 
 	}

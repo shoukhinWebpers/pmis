@@ -78,6 +78,7 @@ $route['pdoi']                                               = 'reports/results_
 $route['pdoi_form']                                          = 'reports/results_framework/updated/Project_development_objective_indicators/data_collection_form';
 $route['pdoi_form_submit']                                   = 'reports/results_framework/updated/Project_development_objective_indicators/submit_the_form';
 $route['get_pdoi_form_data/(:num)']                          = 'reports/results_framework/updated/Project_development_objective_indicators/get_pdoi_data/$1';
+$route['submit_goods_contract']                              = 'data_collection/Goods_contract/submit_goods_contract';
 $route['iri']                                                = 'reports/results_framework/updated/Intermediate_results_indicators';
 $route['mem']                                                = 'reports/M_and_e_matrix';
 $route['mem_form']                                           = 'data_collection/M_and_e_matrix';

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2019 at 01:06 PM
+-- Generation Time: Feb 12, 2019 at 12:55 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -193,7 +193,37 @@ INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('kf4gfskf0lpt8shh1hrpvrq407te0a91', '::1', 1549536308, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533363330383b),
 ('1na685hhe7l2vu9eciqi6uq8ttj7o2qv', '::1', 1549536852, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533363835323b),
 ('ke01mke7g8gt3ndii8pp2euhgpe4tc48', '::1', 1549537634, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533373633343b),
-('igusq9psnpr2g5mplr9jvj39835g4r5a', '::1', 1549537841, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393533373633343b);
+('igusq9psnpr2g5mplr9jvj39835g4r5a', '::1', 1549541194, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393534313139343b),
+('f5oa77a5iigke76sftjl37blcnl8g5u1', '::1', 1549541495, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393534313439353b),
+('ju9pkft6ul35imvf6pt0ggmkljlu1bt8', '::1', 1549541512, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393534313439353b),
+('j0u8innvm650hna0qsv18kk0ncafv8jf', '::1', 1549783962, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393738333936323b),
+('d95lkkg7huco239r7lmddcp1jfs2a4ve', '::1', 1549791106, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393739313130363b),
+('6j6k9md2uoe1hl6qg3cektvm7ic9lf0k', '::1', 1549792293, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393739323239333b),
+('gsog4lg4h42cc31dg8j2gqilds9u4gjt', '::1', 1549793627, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393739333632373b),
+('08n1j3e1ja72gbui5i51i3hobk4hdngk', '::1', 1549794316, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393739343331363b),
+('rfiuv4tnd8soai3m1oitek01u8i5avfu', '::1', 1549795040, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393739353034303b),
+('tf9fg32hf9dnrcvf0imhfbdojj6iqm43', '::1', 1549795190, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393739353034303b),
+('lpaqlv1464g2k5d5d0lcj0qibi2rved1', '::1', 1549877362, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393837373336323b),
+('bqu7c1b60jglhhu79daocagkl798rkkl', '::1', 1549877879, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393837373837393b),
+('aage2q5qv9fq37ipqaht5go0nmjv8qmn', '::1', 1549878507, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393837383530373b),
+('9fr306rlbg2o5qk6869h0spd18jsbhej', '::1', 1549878936, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393837383933363b),
+('20u6qkk8b8q82f7e4q04rdc9lph7q9v6', '::1', 1549879528, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393837393532383b),
+('muhk3n3ltn318p5m9f28cu3uoi0567pl', '::1', 1549880421, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393838303432313b),
+('bo374656jhof4gqga63hqvipdc98561v', '::1', 1549881594, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393838313539343b),
+('mct1riuk40t2pp5l71o6tdga3e0lknlt', '::1', 1549881987, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393838313938373b),
+('4voarbgmu7orh1erk820hs7a9odv812m', '::1', 1549883374, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393838333337343b),
+('ntep6ejg4lmbjsmbfkd0ihtmaa9opb0d', '::1', 1549883374, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393838333337343b),
+('b5kp1psio6qb8sufe2c062ph432e1ani', '::1', 1549955541, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393935353534313b),
+('7ci22uogl8ikdlafddmp0kjd60jautjk', '::1', 1549959200, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393935393230303b),
+('bkb9vl8gf3dkcscihb8sk5s0efuuj2a7', '::1', 1549960870, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393936303837303b),
+('u43gu7dbkni1jpappe1bdavgcf0skc44', '::1', 1549965592, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393936353539323b),
+('rta7ampt2pleiu9gr5lo4fngscegr7sv', '::1', 1549967814, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393936373831343b),
+('j1kr5hdurkoc4tpes5n9d71fpcvqvnlg', '::1', 1549968485, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393936383438353b),
+('8acuv20a1p0a56c0mfujm356vjs1a6em', '::1', 1549969998, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393936393939383b),
+('3097460in7blvoos3s6dsar1v890js6u', '::1', 1549970524, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937303532343b),
+('gd2khufqkbtvlb7nj9in51c533a43pl0', '::1', 1549971253, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937313235333b),
+('h7cq8ihqts7bk6itfjns33d5i72mhudo', '::1', 1549972222, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937323232323b),
+('st04l09npoa4fs55b7lvkc64703vhi9m', '::1', 1549972443, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937323232323b);
 
 -- --------------------------------------------------------
 
@@ -235,8 +265,9 @@ CREATE TABLE `tbl_data_collection_for_goods_contracts` (
   `contract_package_number` varchar(100) NOT NULL,
   `contract_description` text NOT NULL,
   `unit` int(11) NOT NULL,
-  `qty/nos` int(11) NOT NULL,
+  `qty_nos` int(11) NOT NULL,
   `estimated_price` decimal(60,2) NOT NULL,
+  `actual_contract_amount` decimal(60,2) NOT NULL,
   `procedure_method` text NOT NULL,
   `procurement_guideline` text NOT NULL,
   `prior_review` tinyint(1) NOT NULL,
@@ -251,6 +282,13 @@ CREATE TABLE `tbl_data_collection_for_goods_contracts` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_data_collection_for_goods_contracts`
+--
+
+INSERT INTO `tbl_data_collection_for_goods_contracts` (`id`, `activity_id`, `contract_package_number`, `contract_description`, `unit`, `qty_nos`, `estimated_price`, `actual_contract_amount`, `procedure_method`, `procurement_guideline`, `prior_review`, `date_of_bid_opening_planned_date`, `date_of_bid_opening_actual_date`, `date_of_contract_signing_planned_date`, `date_of_contract_signing_actual_date`, `date_of_delivery_planned_date`, `date_of_delivery_actual_date`, `name_of_supplier`, `remarks`, `created_at`, `updated_at`) VALUES
+(1, 1, '324234', 'Contract Description', 12, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-10', 'Name of supplier', 'Short Note', '2019-02-12 11:54:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -597,6 +635,13 @@ CREATE TABLE `tbl_key_agreed_actions_tracking_activities` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `tbl_key_agreed_actions_tracking_activities`
+--
+
+INSERT INTO `tbl_key_agreed_actions_tracking_activities` (`id`, `form_prefix`, `form_code`, `kaa_code`, `activity_description`, `agency`, `has_sub_activity`, `planned_due_date`, `actual_completion_date`, `compliance_status_pcmu`, `evidence_provided_to_verfiy_compliance`, `reasons_for_non_complinace_me_team`, `verified_by_me_team`, `expected_completion_date`, `created_at`, `updated_at`) VALUES
+(1, 'K', '123', '456', 'N/A', 5, 0, '2019-02-12', '2019-02-12', 'w', 'a', 'z', 'b', '2019-02-12', '2019-02-12 07:14:09', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -895,7 +940,8 @@ INSERT INTO `tbl_m_and_e_matrix` (`id`, `tracking_id`, `component_id`, `activity
 (1, 1, 1, 1, 1, 1, 2017, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', '2019-02-02 11:09:27', '2019-02-03 08:20:06'),
 (2, 1, 1, 2, 2, 2, 2008, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', '2019-02-02 12:10:09', '2019-02-03 11:33:03'),
 (3, 3, 2, 6, 6, 7, 2015, '3546.00', '896.00', '231.00', '768.00', '231.00', '897.00', '987.00', '123.00', '2019-10-01', '2019-10-01', 2019, '34.00', '12.00', '90.00', '45.00', '23.00', '45.00', '56.00', '12.00', '2019-02-05 11:55:57', '2019-02-05 11:55:57'),
-(4, 4, 2, 6, 6, 7, 0000, '3546.00', '12.00', '322.00', '23.00', '4644.00', '344.00', '4345.00', '23.00', '2019-10-01', '2019-10-01', 23, '455.00', '12.00', '344.00', '23.00', '454.00', '23.00', '656.00', '45.00', '2019-02-05 12:34:19', '2019-02-05 12:34:19');
+(4, 4, 2, 6, 6, 7, 2009, '3546.00', '12.00', '322.00', '23.00', '4644.00', '344.00', '4345.00', '23.00', '2019-10-01', '2019-10-01', 23, '455.00', '12.00', '344.00', '23.00', '454.00', '23.00', '656.00', '45.00', '2019-02-05 12:34:19', '2019-02-10 09:00:54'),
+(5, 1, 1, 1, 1, 1, 2018, '12.00', '12.00', '34.00', '34.00', '56.00', '56.00', '78.00', '78.00', '2019-10-01', '2019-10-01', 2019, '90.00', '90.00', '89.00', '89.00', '78.00', '78.00', '56.00', '56.00', '2019-02-02 11:09:27', '2019-02-03 08:20:06');
 
 -- --------------------------------------------------------
 
@@ -907,10 +953,20 @@ CREATE TABLE `tbl_progress_of_procurements_goods_contracts` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `contract_id` bigint(20) UNSIGNED NOT NULL,
   `progress_of_procurement` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
-  `date` date NOT NULL,
+  `expenditure_contractor` decimal(60,2) NOT NULL,
+  `expenditure_vat_tax` decimal(60,2) NOT NULL,
+  `exp_date` date NOT NULL,
+  `prgrss_date` date NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_progress_of_procurements_goods_contracts`
+--
+
+INSERT INTO `tbl_progress_of_procurements_goods_contracts` (`id`, `contract_id`, `progress_of_procurement`, `expenditure_contractor`, `expenditure_vat_tax`, `exp_date`, `prgrss_date`, `created_at`, `updated_at`) VALUES
+(1, 1, 23, '2342424.00', '2342423423.00', '2019-02-12', '2019-02-12', '2019-02-12 11:54:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -1017,7 +1073,9 @@ INSERT INTO `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs` (`id`, `ind_id`, `mea
 (1, 1, 3, 2018, '2342', '23', '', '2019-02-06 11:46:06', NULL),
 (2, 1, 1, 2016, '13', '2', 'N/A', '2019-02-07 08:50:52', NULL),
 (3, 1, 1, 2017, '345', '3', 'N/A', '2019-02-07 09:30:33', NULL),
-(4, 1, 1, 2015, '78', '45', '', '2019-02-07 09:33:39', NULL);
+(4, 1, 1, 2015, '78', '45', '', '2019-02-07 09:33:39', NULL),
+(5, 1, 3, 2008, '2342', '23', 'N/A', '2019-02-07 12:07:47', NULL),
+(6, 2, 1, 2015, '2342', '23', '', '2019-02-07 12:08:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -1803,7 +1861,7 @@ ALTER TABLE `tbl_data_collection_for_consultancy_services_contracts`
 -- AUTO_INCREMENT for table `tbl_data_collection_for_goods_contracts`
 --
 ALTER TABLE `tbl_data_collection_for_goods_contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_data_collection_for_works_contracts`
@@ -1881,7 +1939,7 @@ ALTER TABLE `tbl_intermediate_result_indicators_name`
 -- AUTO_INCREMENT for table `tbl_key_agreed_actions_tracking_activities`
 --
 ALTER TABLE `tbl_key_agreed_actions_tracking_activities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_key_agreed_actions_tracking_sub_activities`
@@ -1935,13 +1993,13 @@ ALTER TABLE `tbl_me_urp_component_ia`
 -- AUTO_INCREMENT for table `tbl_m_and_e_matrix`
 --
 ALTER TABLE `tbl_m_and_e_matrix`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_goods_contracts`
 --
 ALTER TABLE `tbl_progress_of_procurements_goods_contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_services_contracts`
@@ -1971,7 +2029,7 @@ ALTER TABLE `tbl_result_framework_intermediate_result_indicators`
 -- AUTO_INCREMENT for table `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
 --
 ALTER TABLE `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_svce_description_of_package`

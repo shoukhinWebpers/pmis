@@ -1,19 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Goods_contract extends CI_Controller {
+class Goods_contract extends MY_Controller {
 
     function __construct(){
         Parent::__construct();
-        
-        $this->_init();
-    }
-
-    private function _init()
-    {
-        $this->load->css('assets/css/custom.css');
-        $this->output->set_template('default');
-        return;
+        $this->load->model("Goods_contract_model");
     }
 
     public function index(){
@@ -22,4 +14,35 @@ class Goods_contract extends CI_Controller {
         return;
 
     }
+
+    public function submit_goods_contract(){
+
+        $data_for_goods_contract                           = $this->input->post();
+        $data_for_progress_of_procurements_goods_contracts = array();
+
+        foreach ( $data_for_goods_contract as $key => $value ) {
+
+            if( $key == "progress_of_procurement" || $key == "expenditure_contractor" 
+                || $key == "expenditure_vat_tax" || $key == "exp_date" || $key == "prgrss_date" ){
+
+                $data_for_progress_of_procurements_goods_contracts[$key] = $value;
+                unset( $data_for_goods_contract[$key] );
+
+            }
+
+        }
+
+        $data_for_goods_contract['activity_id'] = 1;
+
+        if( $id = $this->Goods_contract_model->insert_data_to_data_collection_for_goods_contracts( $data_for_goods_contract ) ){
+
+            $data_for_progress_of_procurements_goods_contracts['contract_id'] = $id;
+
+            $this->Goods_contract_model->insert_data_to_progress_of_procurements_goods_contracts( $data_for_progress_of_procurements_goods_contracts );
+
+        }
+
+
+    }
+
 }

@@ -130,7 +130,7 @@
                                         $output_id[]            = $data[$i]['output_id'];
                                         $iris_under_this_output = count_iris_under_this_output( $data, $data[$i]['component_id'], $data[$i]['output_id'] );
                                     ?>
-                                    <td rowspan="<?= 3*$iris_under_this_output ?>">
+                                    <td rowspan="<?= 3 * $iris_under_this_output ?>">
                                         <?= $data[$i]['output_name'] ?>
                                     </td>
                                     <?php

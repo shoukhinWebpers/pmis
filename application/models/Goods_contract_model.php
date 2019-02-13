@@ -28,4 +28,16 @@ class Goods_contract_model extends CI_Model {
 
     }
 
+    public function get_data_goods_contract( $id ){
+
+        $this->db->select('*');
+        $this->db->from('data_collection_for_goods_contracts a');
+        $this->db->join('progress_of_procurements_goods_contracts b', 'a.id = b.contract_id');
+        $this->db->where('a.id', $id);
+
+        $query = $this->db->get();
+        return $query->row();
+
+    }
+
 }

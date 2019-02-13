@@ -136,5 +136,5 @@
         </div>
     </div>
     <button type="submit" class="btn btn-info">Save and Add More Plan&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></button>
-    <a href="#" class="btn btn-success">Submit</a>
+    <button type="submit" class="btn btn-success">Submit</button>
 <?= form_close(); ?>

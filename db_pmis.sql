@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2019 at 12:55 PM
+-- Generation Time: Feb 13, 2019 at 01:50 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -223,7 +223,15 @@ INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('3097460in7blvoos3s6dsar1v890js6u', '::1', 1549970524, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937303532343b),
 ('gd2khufqkbtvlb7nj9in51c533a43pl0', '::1', 1549971253, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937313235333b),
 ('h7cq8ihqts7bk6itfjns33d5i72mhudo', '::1', 1549972222, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937323232323b),
-('st04l09npoa4fs55b7lvkc64703vhi9m', '::1', 1549972443, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937323232323b);
+('st04l09npoa4fs55b7lvkc64703vhi9m', '::1', 1549972443, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393937323232323b),
+('84eqafljsijmjfvq428qkkgvogmm3vrv', '::1', 1550043001, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303034323930313b),
+('uinr5d3po3hv1jaguebbr9le4q4avj59', '::1', 1550052643, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303035323634333b),
+('a2stu6fs2guphaitcirs2jgmld838fmd', '::1', 1550053613, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303035333631333b),
+('lei7t0bl0t285e1ni8m8q4u8beavhouh', '::1', 1550058789, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303035383738393b),
+('0p8nsfg6sm113nndprianakd9jog4vvu', '::1', 1550059177, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303035393137373b),
+('4aa9tevjeuvsrsgkhoud46mg3b3bfbui', '::1', 1550060245, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303036303234353b),
+('0609q4dhr995qkt6qmf03hjlubdk23jo', '::1', 1550061987, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303036313938373b),
+('44mog8a9ghcpsjfln2flm23030ouadq4', '::1', 1550061987, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535303036313938373b);
 
 -- --------------------------------------------------------
 
@@ -288,7 +296,8 @@ CREATE TABLE `tbl_data_collection_for_goods_contracts` (
 --
 
 INSERT INTO `tbl_data_collection_for_goods_contracts` (`id`, `activity_id`, `contract_package_number`, `contract_description`, `unit`, `qty_nos`, `estimated_price`, `actual_contract_amount`, `procedure_method`, `procurement_guideline`, `prior_review`, `date_of_bid_opening_planned_date`, `date_of_bid_opening_actual_date`, `date_of_contract_signing_planned_date`, `date_of_contract_signing_actual_date`, `date_of_delivery_planned_date`, `date_of_delivery_actual_date`, `name_of_supplier`, `remarks`, `created_at`, `updated_at`) VALUES
-(1, 1, '324234', 'Contract Description', 12, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-10', 'Name of supplier', 'Short Note', '2019-02-12 11:54:03', NULL);
+(1, 1, '324234', 'Contract Description', 12, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-10', 'Name of supplier', 'Short Note', '2019-02-12 11:54:03', NULL),
+(2, 1, '324234', 'Contract Description', 0, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-11', '2019-02-13', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-07', 'Name of supplier', 'Short Note', '2019-02-13 12:20:30', NULL);
 
 -- --------------------------------------------------------
 
@@ -966,7 +975,8 @@ CREATE TABLE `tbl_progress_of_procurements_goods_contracts` (
 --
 
 INSERT INTO `tbl_progress_of_procurements_goods_contracts` (`id`, `contract_id`, `progress_of_procurement`, `expenditure_contractor`, `expenditure_vat_tax`, `exp_date`, `prgrss_date`, `created_at`, `updated_at`) VALUES
-(1, 1, 23, '2342424.00', '2342423423.00', '2019-02-12', '2019-02-12', '2019-02-12 11:54:03', NULL);
+(1, 1, 23, '2342424.00', '2342423423.00', '2019-02-12', '2019-02-12', '2019-02-12 11:54:03', NULL),
+(2, 2, 23, '2342424.00', '2342423423.00', '2019-02-13', '2019-02-13', '2019-02-13 12:20:30', NULL);
 
 -- --------------------------------------------------------
 
@@ -1861,7 +1871,7 @@ ALTER TABLE `tbl_data_collection_for_consultancy_services_contracts`
 -- AUTO_INCREMENT for table `tbl_data_collection_for_goods_contracts`
 --
 ALTER TABLE `tbl_data_collection_for_goods_contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_data_collection_for_works_contracts`
@@ -1999,7 +2009,7 @@ ALTER TABLE `tbl_m_and_e_matrix`
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_goods_contracts`
 --
 ALTER TABLE `tbl_progress_of_procurements_goods_contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_services_contracts`

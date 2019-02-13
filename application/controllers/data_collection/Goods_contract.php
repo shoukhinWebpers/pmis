@@ -23,7 +23,8 @@ class Goods_contract extends MY_Controller {
         foreach ( $data_for_goods_contract as $key => $value ) {
 
             if( $key == "progress_of_procurement" || $key == "expenditure_contractor" 
-                || $key == "expenditure_vat_tax" || $key == "exp_date" || $key == "prgrss_date" ){
+                 || $key == "expenditure_vat_tax" || $key == "exp_date" 
+                 || $key == "prgrss_date" ){
 
                 $data_for_progress_of_procurements_goods_contracts[$key] = $value;
                 unset( $data_for_goods_contract[$key] );
@@ -37,11 +38,11 @@ class Goods_contract extends MY_Controller {
         if( $id = $this->Goods_contract_model->insert_data_to_data_collection_for_goods_contracts( $data_for_goods_contract ) ){
 
             $data_for_progress_of_procurements_goods_contracts['contract_id'] = $id;
-
             $this->Goods_contract_model->insert_data_to_progress_of_procurements_goods_contracts( $data_for_progress_of_procurements_goods_contracts );
 
         }
 
+        redirect('goods_contract_report/'.$id,'refresh');
 
     }
 

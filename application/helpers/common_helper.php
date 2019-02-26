@@ -172,7 +172,21 @@ function calculate_rowspan_for_this_activity( $data, $component_id, $activity_id
     return $counter;
 }
 
-function dd( $data ){
+function convert_numeric_to_bangla($year){
+    $data = array('০','১','২','৩','৪','৫','৬','৭','৮','৯');
+    $year = str_split($year);
+    $numericBangla = "";
+    foreach ($year as $value) {
+        if( $value !== null && !is_numeric( $value ) ) {
+            $numericBangla .= $value;
+        }else{
+            $numericBangla .= $data[$value];
+        }
+    }
+    return $numericBangla;
+}
+
+function dd( $data ){// for testing purpose function
 
     echo "<pre>";
     print_r($data);

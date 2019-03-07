@@ -12,6 +12,8 @@ class Consultancy_services_contract extends CI_Controller {
 	private function _init()
 	{
 		$this->load->css('assets/css/custom.css');
+		$this->load->css('assets/css/confirmBox.css');
+		$this->load->js('assets/js/app.js');
 		$this->output->set_template('default');
 		return;
 	}

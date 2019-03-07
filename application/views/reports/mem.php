@@ -17,12 +17,48 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12 table-responsive">
-                        <select class="form-control" name="component" style="width: 147px; margin-bottom: 10px;">
-                            <option value="">Select Component</option>
-                            <option value="A">Component A</option>
-                            <option value="B">Component B</option>
-                            <option value="C">Component C</option>
-                        </select>
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-3">
+                                <select class="form-control" name="component" style="width: 147px; margin-bottom: 10px;">
+                                    <option value="">Select Component</option>
+                                    <option value="A">Component A</option>
+                                    <option value="B">Component B</option>
+                                    <option value="C">Component C</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <select class="form-control" id="sub-component-list" name="component" style="width: 147px; margin-bottom: 10px;">
+                                    <option value="">Select Component</option>
+                                    <option value="A">Component A</option>
+                                    <option value="B">Component B</option>
+                                    <option value="C">Component C</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <select id="year-list" class="form-control" name="component" style="width: 147px; margin-bottom: 10px;">
+                                    <option value="">Select Component</option>
+                                    <option value="A">Component A</option>
+                                    <option value="B">Component B</option>
+                                    <option value="C">Component C</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <select class="form-control" name="component" style="width: 147px; margin-bottom: 10px;">
+                                    <option value="">Select Quarterly</option>
+                                    <option value="Q1">Q1</option>
+                                    <option value="Q2">Q2</option>
+                                    <option value="Q3">Q3</option>
+                                    <option value="Q4">Q4</option>
+                                </select>
+                            </div>
+
+                        </div>
+
                         <table id="bootstrap-data-table" class="table table-bordered">
                             <thead>
                                 <tr>

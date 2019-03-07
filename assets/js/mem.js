@@ -1,6 +1,11 @@
 $(document).ready(function(){
 
 	$("select").change(function(){
+
+        if($(this).attr("id")==="sub-component-list" || $(this).attr("id")==="year-list"){
+            return;
+        }
+
 		var data = $(this).val();
 		if( data == '' ){
 			$('tbody tr').show();
@@ -8,6 +13,7 @@ $(document).ready(function(){
 			$('tbody tr').hide();
 			$('tbody tr[component="'+data+'"]').show();
 		}
+        
 	});
 
 	$(document).on("change", "#component, #sub_component, #output", function(){

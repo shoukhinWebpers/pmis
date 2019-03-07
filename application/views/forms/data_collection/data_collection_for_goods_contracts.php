@@ -1,5 +1,3 @@
-<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-
 <div class="row">
     <div class="col-lg-12">
         <h2 class="page-header">Data collection for Goods Contracts</h2>
@@ -136,5 +134,5 @@
         </div>
     </div>
     <button type="submit" class="btn btn-info">Save and Add More Plan&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></button>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <a href="#" class="btn btn-success submit-confirmation">Submit</a>
 <?= form_close(); ?>

@@ -4,8 +4,7 @@
     </div>
     <!-- /.col-lg-12 -->
 </div>
-<form action="#" role="form" method="post">
-	{{ csrf_field() }}
+<?= form_open('#', 'role="form" method="post"'); ?>
     <h2>Basic Info</h2>
     <div class="panel panel-default">
         <div class="panel-body">
@@ -99,5 +98,5 @@
         </div>
     </div>
     <a href="#" class="btn btn-info">Save and Add More Plan&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a>
-    <a href="#" class="btn btn-success">Submit</a>
-</form>
+    <a href="#" class="btn btn-success submit-confirmation">Submit</a>
+<?= form_close(); ?>

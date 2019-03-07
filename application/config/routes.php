@@ -97,4 +97,5 @@ $route['expbyagency']                                        = 'reports/Expendit
 $route['get_division']                                       = 'forms/Imed/get_division_under_the_ministry';
 $route['get_m_e_component_related_info']                     = 'data_collection/M_and_e_matrix/get_m_and_e_data_related_to_component';
 $route['404_override']                                       = '';
+$route['imedreportlist']                                     ='reports/imed/allImedRepports';
 $route['translate_uri_dashes']                               = FALSE;

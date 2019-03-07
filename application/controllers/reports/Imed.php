@@ -34,4 +34,12 @@ class Imed extends CI_Controller {
         return;
 
     }
+
+    public function allImedRepports(){
+
+        $data['reports'] = $this->Imed_model->getAllImedReports();
+        $this->load->view('reports/imed/imed_report_list',$data);
+
+    }
+
 }

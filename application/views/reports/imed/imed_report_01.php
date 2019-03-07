@@ -9,7 +9,7 @@
 		<p>ADP: <?= date( "Y-m-d",strtotime( $quarterly_financial_progress->imed_creation ) ) ?> , Reporting Quarter: <?= ( $month_in_numeric%3 == 0 ) ? str_pad( $month_in_numeric/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( ($month_in_numeric/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></p><br><br>
 		<b>A. Quarterly Financial Progress Report</b>
 	</div>
-
+<div style="box-shadow: 0px 3px 9px 3px black;padding: 11px;margin-top: 11px;margin-bottom: 23px;">
 	<div class="row">
 	    <div class="col-lg-1 col-lg-offset-8">
 	        <h4>Code</h4>
@@ -146,7 +146,7 @@
 	</div>
 
 	<hr>
-
+</div>
 	<div class="pagebreak"></div>
 
 	<div style="text-align:center">
@@ -156,7 +156,7 @@
 		<p>ADP: <?= date( "Y-m-d",strtotime( $quarterly_financial_progress->imed_creation ) ) ?> , Reporting Quarter: <?= ( $month_in_numeric%3 == 0 ) ? str_pad( $month_in_numeric/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( ($month_in_numeric/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></p><br>
 		<b>B. Quarterly Component-wise Progress</b>
 	</div>
-
+<div style="box-shadow: 0px 3px 9px 3px black;padding: 11px;margin-top: 11px;margin-bottom: 23px;">
 	<div class="row">
 	    <div class="col-lg-1 col-lg-offset-8">
 	        <h4>Code</h4>
@@ -243,7 +243,7 @@
 	</div>
 
 	<hr>
-
+</div>
 	<div class="pagebreak"></div>
 
 	<div style="text-align:center">
@@ -253,7 +253,7 @@
 		<p>ADP: <?= date( "Y-m-d",strtotime( $quarterly_financial_progress->imed_creation ) ) ?> , Reporting Quarter: <?= ( $month_in_numeric%3 == 0 ) ? str_pad( $month_in_numeric/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( ($month_in_numeric/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></p><br>
 		<b>C. Implementation Problems and Suggested Measures</b>
 	</div>
-
+<div style="box-shadow: 0px 3px 9px 3px black;padding: 11px;margin-top: 11px;margin-bottom: 23px;">
 	<div class="row">
 	    <div class="col-lg-1 col-lg-offset-8">
 	        <h4>Code</h4>
@@ -322,7 +322,7 @@
 	</div>
 
 	<hr>
-
+</div>
 	<div class="pagebreak"></div>
 
 	<div style="text-align:center">
@@ -332,7 +332,8 @@
 		<p>ADP: <?= date( "Y-m-d",strtotime( $quarterly_financial_progress->imed_creation ) ) ?> , Reporting Quarter: <?= ( $month_in_numeric%3 == 0 ) ? str_pad( $month_in_numeric/3, 2, '0', STR_PAD_LEFT) : str_pad( floor( ( ($month_in_numeric/3) ) ) + 1, 2, '0', STR_PAD_LEFT ) ?></p><br>
 		<b>D. Contract Implementation Report</b>
 	</div>
-
+<div style="box-shadow: 0px 3px 9px 3px black;padding: 11px;margin-top: 11px;
+margin-bottom: 23px;">
 	<div class="row">
 	    <div class="col-lg-1 col-lg-offset-8">
 	        <h4>Code</h4>
@@ -403,4 +404,5 @@
 			</tbody>
 		</table>
 	</div>
+</div>
 </div>

@@ -10,6 +10,8 @@ class Goods_contract extends MY_Controller {
 
     public function index(){
 
+        $this->load->css('assets/css/confirmBox.css');
+        $this->load->js('assets/js/app.js');
         $this->load->view('forms/data_collection/data_collection_for_goods_contracts');
         return;
 

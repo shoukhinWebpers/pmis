@@ -124,5 +124,5 @@
         </div>
     </div>
     <a href="#" class="btn btn-info">Save and Add More Plan&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a>
-    <a href="#" class="btn btn-success">Submit</a>
+    <a href="#" class="btn btn-success submit-confirmation">Submit</a>
 </form>

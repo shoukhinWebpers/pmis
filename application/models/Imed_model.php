@@ -153,4 +153,16 @@ class Imed_model extends CI_Model {
 
     }
 
+    /* Function defined by Jobayer start */
+    
+    public function getAllImedReports(){
+        $this->db->select('*');
+        $this->db->from('imed_basic_info');
+        $query = $this->db->get();
+        
+        return $query->result();
+    }
+    
+    /* Function defined by Jobayer end */
+
 }

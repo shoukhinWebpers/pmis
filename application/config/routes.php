@@ -74,6 +74,7 @@ $route['data_collection_for_goods_contracts']                = 'data_collection/
 $route['data_collection_for_consultancy_services_contracts'] = 'data_collection/Consultancy_services_contract';
 $route['check_list_for_equipments']                          = 'data_collection/check_lists/Check_list_for_equipments';
 $route['check_list_for_structures']                          = 'data_collection/check_lists/Check_list_for_structures';
+$route['pdoi/(:num)']                                        = 'reports/results_framework/updated/Project_development_objective_indicators/index/$1';
 $route['pdoi']                                               = 'reports/results_framework/updated/Project_development_objective_indicators';
 $route['pdoi_form']                                          = 'reports/results_framework/updated/Project_development_objective_indicators/data_collection_form';
 $route['pdoi_form_submit']                                   = 'reports/results_framework/updated/Project_development_objective_indicators/submit_the_form';

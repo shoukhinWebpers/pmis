@@ -42,7 +42,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php for ( $i = 0; $i < count( $data ); $i++ ) { ?>
+                                <?php
+                                $indicator_name = array();
+                                for ( $i = 0; $i < count( $data ); $i++ ) {
+                                    if( !in_array( $data[$i]['ind_id'], $indicator_name ) ){
+                                        $indicator_name[] = $data[$i]['ind_id'];
+                                ?>
                                 <tr>
                                     <td rowspan="2">
                                         <?= $data[$i]['indicator_name'] ?>
@@ -50,7 +55,33 @@
                                     <td rowspan="2"><?= $data[$i]['unit_of_measure'] ?></td>
                                     <td>PAD Targets</td>
                                     <td><?= $data[$i]['baseline'] ?></td>
-                                    <td><?= $data[$i]['pad_target'] ?></td>
+                                    <?php
+                                    $found = false;
+                                    $remember_founding_place = -1;
+                                    for ( $pt = 0; $pt < count( $year ); $pt++ ) {
+                                        for ( $j = $remember_founding_place+1; $j < count( $data ); $j++ ) {
+                                            if( $data[$j]['year'] == $year[$pt] && end( $indicator_name ) == $data[$j]['ind_id'] ) {
+                                    ?>
+                                    <td><?= $data[$j]['pad_target'] ?></td>
+                                    <?php
+                                                $found = true;
+                                                $remember_founding_place = $j;
+                                                break;
+                                            }else{
+                                                $found = false;
+                                            }
+                                        }
+                                        if( ($remember_founding_place + 1) >= count( $data ) && $found == true ){
+
+                                            $found = false;
+
+                                        }else if( !$found ){
+                                    ?>
+                                    <td>0</td>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
                                     <td rowspan="2"><?= $data[$i]['frequency'] ?></td>
                                     <td rowspan="2"><?= $data[$i]['data_source_methodology'] ?></td>
                                     <td rowspan="2"><?= $data[$i]['responsibilities_for_data_collection'] ?></td>
@@ -59,9 +90,38 @@
                                 <tr>
                                     <td>Actual Achieved</td>
                                     <td><?= $data[$i]['baseline'] ?></td>
-                                    <td><?= $data[$i]['actual_acheived'] ?></td>
+                                    <?php
+                                    $found = false;
+                                    $remember_founding_place = -1;
+                                    for ( $pt = 0; $pt < count( $year ); $pt++ ) {
+                                        for ( $j = $remember_founding_place+1; $j < count( $data ); $j++ ) {
+                                            if( $data[$j]['year'] == $year[$pt] && end( $indicator_name ) == $data[$j]['ind_id'] ) {
+                                    ?>
+                                    <td><?= $data[$j]['actual_acheived'] ?></td>
+                                    <?php
+                                                $found = true;
+                                                $remember_founding_place = $j;
+                                                break;
+                                            }else{
+                                                $found = false;
+                                            }
+                                        }
+                                        if( ($remember_founding_place + 1) >= count( $data ) && $found == true ){
+
+                                            $found = false;
+
+                                        }else if( !$found ){
+                                    ?>
+                                    <td>0</td>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
                                 </tr>
-                                <?php } ?>
+                                <?php
+                                    }//End first indicator check if 
+                                }//End of first for loop
+                                ?>
                             </tbody>
                         </table>
                     </div>

@@ -13,7 +13,7 @@
 		foreach($meta as $name=>$content){
 			echo "\n\t\t";
 			?><meta name="<?php echo $name; ?>" content="<?php echo $content; ?>" /><?php
-				 }
+		}
 		echo "\n";
 
 	?>
@@ -448,7 +448,7 @@
 	    	                                        <a href="<?= base_url('pdoi') ?>">Project Development Objective Indicators</a>
 	    	                                    </li>
 	    	                                    <li>
-	    	                                        <a href="<?= '#'//base_url('iri') ?>">Intermediate Results Indicators</a>
+	    	                                        <a href="<?= base_url('iri') ?>">Intermediate Results Indicators</a>
 	    	                                    </li>
 	    	                                </ul>
 	    	                            </li>

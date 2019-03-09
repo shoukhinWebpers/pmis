@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2019 at 01:05 PM
+-- Generation Time: Mar 09, 2019 at 01:20 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -244,7 +244,9 @@ CREATE TABLE `tbl_accounts_pcmu` (
 --
 
 INSERT INTO `tbl_accounts_pcmu` (`id`, `fiscal_year`, `gob_officer_salary`, `rpa_officer_salary`, `others_rpa_officer_salary`, `others_without_rpa_officer_salary`, `gob_other_official_salary`, `rpa_other_official_salary`, `others_rpa_other_official_salary`, `others_without_rpa_other_official_salary`, `gob_transport`, `rpa_transport`, `others_rpa_transport`, `others_without_rpa_transport`, `gob_education_allow`, `rpa_education_allow`, `others_rpa_education_allow`, `others_without_rpa_education_allow`, `gob_home_allow`, `rpa_home_allow`, `others_rpa_home_allow`, `others_without_rpa_home_allow`, `gob_medical_allow`, `rpa_medical_allow`, `others_rpa_medical_allow`, `others_without_rpa_medical_allow`, `gob_tiffin_allow`, `rpa_tiffin_allow`, `others_rpa_tiffin_allow`, `others_without_rpa_tiffin_allow`, `gob_festival_allow`, `rpa_festival_allow`, `others_rpa_festival_allow`, `others_without_rpa_festival_allow`, `gob_sranti_allow`, `rpa_sranti_allow`, `others_rpa_sranti_allow`, `others_without_rpa_sranti_allow`, `gob_complimentary_allow`, `rpa_complimentary_allow`, `others_rpa_complimentary_allow`, `others_without_rpa_complimentary_allow`, `gob_other_allow`, `rpa_other_allow`, `others_rpa_other_allow`, `others_without_rpa_other_allow`, `gob_overtime_allow`, `rpa_overtime_allow`, `others_rpa_overtime_allow`, `others_without_rpa_overtime_allow`, `gob_compliments`, `rpa_compliments`, `others_rpa_compliments`, `others_without_rpa_compliments`, `gob_seminar`, `rpa_seminar`, `others_rpa_seminar`, `others_without_rpa_seminar`, `gob_others_expenditure`, `rpa_others_expenditure`, `others_rpa_others_expenditure`, `others_without_rpa_others_expenditure`, `gob_post`, `rpa_post`, `others_rpa_post`, `others_without_rpa_post`, `gob_fax`, `rpa_fax`, `others_rpa_fax`, `others_without_rpa_fax`, `gob_telephone`, `rpa_telephone`, `others_rpa_telephone`, `others_without_rpa_telephone`, `gob_advertising`, `rpa_advertising`, `others_rpa_advertising`, `others_without_rpa_advertising`, `gob_film_making`, `rpa_film_making`, `others_rpa_film_making`, `others_without_rpa_film_making`, `gob_book`, `rpa_book`, `others_rpa_book`, `others_without_rpa_book`, `gob_office_rent`, `rpa_office_rent`, `others_rpa_office_rent`, `others_without_rpa_office_rent`, `gob_reg_fee`, `rpa_reg_fee`, `others_rpa_reg_fee`, `others_without_rpa_reg_fee`, `gob_bank_charge`, `rpa_bank_charge`, `others_rpa_bank_charge`, `others_without_rpa_bank_charge`, `gob_interest`, `rpa_interest`, `others_rpa_interest`, `others_without_rpa_interest`, `gob_oversease_training`, `rpa_oversease_training`, `others_rpa_oversease_training`, `others_without_rpa_oversease_training`, `gob_internal_training`, `rpa_internal_training`, `others_rpa_internal_training`, `others_without_rpa_internal_training`, `gob_internal_transport`, `rpa_internal_transport`, `others_rpa_internal_transport`, `others_without_rpa_internal_transport`, `gob_petrol_lubricant`, `rpa_petrol_lubricant`, `others_rpa_petrol_lubricant`, `others_without_rpa_petrol_lubricant`, `gob_fuel_and_gas`, `rpa_fuel_and_gas`, `others_rpa_fuel_and_gas`, `others_without_rpa_fuel_and_gas`, `gob_publication`, `rpa_publication`, `others_rpa_publication`, `others_without_rpa_publication`, `gob_stationary`, `rpa_stationary`, `others_rpa_stationary`, `others_without_rpa_stationary`, `gob_purchase_used_product`, `rpa_purchase_used_product`, `others_rpa_purchase_used_product`, `others_without_rpa_purchase_used_product`, `gob_raw_materials`, `rpa_raw_materials`, `others_rpa_raw_materials`, `others_without_rpa_raw_materials`, `gob_consultancy`, `rpa_consultancy`, `others_rpa_consultancy`, `others_without_rpa_consultancy`, `gob_survey`, `rpa_survey`, `others_rpa_survey`, `others_without_rpa_survey`, `gob_honorarium`, `rpa_honorarium`, `others_rpa_honorarium`, `others_without_rpa_honorarium`, `gob_vehicle_repair`, `rpa_vehicle_repair`, `others_rpa_vehicle_repair`, `others_without_rpa_vehicle_repair`, `gob_furniture_repair`, `rpa_furniture_repair`, `others_rpa_furniture_repair`, `others_without_rpa_furniture_repair`, `gob_office_utilities_repair`, `rpa_office_utilities_repair`, `others_rpa_office_utilities_repair`, `others_without_rpa_office_utilities_repair`, `gob_other_service_exp`, `rpa_other_service_exp`, `others_rpa_other_service_exp`, `others_without_rpa_other_service_exp`, `gob_vat`, `rpa_vat`, `others_rpa_vat`, `others_without_rpa_vat`, `gob_stock_allocation`, `rpa_stock_allocation`, `others_rpa_stock_allocation`, `others_without_rpa_stock_allocation`, `gob_non_financial_asset`, `rpa_non_financial_asset`, `others_rpa_non_financial_asset`, `others_without_rpa_non_financial_asset`, `gob_vehicle`, `rpa_vehicle`, `others_rpa_vehicle`, `others_without_rpa_vehicle`, `gob_computer_utilites`, `rpa_computer_utilites`, `others_rpa_computer_utilites`, `others_without_rpa_computer_utilites`, `gob_tel_utilities`, `rpa_tel_utilities`, `others_rpa_tel_utilities`, `others_without_rpa_tel_utilities`, `gob_ohter_utilities`, `rpa_ohter_utilities`, `others_rpa_ohter_utilities`, `others_without_rpa_ohter_utilities`, `gob_furniture`, `rpa_furniture`, `others_rpa_furniture`, `others_without_rpa_furniture`, `gob_office_utilities`, `rpa_office_utilities`, `others_rpa_office_utilities`, `others_without_rpa_office_utilities`, `gob_software`, `rpa_software`, `others_rpa_software`, `others_without_rpa_software`, `created_at`, `updated_at`) VALUES
-(1, '2018-19', '2345.00', '678.00', '111.00', '234.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-02-26 11:07:00', NULL);
+(1, '2018-19', '2345.00', '678.00', '111.00', '234.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-02-26 11:07:00', NULL),
+(3, '2001-02', '2345.00', '678.00', '111.00', '234.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-02-26 12:17:01', NULL),
+(4, '2016-17', '2345.00', '67.00', '789.23', '123.00', '345.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-02-26 12:22:48', NULL);
 
 -- --------------------------------------------------------
 
@@ -264,45 +266,21 @@ CREATE TABLE `tbl_ci_sessions` (
 --
 
 INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('bp8lt8102ehjrb3ak7onr0gqe7gptn7d', '::1', 1551077820, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313037373832303b),
-('v30thitrogip3vduhoqtc707r1rba1u6', '::1', 1551082667, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038323636373b),
-('os3k4prg494g715lj9sahojghds91nvf', '::1', 1551083103, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038333130333b),
-('ljr5perihob1jm71mcfkr46uive8k1ek', '::1', 1551083463, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038333436333b),
-('un0opbgfd0tnlfag7ua2jgm8o633rn76', '::1', 1551083978, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038333937383b),
-('ffi5sammqfbbn14omb1irrang5ls8ad5', '::1', 1551084284, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038343238343b),
-('qo31725b73rpapq0gug7bmoogvg1pum4', '::1', 1551084824, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038343832343b),
-('jciafomma9kbs7ionpndjm472v2cnsjv', '::1', 1551085208, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038353230383b),
-('c91t8m57mio6n8k4hcveaj63bt2f2kbu', '::1', 1551085961, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038353936313b),
-('gmamidr202o53dkhj04g1k44gl8c0q45', '::1', 1551086444, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038363434343b),
-('d0cgf95ugil2l8u0r9jpmt83nqcmfro3', '::1', 1551086754, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038363735343b),
-('rosltr87bob71h0s0dck1f4ijoa47ehm', '::1', 1551087073, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038373037333b),
-('cijmgd5bbi95efddaosbkin6gjm5i5gi', '::1', 1551088276, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038383237363b),
-('4i29cppcldo5kvj13r6uulccqka6cq3f', '::1', 1551088291, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313038383237363b),
-('cseu04oedbihqet3tm7pv30qtko9p7gb', '::1', 1551157989, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313135373938393b),
-('ri1854cvld6j704o8f4bi164e6e14j19', '::1', 1551158613, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313135383631333b),
-('4isma8aab1oqqaeo2jjdfnmiqgr3bjni', '::1', 1551160284, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313136303238343b),
-('ekq7jtc70e3fqle184i2rhtugipbj2q5', '::1', 1551163706, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313136333730363b),
-('lp3mkng8pucolmquj40k178o179egssi', '::1', 1551164920, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313136343932303b),
-('k4ak4odpvuf1pghle329nmq51sen8sb0', '::1', 1551165283, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313136353238333b),
-('7hnipc2a2pvrua4iqkbgidtcgkdl8i0k', '::1', 1551168354, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313136383335343b),
-('hqhfnl6fubjokcf5u59h4t1g77b3n65d', '::1', 1551170585, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137303538353b),
-('kp0vfbkr9nv4qr7hukqdluhk8l5h7767', '::1', 1551170917, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137303931373b),
-('r2cairh2a86oe5gbn73n1lihj3va6n28', '::1', 1551171868, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137313836383b),
-('bboovp9gvfron7nhc13ddi22181reol1', '::1', 1551172338, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137323333383b),
-('n4tdnj3sm1pk0c5648l7guaa1g0deu8i', '::1', 1551172669, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137323636393b),
-('20nfftt8mfp7p52moth39uf3rjb98sn0', '::1', 1551173035, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137333033353b),
-('kooiqlou6jkgj0nk9qm7r1gqsq30j9p3', '::1', 1551173698, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137333639383b),
-('93fhr56nugsqhti8jjog0ga3q420irs7', '::1', 1551174041, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137343034313b),
-('o5v5l58jr7ogmofsiopjeml0suctq2es', '::1', 1551174474, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137343437343b),
-('016nhi3bpe0ek095u4k3iqhfj26hvlre', '::1', 1551174866, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137343836363b),
-('fgh9i2uhtv4ii21c7v1jd5f7mglkdhrb', '::1', 1551175189, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137353138393b),
-('fsahr6bg57a0q67o7lhgrh7qejrscmkv', '::1', 1551175549, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137353534393b),
-('23o0p79j3a2uj4adr9esj2c3eqcku5r9', '::1', 1551176709, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137363730393b),
-('279q480gib4m05chl6bagred9h2vjf0p', '::1', 1551179220, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137393232303b),
-('49kdbjrn69l2d57gsh2up2t4b2aubauc', '::1', 1551179835, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313137393833353b),
-('95ahn5d6qcd0o28r0rgh07aap9sas4id', '::1', 1551182065, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313138323036353b),
-('ikdd4q8pq9f3ddhpcoi75eam150igg4d', '::1', 1551182378, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313138323337383b),
-('ru1t27q2lqb8irdoj69hvp7ge6n5j041', '::1', 1551182595, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313138323337383b);
+('ht3plu4msf2uf0tsio6d58t52mkorh4k', '::1', 1552126040, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132363034303b),
+('7ftguh1q85deabpdkqlrljqbrrhi6s3p', '::1', 1552126377, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132363337373b),
+('tfbfeld8n5pi1fr5emfcer05gme07m6l', '::1', 1552126722, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132363732323b),
+('jjrptniuvhman5ao1m1ul61kknu3ul4s', '::1', 1552127484, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132373438343b),
+('84imtnaqsge6is9e8p52rhu2oue4t74g', '::1', 1552129267, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132393236373b),
+('qcj3bqirkhn6e621asr8ch2vv6fddu2p', '::1', 1552129659, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132393635393b),
+('qa4g98fo55e70h4b3i0rmhbjgjdr46fm', '::1', 1552129971, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132393937313b),
+('h2q2jtg1vjlkm13mi5s5kd5p7c83ehss', '::1', 1552130329, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133303332393b),
+('i0ifrbv2q6brqaqbr69lj95i7sci2ik1', '::1', 1552131006, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133313030363b),
+('e3po05nphdkc19avmvccrdoj2iqo9r5o', '::1', 1552131530, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133313533303b),
+('m7osc38neel6s0g4i9mj621fici70m5p', '::1', 1552132238, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133323233383b),
+('m1dhsi47hfndvq8bvqaf9h17rviu9909', '::1', 1552132927, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133323932373b),
+('t60lvd0olhdfu4qf0chicdhepbt7rm6e', '::1', 1552133579, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133333537393b),
+('ohm037ie414r7huj084lr79ljsj710u2', '::1', 1552133885, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133333838353b),
+('5tlauh8tuoj6ubpsr35okhsd0kdhf9e2', '::1', 1552133959, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133333838353b);
 
 -- --------------------------------------------------------
 
@@ -368,7 +346,9 @@ CREATE TABLE `tbl_data_collection_for_goods_contracts` (
 
 INSERT INTO `tbl_data_collection_for_goods_contracts` (`id`, `activity_id`, `contract_package_number`, `contract_description`, `unit`, `qty_nos`, `estimated_price`, `actual_contract_amount`, `procedure_method`, `procurement_guideline`, `prior_review`, `date_of_bid_opening_planned_date`, `date_of_bid_opening_actual_date`, `date_of_contract_signing_planned_date`, `date_of_contract_signing_actual_date`, `date_of_delivery_planned_date`, `date_of_delivery_actual_date`, `name_of_supplier`, `remarks`, `created_at`, `updated_at`) VALUES
 (1, 1, '324234', 'Contract Description', 12, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-10', 'Name of supplier', 'Short Note', '2019-02-12 11:54:03', NULL),
-(2, 1, '324234', 'Contract Description', 0, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-11', '2019-02-13', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-07', 'Name of supplier', 'Short Note', '2019-02-13 12:20:30', NULL);
+(2, 1, '324234', 'Contract Description', 0, 12, '3423423.00', '234234.00', 'Procedure method', 'PPA', 0, '2019-02-11', '2019-02-13', '2019-02-12', '2019-02-12', '2019-02-11', '2019-02-07', 'Name of supplier', 'Short Note', '2019-02-13 12:20:30', NULL),
+(3, 1, '', '', 0, 0, '0.00', '0.00', '', '', 0, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '2019-03-07 08:59:03', NULL),
+(4, 1, '', '', 0, 0, '0.00', '0.00', '', '', 0, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '2019-03-07 09:01:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -1047,7 +1027,9 @@ CREATE TABLE `tbl_progress_of_procurements_goods_contracts` (
 
 INSERT INTO `tbl_progress_of_procurements_goods_contracts` (`id`, `contract_id`, `progress_of_procurement`, `expenditure_contractor`, `expenditure_vat_tax`, `exp_date`, `prgrss_date`, `created_at`, `updated_at`) VALUES
 (1, 1, 23, '2342424.00', '2342423423.00', '2019-02-12', '2019-02-12', '2019-02-12 11:54:03', NULL),
-(2, 2, 23, '2342424.00', '2342423423.00', '2019-02-13', '2019-02-13', '2019-02-13 12:20:30', NULL);
+(2, 2, 23, '2342424.00', '2342423423.00', '2019-02-13', '2019-02-13', '2019-02-13 12:20:30', NULL),
+(3, 3, 0, '0.00', '0.00', '0000-00-00', '0000-00-00', '2019-03-07 08:59:03', NULL),
+(4, 4, 0, '0.00', '0.00', '0000-00-00', '0000-00-00', '2019-03-07 09:01:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -1943,7 +1925,7 @@ ALTER TABLE `tbl_unit_of_measure`
 -- AUTO_INCREMENT for table `tbl_accounts_pcmu`
 --
 ALTER TABLE `tbl_accounts_pcmu`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_data_collection_for_consultancy_services_contracts`
@@ -1955,7 +1937,7 @@ ALTER TABLE `tbl_data_collection_for_consultancy_services_contracts`
 -- AUTO_INCREMENT for table `tbl_data_collection_for_goods_contracts`
 --
 ALTER TABLE `tbl_data_collection_for_goods_contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_data_collection_for_works_contracts`
@@ -2093,7 +2075,7 @@ ALTER TABLE `tbl_m_and_e_matrix`
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_goods_contracts`
 --
 ALTER TABLE `tbl_progress_of_procurements_goods_contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_progress_of_procurements_services_contracts`

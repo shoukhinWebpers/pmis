@@ -16,9 +16,17 @@ class Project_development_objective_indicators extends MY_Controller {
 		return;
 	}
 
-	public function index(){
+	public function index( $id = NULL ){
 
-		$this->load->view('reports/pdoi');
+		$data['data'] = $this->PDOI_model->get_data( $id );
+
+		/*echo "<pre>";
+
+		var_dump($data['data']);
+
+		exit();*/
+
+		$this->load->view( 'reports/pdoi', $data );
 		return;
 
 	}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2019 at 01:20 PM
+-- Generation Time: Mar 10, 2019 at 12:49 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -266,21 +266,23 @@ CREATE TABLE `tbl_ci_sessions` (
 --
 
 INSERT INTO `tbl_ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('ht3plu4msf2uf0tsio6d58t52mkorh4k', '::1', 1552126040, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132363034303b),
-('7ftguh1q85deabpdkqlrljqbrrhi6s3p', '::1', 1552126377, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132363337373b),
-('tfbfeld8n5pi1fr5emfcer05gme07m6l', '::1', 1552126722, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132363732323b),
-('jjrptniuvhman5ao1m1ul61kknu3ul4s', '::1', 1552127484, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132373438343b),
-('84imtnaqsge6is9e8p52rhu2oue4t74g', '::1', 1552129267, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132393236373b),
-('qcj3bqirkhn6e621asr8ch2vv6fddu2p', '::1', 1552129659, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132393635393b),
-('qa4g98fo55e70h4b3i0rmhbjgjdr46fm', '::1', 1552129971, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323132393937313b),
-('h2q2jtg1vjlkm13mi5s5kd5p7c83ehss', '::1', 1552130329, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133303332393b),
-('i0ifrbv2q6brqaqbr69lj95i7sci2ik1', '::1', 1552131006, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133313030363b),
-('e3po05nphdkc19avmvccrdoj2iqo9r5o', '::1', 1552131530, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133313533303b),
-('m7osc38neel6s0g4i9mj621fici70m5p', '::1', 1552132238, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133323233383b),
-('m1dhsi47hfndvq8bvqaf9h17rviu9909', '::1', 1552132927, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133323932373b),
-('t60lvd0olhdfu4qf0chicdhepbt7rm6e', '::1', 1552133579, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133333537393b),
-('ohm037ie414r7huj084lr79ljsj710u2', '::1', 1552133885, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133333838353b),
-('5tlauh8tuoj6ubpsr35okhsd0kdhf9e2', '::1', 1552133959, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323133333838353b);
+('aoedmv8dn28rcmokmj3g3sk23rmfnhkd', '::1', 1552206318, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323230363331383b),
+('o69rr3panfqrbmkgkphr4ohh3k2g22vh', '::1', 1552206797, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323230363739373b),
+('guft5tte19pijrcd2dfe0jrdhvmbfonf', '::1', 1552207540, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323230373534303b),
+('co6hmljnbjt2q4s0c2skhigalhbrdtn1', '::1', 1552209054, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323230393035343b),
+('8fmfj37gg3slqt7e1gejm4k5s60djlbe', '::1', 1552211209, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231313230393b),
+('frci6foqe35sbg18tv4kq5fsteb2edr2', '::1', 1552211560, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231313536303b),
+('9j3o9e2v0r2pab4sd0m2h4mug6p563fa', '::1', 1552212059, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231323035393b),
+('eamnhi8j1fuenfnijnokdetd9m68o049', '::1', 1552212583, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231323538333b),
+('f2jkka2debo098n74tanil79lo26k7eg', '::1', 1552212885, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231323838353b),
+('2np9pg4j6o4j97od0sghiqk2bh7os91h', '::1', 1552213212, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231333231323b),
+('8qefvms2ljuk3jfeothugb52vk0rn49i', '::1', 1552213879, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231333837393b),
+('v681l93ffq6uhbqqun9b7oqqt8t89cnb', '::1', 1552214244, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231343234343b),
+('6vtq7fvkruah84c7bgme8hru44al9chv', '::1', 1552214705, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231343730353b),
+('ddbk6tc82hcemisus2ph2895j86eecnj', '::1', 1552215050, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231353035303b),
+('6pl85c7qoc26aruhsckvdcilthn9b4av', '::1', 1552216367, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231363336373b),
+('u3o5ohqhqrk6c1qd6a4lhqfobpq61ceo', '::1', 1552217969, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231373936393b),
+('lgjruevec6f5c765vvt56r94b2ppftar', '::1', 1552217969, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535323231373936393b);
 
 -- --------------------------------------------------------
 
@@ -652,6 +654,16 @@ CREATE TABLE `tbl_intermediate_result_indicators_component` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `tbl_intermediate_result_indicators_component`
+--
+
+INSERT INTO `tbl_intermediate_result_indicators_component` (`id`, `component_name`, `created_at`, `updated_at`) VALUES
+(1, 'Component A', '2019-03-10 06:11:37', NULL),
+(2, 'Component B', '2019-03-10 06:11:37', NULL),
+(3, 'Component C', '2019-03-10 06:11:55', NULL),
+(4, 'Component D', '2019-03-10 06:11:55', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -660,15 +672,26 @@ CREATE TABLE `tbl_intermediate_result_indicators_component` (
 
 CREATE TABLE `tbl_intermediate_result_indicators_name` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `component_id` bigint(20) UNSIGNED NOT NULL,
   `indicator_name` char(255) NOT NULL,
   `baseline` char(255) NOT NULL,
   `frequency` char(255) NOT NULL,
   `data_source_methodology` char(255) NOT NULL,
   `responsibilities_for_data_collection` char(255) NOT NULL,
-  `comments` char(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_intermediate_result_indicators_name`
+--
+
+INSERT INTO `tbl_intermediate_result_indicators_name` (`id`, `component_id`, `indicator_name`, `baseline`, `frequency`, `data_source_methodology`, `responsibilities_for_data_collection`, `created_at`, `updated_at`) VALUES
+(1, 1, 'DDM facilities renovated (ERCC, NDMRTI)', '0', 'Annual', 'DDM/Monitoring Reports', 'PCMU and M&E Consultants', '2019-03-10 06:19:46', NULL),
+(4, 2, 'Identification of critical and essential facilities and lifelines for Dhaka.', '0', 'Annual', 'RAJUK/Monitoring Reports', 'PCMU and M&E Consultants', '2019-03-10 06:27:13', NULL),
+(5, 3, 'E-Permits for construction Unit facility constructed.', '0', 'Annual', 'RAJUK/Monitoring Reports', 'PCMU and M&E Consultants', '2019-03-10 06:27:13', NULL),
+(6, 4, 'Monitoring Reports produced', '0', 'Quarterly', 'PCMU', 'PCMU and M&E Consultants', '2019-03-10 06:29:46', NULL),
+(7, 1, 'FSCD facilities constructed and/or renovated', '0', 'Annual', 'FSCD/Monitoring Reports', 'PCMU and M&E Consultants', '2019-03-10 10:22:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -1097,18 +1120,22 @@ CREATE TABLE `tbl_result_framework_intermediate_result_indicators` (
   `year` year(4) NOT NULL,
   `ind_id` bigint(20) UNSIGNED NOT NULL,
   `measure_id` bigint(20) UNSIGNED NOT NULL,
-  `q1_pad_target` char(255) NOT NULL,
-  `q2_pad_target` char(255) NOT NULL,
-  `q3_pad_target` char(255) NOT NULL,
-  `q4_pad_target` char(255) NOT NULL,
-  `q1_actual_achieved` char(255) NOT NULL,
-  `q2_actual_achieved` char(255) NOT NULL,
-  `q3_actual_achieved` char(255) NOT NULL,
-  `q4_actual_achieved` char(255) NOT NULL,
-  `component_id` bigint(20) UNSIGNED NOT NULL,
+  `pad_target` decimal(60,2) DEFAULT NULL,
+  `actual_acheived` decimal(60,2) DEFAULT NULL,
+  `comments` text,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_result_framework_intermediate_result_indicators`
+--
+
+INSERT INTO `tbl_result_framework_intermediate_result_indicators` (`id`, `year`, `ind_id`, `measure_id`, `pad_target`, `actual_acheived`, `comments`, `created_at`, `updated_at`) VALUES
+(2, 2015, 1, 2, '987.00', '67.00', 'N/A', '2019-03-10 10:00:59', NULL),
+(3, 2017, 6, 1, '2342.00', '23.00', 'N/A', '2019-03-10 10:19:05', NULL),
+(4, 2014, 1, 3, '6456.00', '453.00', 'N/A', '2019-03-10 10:23:18', '2019-03-10 10:28:54'),
+(5, 2015, 7, 3, '56.00', '3.00', 'N/A', '2019-03-10 10:31:59', NULL);
 
 -- --------------------------------------------------------
 
@@ -1138,7 +1165,8 @@ INSERT INTO `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs` (`id`, `ind_id`, `mea
 (3, 1, 1, 2017, '345', '3', 'N/A', '2019-02-07 09:30:33', NULL),
 (4, 1, 1, 2015, '78', '45', '', '2019-02-07 09:33:39', NULL),
 (5, 1, 3, 2008, '2342', '23', 'N/A', '2019-02-07 12:07:47', NULL),
-(6, 2, 1, 2015, '2342', '23', '', '2019-02-07 12:08:49', NULL);
+(6, 2, 1, 2015, '2342', '23', '', '2019-02-07 12:08:49', NULL),
+(7, 2, 3, 2018, '987', '67', 'N/A', '2019-03-10 05:32:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -1623,7 +1651,8 @@ ALTER TABLE `tbl_intermediate_result_indicators_component`
 --
 ALTER TABLE `tbl_intermediate_result_indicators_name`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `component_id` (`component_id`);
 
 --
 -- Indexes for table `tbl_key_agreed_actions_tracking_activities`
@@ -1742,6 +1771,7 @@ ALTER TABLE `tbl_project_development_objective_indicators_name`
 ALTER TABLE `tbl_result_framework_intermediate_result_indicators`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
+  ADD UNIQUE KEY `unique_index` (`ind_id`,`year`),
   ADD KEY `measure_id` (`measure_id`);
 
 --
@@ -2003,13 +2033,13 @@ ALTER TABLE `tbl_imed_suggested_measures`
 -- AUTO_INCREMENT for table `tbl_intermediate_result_indicators_component`
 --
 ALTER TABLE `tbl_intermediate_result_indicators_component`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_intermediate_result_indicators_name`
 --
 ALTER TABLE `tbl_intermediate_result_indicators_name`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_key_agreed_actions_tracking_activities`
@@ -2099,13 +2129,13 @@ ALTER TABLE `tbl_project_development_objective_indicators_name`
 -- AUTO_INCREMENT for table `tbl_result_framework_intermediate_result_indicators`
 --
 ALTER TABLE `tbl_result_framework_intermediate_result_indicators`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
 --
 ALTER TABLE `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_svce_description_of_package`
@@ -2295,6 +2325,12 @@ ALTER TABLE `tbl_imed_suggested_measures`
   ADD CONSTRAINT `tbl_imed_suggested_measures_ibfk_1` FOREIGN KEY (`imed_bi_id`) REFERENCES `tbl_imed_basic_info` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
+-- Constraints for table `tbl_intermediate_result_indicators_name`
+--
+ALTER TABLE `tbl_intermediate_result_indicators_name`
+  ADD CONSTRAINT `tbl_intermediate_result_indicators_name_ibfk_1` FOREIGN KEY (`component_id`) REFERENCES `tbl_intermediate_result_indicators_component` (`id`);
+
+--
 -- Constraints for table `tbl_key_agreed_actions_tracking_activities`
 --
 ALTER TABLE `tbl_key_agreed_actions_tracking_activities`
@@ -2361,7 +2397,8 @@ ALTER TABLE `tbl_progress_of_procurements_works_contracts`
 -- Constraints for table `tbl_result_framework_intermediate_result_indicators`
 --
 ALTER TABLE `tbl_result_framework_intermediate_result_indicators`
-  ADD CONSTRAINT `tbl_result_framework_intermediate_result_indicators_ibfk_1` FOREIGN KEY (`measure_id`) REFERENCES `tbl_unit_of_measure` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `tbl_result_framework_intermediate_result_indicators_ibfk_1` FOREIGN KEY (`measure_id`) REFERENCES `tbl_unit_of_measure` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `tbl_result_framework_intermediate_result_indicators_ibfk_2` FOREIGN KEY (`ind_id`) REFERENCES `tbl_intermediate_result_indicators_name` (`id`);
 
 --
 -- Constraints for table `tbl_rslt_frmwrk_prjct_dvlpmnt_objctv_indctrs`

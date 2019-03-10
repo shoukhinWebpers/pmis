@@ -18,14 +18,17 @@
                 <div class="row">
                     <div class="col-lg-12 table-responsive">
                         <table id="bootstrap-data-table" class="table table-bordered">
-                            <?php $year = get_years( $data ); ?>
+                            <?php 
+                            $year       = get_years( $data );
+                            $total_year = count( $year ); 
+                            ?>
                             <thead>
                                 <tr>
                                     <th rowspan="2">Indicator Name</th>
                                     <th rowspan="2">Unit of Measure</th>
                                     <th rowspan="2">&nbsp;</th>
                                     <th rowspan="2">Baseline</th>
-                                    <th colspan="<?= count( $year ) ?>" style="text-align: center">Cumulative Target Values</th>
+                                    <th colspan="<?= $total_year ?>" style="text-align: center">Cumulative Target Values</th>
                                     <th rowspan="2">Frequency</th>
                                     <th rowspan="2">Data Source/Methodology</th>
                                     <th rowspan="2">Responsible for data collection</th>
@@ -33,7 +36,7 @@
                                 </tr>
                                 <tr>
                                     <?php
-                                    for ( $i = 0; $i < count( $year ); $i++ ) {
+                                    for ( $i = 0; $i < $total_year; $i++ ) {
                                     ?>
                                     <th>YR<?= $i + 1 ?> ( <?= $year[$i] ?> )</th>
                                     <?php
@@ -44,7 +47,11 @@
                             <tbody>
                                 <?php
                                 $indicator_name = array();
-                                for ( $i = 0; $i < count( $data ); $i++ ) {
+                                $remember_founding_place_for_pad_target = -1;
+                                $remember_founding_place_for_actual_acheived = -1;
+                                $total_data = count( $data );
+
+                                for ( $i = 0; $i < $total_data; $i++ ) {
                                     if( !in_array( $data[$i]['ind_id'], $indicator_name ) ){
                                         $indicator_name[] = $data[$i]['ind_id'];
                                 ?>
@@ -57,21 +64,20 @@
                                     <td><?= $data[$i]['baseline'] ?></td>
                                     <?php
                                     $found = false;
-                                    $remember_founding_place = -1;
-                                    for ( $pt = 0; $pt < count( $year ); $pt++ ) {
-                                        for ( $j = $remember_founding_place+1; $j < count( $data ); $j++ ) {
+                                    for ( $pt = 0; $pt < $total_year; $pt++ ) {
+                                        for ( $j = $remember_founding_place_for_pad_target+1; $j < $total_data; $j++ ) {
                                             if( $data[$j]['year'] == $year[$pt] && end( $indicator_name ) == $data[$j]['ind_id'] ) {
                                     ?>
                                     <td><?= $data[$j]['pad_target'] ?></td>
                                     <?php
                                                 $found = true;
-                                                $remember_founding_place = $j;
+                                                $remember_founding_place_for_pad_target = $j;
                                                 break;
                                             }else{
                                                 $found = false;
                                             }
                                         }
-                                        if( ($remember_founding_place + 1) >= count( $data ) && $found == true ){
+                                        if( ($remember_founding_place_for_pad_target + 1) >= $total_data && $found == true ){
 
                                             $found = false;
 
@@ -92,21 +98,20 @@
                                     <td><?= $data[$i]['baseline'] ?></td>
                                     <?php
                                     $found = false;
-                                    $remember_founding_place = -1;
-                                    for ( $pt = 0; $pt < count( $year ); $pt++ ) {
-                                        for ( $j = $remember_founding_place+1; $j < count( $data ); $j++ ) {
+                                    for ( $pt = 0; $pt < $total_year; $pt++ ) {
+                                        for ( $j = $remember_founding_place_for_actual_acheived+1; $j < $total_data; $j++ ) {
                                             if( $data[$j]['year'] == $year[$pt] && end( $indicator_name ) == $data[$j]['ind_id'] ) {
                                     ?>
                                     <td><?= $data[$j]['actual_acheived'] ?></td>
                                     <?php
                                                 $found = true;
-                                                $remember_founding_place = $j;
+                                                $remember_founding_place_for_actual_acheived = $j;
                                                 break;
                                             }else{
                                                 $found = false;
                                             }
                                         }
-                                        if( ($remember_founding_place + 1) >= count( $data ) && $found == true ){
+                                        if( ( $remember_founding_place_for_actual_acheived + 1 ) >= $total_data && $found == true ){
 
                                             $found = false;
 

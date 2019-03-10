@@ -429,7 +429,7 @@
 	    	                        	    <a href="<?= base_url('pdoi_form') ?>">Project Development Objective Indicators</a>
 	    	                        	</li>
 	    	                        	<li>
-	    	                        	    <a href="<?= '#'//base_url('iri') ?>">Intermediate Results Indicators</a>
+	    	                        	    <a href="<?= base_url('iri_form') ?>">Intermediate Results Indicators</a>
 	    	                        	</li>
 	    	                        </ul>
 	    	                    </li>

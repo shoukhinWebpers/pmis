@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	$("select").change(function(){
 
-        if($(this).attr("id")==="sub-component-list" || $(this).attr("id")==="year-list"){
+        if( $(this).attr("id") === "sub-component-list" || $(this).attr("id") === "year-list" ){
             return;
         }
 

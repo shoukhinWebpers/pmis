@@ -105,3 +105,16 @@ $route['get_m_e_component_related_info']                     = 'data_collection/
 $route['404_override']                                       = '';
 $route['imedreportlist']                                     ='reports/imed/allImedRepports';
 $route['translate_uri_dashes']                               = FALSE;
+
+
+/*jobayer router list start */
+$route['imedreportlist']='reports/imed/allImedRepports';
+$route['officials']='Officials';
+    
+/*API routes start */
+$route['getsubcomponents']='./API/Endpoints';
+$route['getcomponents']='./API/Endpoints/getComponents';
+$route['getYears']='./API/Endpoints/yearList';
+/*API routes end */
+    
+/*jobayer router list end */

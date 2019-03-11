@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Imed extends CI_Controller {
+class Imed extends MY_Controller {
 
     function __construct(){
         Parent::__construct();
@@ -15,9 +15,7 @@ class Imed extends CI_Controller {
 
     private function _init()
     {
-        $this->load->css('assets/css/custom.css');
         $this->load->js('assets/js/imed.js');
-        $this->output->set_template('default');
         return;
     }
 

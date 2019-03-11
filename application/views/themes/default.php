@@ -399,6 +399,15 @@
 	    	                        	<li>
 	    	                        	    <a href="<?= base_url('pcmu_yearly_project_form') ?>">PCMU</a>
 	    	                        	</li>
+	    	                        	<li>
+	    	                        	    <a href="<?= base_url('ddm_yearly_project_form') ?>">DDM</a>
+	    	                        	</li>
+	    	                        	<li>
+	    	                        	    <a href="<?= base_url('rajuk_yearly_project_form') ?>">RAJUK</a>
+	    	                        	</li>
+	    	                        	<li>
+	    	                        	    <a href="<?= base_url('dncc_yearly_project_form') ?>">DNCC</a>
+	    	                        	</li>
 	    	                        </ul>
 	    	                    </li>
 	    	                    <li>

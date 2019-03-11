@@ -1,18 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pcmu_yearly_project extends MY_Controller {
+class Yearly_project extends MY_Controller {
 
     function __construct(){
 
         Parent::__construct();
-        $this->load->model("Accounts_pcmu_model");
+        $this->load->model("Accounts_model");
 
     }
 
     public function index(){
 
-    	$data['existed_fiscal_year'] = $this->Accounts_pcmu_model->get_fiscal_years();
+    	$data['existed_fiscal_year'] = $this->Accounts_model->get_fiscal_years();
 
     	/*for ($i=0; $i < sizeof($data['existed_fiscal_year']) ; $i++) { 
     		
@@ -22,10 +22,14 @@ class Pcmu_yearly_project extends MY_Controller {
 
     	}
 
-    	dd( $data['existed_fiscal_year'] );*/
+    	dd( $data['existed_fiscal_year'] );
+
+        exit();*/
+
+        $request_comes_from = uri_string();
 
     	$this->load->js( 'assets/js/pcmu_yearly_project.js' );
-        $this->load->view( 'forms/accounts/pcmu_yearly_project', $data );
+        $this->load->view( 'forms/accounts/'.$request_comes_from, $data );
         return;
 
     }
@@ -36,9 +40,27 @@ class Pcmu_yearly_project extends MY_Controller {
 
     	$new_data = $this->convert_numeric_to_english( $data );
 
-    	if( $id = $this->Accounts_pcmu_model->insert_data( $new_data ) ){
+    	if( $id = $this->Accounts_model->insert_data( $new_data ) ){
 
-    		redirect('pcmu_yearly_project_report/'.$id,'refresh');
+            $request_comes_from = uri_string();
+
+            if ( strpos($request_comes_from, 'pcmu') !== false ) {
+
+                redirect('pcmu_yearly_project_report/'.$id,'refresh');
+                
+            }else if( strpos($request_comes_from, 'ddm') !== false ){
+
+                redirect('ddm_yearly_project_report/'.$id,'refresh');
+
+            }else if( strpos($request_comes_from, 'rajuk') !== false ){
+
+                redirect('rajuk_yearly_project_report/'.$id,'refresh');
+
+            }else if( strpos($request_comes_from, 'dncc') !== false ){
+
+                redirect('dncc_yearly_project_report/'.$id,'refresh');
+
+            }
 
     	}
 
@@ -46,9 +68,10 @@ class Pcmu_yearly_project extends MY_Controller {
 
     public function get_data( $id ){
 
-    	$data['data'] = $this->Accounts_pcmu_model->get_data( $id );
+    	$data['data'] = $this->Accounts_model->get_data( $id );
     	$this->load->js( 'assets/js/pcmu_yearly_project.js' );
-        $this->load->view( 'forms/accounts/pcmu_yearly_project_report', $data );
+        $request_comes_from = $this->uri->segment(1);
+        $this->load->view( 'forms/accounts/'.$request_comes_from, $data );
         return;
     }
 

@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(document).on("change", "#list_of_ministry", function(){
 
         var mid = $("select[name=ministry]").val();
-        var url = "http://localhost/pmisV2/get_division";
+        var url = base_url + "get_division";
         
         ajax_csrf_setup();
 

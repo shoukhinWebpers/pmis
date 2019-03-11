@@ -10,7 +10,7 @@ class Intermediate_results_indicators extends MY_Controller {
 
 	public function index(){
 
-		$this->load->view('reports/iri');
+		redirect( 'get_iri_form_data/', 'refresh' );
 		return;
 
 	}

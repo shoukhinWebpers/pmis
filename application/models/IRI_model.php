@@ -67,8 +67,7 @@ class IRI_model extends CI_Model {
             $this->db->where('a.id', $id);
         }
 
-        echo $query = $this->db->get_compiled_select();
-        exit();
+        $query = $this->db->get();
         return $query->result_array();
 
     }
